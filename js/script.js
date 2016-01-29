@@ -9,10 +9,11 @@ var counter = 0;
 $('input').focus().val("");
 
 var appendPicture = function(){
-	if(searchData.data.children[counter].data.domain === "i.imgur.com"){
-			$('#slideshow').html("<img src='" + searchData.data.children[counter].data.preview.images[0].url + "' height='400px' width='400px'>");
+	if(searchData.data.children[counter].data.preview){
+			$('#slideshow').html("<img src='" + searchData.data.children[counter].data.preview.images[0].source.url + "' height='400px' width='400px'>");
 			counter++
 	}else{
+		clearInterval()
 		counter++
 	}
 
