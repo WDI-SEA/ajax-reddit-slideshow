@@ -3,12 +3,18 @@ body {
 	color: white;
 	display: flex;
 	justify-content: center;
+	background-image: url(http://i.kinja-img.com/gawker-media/image/upload/msykmohxox4buoeuvp2y.jpg); 
 }
 
 #instructions {
 	display: flex;
 	justify-content: center;
 	margin-top: 300px;
+}
+
+p {
+	font-family: Arial;
+	font-size: 3em;
 }
 
 #photos  {
@@ -31,6 +37,7 @@ body {
 	justify-content: center;
 	background-color: powderblue;
 	border: none;
+	margin-bottom: 10px;
 }
 
 #lul {
@@ -43,4 +50,5 @@ body {
 	color:black;
 	border:none;
 	float: right;
+	margin-right: 540px;
 }

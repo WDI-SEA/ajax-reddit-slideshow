@@ -48,11 +48,3 @@ $(document).ready(function() {
 });
 
 
-// $('#stop').show();
-		
-// 		};
-// $('#stop').show();
-// 		$('#stop').on('click', function {
-// 			function stopSlideShow () {
-// 			clearInterval(slideshow);}
-// 		};
