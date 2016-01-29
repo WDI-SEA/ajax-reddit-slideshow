@@ -1,0 +1,46 @@
+body {
+	background-color: #8bba21;
+	color: black;
+  font-family: 'Tangerine', 'Inconsolata', 'Droid Sans', serif; 
+  font-size: 48px; 
+}
+
+.picture {
+	padding-top: 35px;
+	text-align: center;
+	margin: 15px auto;
+
+}
+.container{
+	text-align: center;
+	margin: 30px auto;
+}
+
+img {
+	width: 50%;
+	height: 50%;
+	text-align: center;
+	margin: 10px auto;
+}
+
+.stop {
+	display: block;
+	text-align: center;
+	margin: 10px auto;
+}
+
+input{
+	background-color: transparent; 
+	border-style: solid; 
+	border-width: 0px 0px 3px 0px; 
+	border-color: red;
+	color:red;
+	width: 300px;
+}
+button{
+	border: 1px solid red;
+	background-color: #8bba21;
+	color: red;
+	width: 80px;
+}
+
