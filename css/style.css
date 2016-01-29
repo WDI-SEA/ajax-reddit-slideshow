@@ -1,0 +1,33 @@
+body{
+	width: 100%;
+	background-color: #002244;
+}
+header h1{
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+	color: #ffffff;
+	width: 300px;
+	margin: 0 auto;
+}
+
+form{
+	font-size: 2em;
+	width: 255px;
+	margin: 0 auto;
+	margin-top: 1%;
+	font-weight: bold;
+}
+
+#container{
+	margin: 0 auto;
+	width:500px;
+	min-width: 300px;
+	height: auto;
+	}
+
+img{
+	width: 500px;
+	min-width: 350px;
+	margin: 0 auto;
+}
