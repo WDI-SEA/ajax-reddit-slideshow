@@ -1,0 +1,47 @@
+body{
+	background-color: black;
+}
+
+
+
+.container{
+	height: 1000px;
+	width: 1000px;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+#slideshow-container{
+	height: 400px;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+#slideshow{
+	border: 1px solid red;
+	height: 400px	;
+	width: 400px;
+	margin: 40px auto;
+}
+
+#search-container{
+	text-align: center;
+	margin: 0 auto;
+}
+
+#input{
+	height: 20px;
+	width: 300px;
+	display: block;
+	margin: 0 auto;
+}
+
+#search-button{
+	height: 40px;
+	width: 100px;
+	border-radius: 4px;
+	display: block;
+	margin: 15px auto;
+}
