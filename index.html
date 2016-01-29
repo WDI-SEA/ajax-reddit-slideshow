@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reddit Search</title>
+	<link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<h1>Reddit Search Slideshow</h1>
+	<form>
+		<input type="text" placeholder="Search Term">
+		<button type="submit">Submit</button>
+	</form>
+	
+	<button id="clear" type="submit">Clear</button>
+
+	<!-- Slideshow carousel -->
+	<div id="carousel" class="carousel slide hidden" data-ride="carousel">
+
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	  </ol>
+
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner container" role="listbox">
+	  </div>
+
+	  <!-- Controls -->
+	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	  </a>
+	</div>
+
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

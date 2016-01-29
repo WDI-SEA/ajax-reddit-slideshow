@@ -1,0 +1,15 @@
+body {
+	background-color: skyblue;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.hidden {
+	display: none;
+}
+
+img {
+	max-height: 70vw;
+	max-height:75vh;
+	margin: 0 auto;
+}
