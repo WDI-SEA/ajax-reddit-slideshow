@@ -1,0 +1,17 @@
+.container {
+	text-align: center;
+	margin-top: 10em;
+}
+
+.form-inline {
+	margin-top: 3em;
+}
+
+#search-term {
+	width: 15em;
+}
+
+img {
+	max-width: 300px;
+	max-height: 300px;
+}
