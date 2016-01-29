@@ -19,6 +19,9 @@ $('#hit').on('click', function(e){
   e.preventDefault();
   search = $('#search').val();
   console.log(search);
+  $('#pic').html('<div class="item active"></div>');
+  filteredData = [];
+
  if(search != ''){
   $.get('https://www.reddit.com/search.json?q='+search+'+nsfw:no').done(function(data) {
     redditData = data;
