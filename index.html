@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reddit Image Slideshow</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-git2.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div id="search-page">
+		<h1>Reddit Image Slideshow<br><small>Enter your search term below to view a slideshow of images from Reddit.</small></h1>
+		<form class="form-inline" id="search-form">
+			<div class="form-group">
+				<label class="sr-only" for="search-term">Search term</label>
+				<input type="text" class="form-control" id="search-term" placeholder="What do you want to see?">
+			</div>
+			<button type="submit" class="btn btn-danger" id="search-button">Show me the pics!</button>
+		</form>
+	</div>
+	<div id="results-page">
+		<div id="images">
+		<button type="submit" class="btn btn-danger" id="reset-button">Ok, that's enough!</button>
+	</div>
+</div>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
