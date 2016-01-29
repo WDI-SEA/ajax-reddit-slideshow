@@ -1,0 +1,10 @@
+body {
+	background: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+}
+
+#photos {
+	display: block;
+}
