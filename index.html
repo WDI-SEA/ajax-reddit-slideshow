@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Reddit Slideshow</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<h1 class="text-center">Reddit Slideshow</h1>
+		<!-- Search bar  -->
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			 <div class="input-group">
+      			<input type="search" id="search" class="form-control" placeholder="Enter category">
+      			<span class="input-group-btn">
+        			<button class="btn btn-default" type="button" id="searchBtn">Search</button>
+     			</span>
+ 			 </div>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+		<!-- Carousel -->
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+		<div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+			<div id="slideshow" class="carousel slide" data-ride="carousel">
+			    <div class="carousel-inner">
+			        <div class="item active">
+			            <img data-src="" alt="Pictures go here!" src="">
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<span class="input-group-btn">
+				<button type="button" id='stop' class="btn btn-default">Stop!</button>
+			</span>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+		<!-- jQuery -->
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
