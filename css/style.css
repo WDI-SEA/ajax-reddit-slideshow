@@ -1,0 +1,47 @@
+body {
+	font-family: sans-serif;
+	background-color: #333;
+}
+
+h1 {
+	color: #eee;
+	text-align: center;
+}
+
+#main-content {
+	text-align: center;
+}
+
+form {
+	border: #6f6 1px solid;
+	margin: 5px auto;
+	width: 40%;
+	padding: 25px 0;
+}
+
+#sf-input, #sf-submit, #stop-button {
+	font-size: 1.2em;
+	margin: 5px;
+}
+
+#pic-box {
+	background-color: #111;
+	width: 500px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.hidden {
+	display: none;
+}
+
+#pic-box p{
+	color: #eee;
+	font-weight: bold;
+	font-size: 30px;
+	padding-top: 100px;
+}
+
+img {
+	width: 500px;
+}
