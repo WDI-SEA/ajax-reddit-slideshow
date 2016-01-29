@@ -1,5 +1,6 @@
 var datArr=[];
 var count = 0;
+var interval = -1;
 var forEachChild = function(reddit){
 	reddit.data.children.forEach(function(children){
 		if (children.data.preview){
@@ -27,8 +28,10 @@ var insert = function(){
 	console.log(count);
 }
 
+
 $(document).ready(function() {
-	$('#search-form').on('submit', function(e){
+	$('.btn-danger').hide();
+	$('.btn-success').click(function(e){
 			e.preventDefault();
 			datArr = [];
 			insert();
@@ -46,9 +49,17 @@ $(document).ready(function() {
 
 			 }
 			var insertPic = setInterval (insert, 5000);
+			$('.btn-success').hide();
+			$('.btn-danger').show();
 		});
 		
 	});
 
+	$('.btn-danger').click(function(e){
+		clearInterval(insertPic);
+		$('.btn-success').show();
+		$('.btn-danger').hide();
+
+	});
 
 });
