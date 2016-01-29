@@ -1,14 +1,21 @@
-var userInput;
+var userInput = "";
 var pictures = [];
 var i = 0;
+
+
 
 
 $(document).ready(function() {
 
 	$("form").on("submit", function (e) {
-		e.preventDefault();
+		userInput = "";
+		i = 0;
+		pictures = [];
+		$("div.carousel-inner").html('');
+		$("ol.carousel-indicators").html('');
 		userInput = $("input").val();
 		$("input").val('')
+		e.preventDefault();
 		$.get("http://www.reddit.com/search.json", { q: userInput }).done(function(data) {
 			//get images out of array of objects
 			data.data.children.forEach(function(article) {
@@ -28,16 +35,21 @@ $(document).ready(function() {
 				}
 			});
 			//push array to slideshow
-			console.log(pictures);
-			pictures.forEach(function(imageLink) {
-				$("ol.carousel-indicators").append('<li data-target="#carousel-example-generic" data-slide-to="' + i + '" class="active"></li>');
+			for (var x = 0; x < pictures.length; x++) {
+				console.log(pictures);
+				$("ol.carousel-indicators").append('<li data-target="#carousel" data-slide-to="' + x + '" class="active"></li>');
 				console.log(i);
-				$("div.carousel-inner").append("<div class='item active'></div>");
-				$(".item.active").append("<img>");
-			    i++;
-			    console.log(i);
-			});
-			$("#carousel-example-generic").removeClass("hidden");
+				if (x === 0) {
+					$("div.carousel-inner").append('<div class="item active"><img src="' + pictures[0] + '" alt="' + userInput + ' ' + x + '"></div>');
+				} else {
+					$("div.carousel-inner").append('<div class="item"><img src="' + pictures[x] + '" alt="' + userInput + ' ' + x + '"></div>');
+				}
+			    console.log(x);
+		    }
+			$("#carousel").removeClass("hidden");
 		});
+	});
+	$("#clear").on("click", function() {
+		$("#carousel").addClass("hidden");
 	});
 });
