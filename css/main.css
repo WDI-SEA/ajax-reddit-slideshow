@@ -5,6 +5,42 @@ body {
 	justify-content: center;
 }
 
-#photos {
-	display: block;
+#instructions {
+	display: flex;
+	justify-content: center;
+	margin-top: 300px;
+}
+
+#photos  {
+	position: absolute;
+	top: 30px;
+	left: 500px;
+
+}
+
+
+#form {
+	display: flex;
+	justify-content: center;
+	color:black;
+	border: none;
+}
+
+#submit {
+	display: flex;
+	justify-content: center;
+	background-color: powderblue;
+	border: none;
+}
+
+#lul {
+	width: 50%;
+	height: 50%;
+}
+
+#stop {
+	background-color: powderblue;
+	color:black;
+	border:none;
+	float: right;
 }
