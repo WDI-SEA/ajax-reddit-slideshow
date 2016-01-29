@@ -3,6 +3,7 @@ $(document).ready(function(){
 	var reddit= [];
 	var counter = 0;
 	var filteredData = [];
+	var intervalId = 0;
 	
 
 
@@ -26,21 +27,24 @@ $(document).ready(function(){
 			});
 		
 		
-		setInterval(function(){	
+			intervalId = setInterval(function(){	
 
-			$('#container')
-			.html(' ')
-			.append('<img src=' + filteredData[counter] +'>');
+				$('#container')
+				.html(' ')
+				.append('<img src=' + filteredData[counter] +'>');
 
-				counter++;
-				if(counter == filteredData.length){
-				  	counter = 0;
-				}
-			}, 2000);
-
-
+					counter++;
+					if(counter == filteredData.length){
+					  	counter = 0;
+					}
+				}, 2000);
+			});		
 		});
-		
-		
-	});		
-});  
+
+		$('#stop').on('click',function(e){
+			e.preventDefault();
+			clearInterval(intervalId);
+			$('#container').html("");	
+		}); 
+}); 
+
