@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" media="screen" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  	<title>AJAX Slideshow</title>
+</head>
+<body>
+ <h1>Search Reddit for pics!</h1>
+  
+  <form>
+  	<button id="hit">Reset and GO GO GO!</button>
+  	<input id="search" type="text" placeholder="Enter your search for images on Reddit here and click the button above!">
+  </form>
+  
+
+   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  
+  <!-- Wrapper for slides -->
+  <div id="pic" class="carousel-inner">
+    <div class="item active"></div>
+  </div>
+ 
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div> <!-- Carousel --> 
+
+      
+
+ 
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
