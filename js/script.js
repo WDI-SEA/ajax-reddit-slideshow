@@ -25,32 +25,15 @@ $(document).ready(function() {
 
 			var imageUrlArray= filterResult.map(mapResult);
 			console.log(imageUrlArray);
+
+			var counter = 0;
+			setInterval( function() {
+				$('#photos').html('<img src='+imageUrlArray[counter]+'/>');
+				counter++;
+				if (counter >= imageUrlArray.length) {
+					counter = 0;
+				}
+			}, 1000);
 		});
 	});
 });
-
-
-
-
-
-	
-
-
-
-// document.getElementById("button").addEventListener("click", function(){
-//     document.getElementById("quoteAppear").innerHTML = 
-//     quotes[Math.floor(Math.random()* quotes.length)];
-// });
-	
-// 	/var newThing = $('#taskInput').val();
-// 	console.log("this"+newThing);
-
-// 	$('#taskList').append('<li>' + newThing + '<button id="delete">X</button></li>');
-// 	$('#taskInput').val('');
-
-// 	$('#taskList').on('click', "li #delete", function(e) {
-// 	e.preventDefault();
-// 	console.log("Hay");
-// 	$(this).parent().remove();
-	
-// });
