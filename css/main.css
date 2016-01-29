@@ -1,0 +1,54 @@
+body {
+	background: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	background-image: url(http://i.kinja-img.com/gawker-media/image/upload/msykmohxox4buoeuvp2y.jpg); 
+}
+
+#instructions {
+	display: flex;
+	justify-content: center;
+	margin-top: 300px;
+}
+
+p {
+	font-family: Arial;
+	font-size: 3em;
+}
+
+#photos  {
+	position: absolute;
+	top: 30px;
+	left: 500px;
+
+}
+
+
+#form {
+	display: flex;
+	justify-content: center;
+	color:black;
+	border: none;
+}
+
+#submit {
+	display: flex;
+	justify-content: center;
+	background-color: powderblue;
+	border: none;
+	margin-bottom: 10px;
+}
+
+#lul {
+	width: 50%;
+	height: 50%;
+}
+
+#stop {
+	background-color: powderblue;
+	color:black;
+	border:none;
+	float: right;
+	margin-right: 540px;
+}
