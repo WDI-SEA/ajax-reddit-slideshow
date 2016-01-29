@@ -38,7 +38,7 @@ $(document).ready(function() {
 						counter++;
 						counter = counter % searchResults.length;
 
-				}, 2000);
+				}, 1000);
 
 				$("#stop").on("click", function() {
 					clearInterval(slideshow);
