@@ -1,0 +1,29 @@
+body {
+	text-align: center;
+	background-color: darkolivegreen;
+	font-family: 'Courgette', cursive;
+}
+
+h1 {
+	color: white;
+	text-shadow: 2px 2px black;
+}
+
+img {
+	max-height: 500px;
+	margin: 20px auto;
+	border: 5px solid black;
+}
+
+p {
+	color: white;
+	text-shadow: 1px 1px black;
+	margin: 5px auto;
+}
+
+button {
+	background-color: darkgrey;
+	height: 5%;
+	width: 5%;
+	box-shadow: 1px 1px black;
+}
