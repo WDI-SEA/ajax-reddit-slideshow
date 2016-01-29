@@ -2,7 +2,7 @@ var searchResults = [];
 var slideshow; 
 
 $(document).ready(function() {
-	$('#stop').hide();
+	
 	$('#submit').on('click', function(e) {
 		e.preventDefault();
 		$('#form').hide();
@@ -40,15 +40,16 @@ $(document).ready(function() {
 				}
 			}, 1000);
 
+			$('#stop').on('click', function() {
+				location.reload();
+			})
 		});
 	});
 });
 
 
 // $('#stop').show();
-// 		$('#stop').on('click', function {
-// 			function stopSlideShow () {
-// 			clearInterval(slideshow);}
+		
 // 		};
 // $('#stop').show();
 // 		$('#stop').on('click', function {
