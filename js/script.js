@@ -44,7 +44,9 @@ $(document).ready(function(){
 		$('#stop').on('click',function(e){
 			e.preventDefault();
 			clearInterval(intervalId);
-			$('#container').html("");	
+			$('#container').html("");
+			filteredData = [];
+
 		}); 
 }); 
 
