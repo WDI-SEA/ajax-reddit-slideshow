@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	$("#Go_Button").on('click', search);
 
-var imageArray = [];
+	var imageArray = [];
 
 	function search(event) {
   event.preventDefault();
@@ -14,28 +14,29 @@ var imageArray = [];
   	}).done(function(response) {
     console.log(response);
 
-		var results = response.data.children.preview;
-		for (i=0; i<= results.children.length; i++) {
-    	console.log(results[i].data.img);
-    	} var result= results[i].preview.images[0].source.url;
-	    addSearchResult(result)
+		var results = response.data.children;
+		for (i=0; i< results.length; i++) {
+			if (!results[i].data.preview ){
+				return;
+			}
+    	var result= results[i].data.preview.images[0].source.url;
+	    addSearchResult(result);
 	    console.log(result);
-    });
-
-	}
+    }
  });
-// });
-
-function addSearchResult(result) {
-   var pictures = '<img src="' + result + '">'
-		$('#images').append(pictures);
 }
-  // var li = document.createElement("li");
+});
 
-  // var link = document.createElement("a");
-  // link.href = result.url; 
-  // link.textContent = result.title; 
-  // $(li).append(link);
+ var image = $('#query').val();
+function addSearchResult(result) {
+	var image = document.createElement("img");
+  // var pictures = ('<img src="' + result + '">')
+	var link = document.createElement("a");
+  link.href = result.url; 
+  link.textContent = result.title; 
+  $(li).append(link);
 
-  // add the list item to the list of search results
-  // $("#results").append(li);
+  $("#results").append(li);
+
+}
+ 
