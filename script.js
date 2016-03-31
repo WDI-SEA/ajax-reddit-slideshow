@@ -122,7 +122,7 @@ function flashImage() {
 
 
 function triggerTimer(){
-    timer = setInterval(flashImage, 1000);
+    timer = setInterval(flashImage, 4000);
 }
 
 function cancelTimer(){
