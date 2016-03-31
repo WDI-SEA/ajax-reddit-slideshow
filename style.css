@@ -18,9 +18,10 @@ body {
   text-align: center;
   background-color: black;
   color: white;
-  background: gray; 
-/*  background: -webkit-linear-gradient(left top, #413839, #565051); 
-  background: -o-linear-gradient(bottom right, #413839, #565051); 
-  background: -moz-linear-gradient(bottom right, #413839, #565051); 
-  background: linear-gradient(to bottom right, #413839, #565051);*/
+  background: gray;
+  bacgkround-image: url("escalator.jpeg");
+}
+
+#slideshow{
+  
 }
