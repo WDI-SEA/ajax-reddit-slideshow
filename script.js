@@ -56,6 +56,7 @@
 var imageArray = [];
 var counter = 0;
 var timer;
+$('#stop-slides').hide();
 
 $('#myForm').submit(function (event) {
   event.preventDefault();
@@ -77,7 +78,6 @@ $('#myForm').submit(function (event) {
       console.log(imageArray);
 
     }
-    // addSearchResult(imageArray);
   triggerTimer();
   });
 });
@@ -85,20 +85,20 @@ $('#myForm').submit(function (event) {
 function clearSearchResults() {
   $("#results").html("");
   $('#photo-div').html(""); 
-  $('#submit').fadeIn();
-  $('#submit').parent.fadeIn();
+  $('#myForm').show();
   imageArray = [];
+  $('#query').html("");
 }
 
 $('#submit')
   .click(function () {
-    $(this).parent().fadeOut();
-    $(this).fadeOut();
+    $('#myForm').hide();
+    $('#stop-slides').show();
   });
 
 $('#stop-slides').click(function() {
   console.log('stop click');
-  cancelTimer;
+  stop();
   clearSearchResults();
 });
 
@@ -111,8 +111,7 @@ function flashImage() {
     var html = '<img class="animate" src="' + imageArray[counter] + '"/>'; 
     $('#photo-div').append(html); 
     if (counter >= (imageArray.length-1)) {
-      cancelTimer();
-      imageArray = [];
+      stop();
       clearSearchResults();
     } else{
       counter++;
@@ -125,11 +124,15 @@ function triggerTimer(){
     timer = setInterval(flashImage, 4000);
 }
 
-function cancelTimer(){
-    clearInterval(timer);
-}
 
+function stop(){
+  clearSearchResults();
+  clearInterval(timer);
+  counter = 0;
+  var imageArray = [];
+  $('#photo-div').empty();
 
+ }
 
   // CURRENTLY WORKING
   // function flashImage() {
