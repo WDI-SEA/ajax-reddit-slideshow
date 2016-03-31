@@ -7,6 +7,7 @@ var intervalID;
 var stop = function(){
 	clearInterval(intervalID);
 	imageIndex = 0;
+	imageURLs = [];
 	$('#div_image').empty();
 
 	var info = '<div id="div_info">'
