@@ -11,6 +11,9 @@ $(document).ready(function() {
  	$.get('https://www.reddit.com/search.json', {
     q: userQuery
   	}).done(function(response) {
+
+  	$('form').hide();
+  	$('h1').hide();
     console.log(response);
 
 		function filterByID(obj) {
@@ -27,6 +30,17 @@ $(document).ready(function() {
     	var result= results[i].data.preview.images[0].source.url;
 	    addSearchResult(result);
 	    console.log(result);
+
+
+	  var results_num = results.length
+		var intervalID = window.setInterval(changeImage, 1000);
+	  function changeImage(results_num){
+	  	var oElem = document.getElementById("images");
+      oElem.src = oElem.src == "result[results_num -1]" ? "result[results_num]" : "result[results_num";
+
+	  }
+		
+	  //dont mess with below
     }
  		})
  		//trying to do a hide function after the search function finsihes
@@ -37,7 +51,7 @@ $(document).ready(function() {
 			// 	});
  		// };
 	};
-	
+
 	//trying to alternate images
 	// var nIntervId;
  
