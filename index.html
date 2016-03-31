@@ -9,18 +9,23 @@
 <body>
 <h1>Searchibble for Reddit</h1>
 <h3>Search Reddit for images that interest you!</h3>
+<h3>Click "searchify" & wait 5 seconds to start slideshow</h3>
 
-<form id="search-form">
-  <input type="text" id="query">
-  <br/>
-  <input type="submit" name="pressMe" value="SEARCHIFY">
-</form>
+<div id = "container">
+  <form id="search-form">
+    <input type="text" id="query" placeholder="cats">
+    <br/>
+    <input type="submit" id="submit" value="SEARCHIFY">
+  </form>
 
-<!-- loading stuff
- --><!-- <div id="dvLoading"></div>
- -->
+  <!-- loading stuff
+   --><!-- <div id="dvLoading"></div>
+   -->
 
-<div id="slideshow"><div>
+  <div id="slideshow">
+    <div id="photo-div"></div>
+    <input type="button" id="stop-slides" value="Stop">
+</div> 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
