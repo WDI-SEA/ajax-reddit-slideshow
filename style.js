@@ -29,14 +29,9 @@ $(document).ready(function() {
 
  var image = $('#query').val();
 function addSearchResult(result) {
-	var image = document.createElement("img");
-  // var pictures = ('<img src="' + result + '">')
-	var link = document.createElement("a");
-  link.href = result.url; 
-  link.textContent = result.title; 
-  $(li).append(link);
-
-  $("#results").append(li);
+  var pictures = ('<img src="' + result + '">')
+	$('#images').append(pictures);
 
 }
+
  
