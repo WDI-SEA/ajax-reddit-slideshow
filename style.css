@@ -61,17 +61,14 @@ input[type=text] {
   to { opacity: 0; }
 }
 
-
-#container {
- /* position: relative;*/
-  
-  /*margin: 0 auto;*/
-  margin-top: 50px;
-
+#spacer {
+  height: 50px;
 }
+
 
 #myForm {
   width: 100%;
+  margin-top: 50px;
   
 }
 
@@ -87,6 +84,7 @@ padding: 12px 24px;
 text-decoration: none;
 cursor: pointer;
 font-weight: bold;
+margin-bottom: 50px;
 }
 
 #photo-div {
@@ -101,6 +99,7 @@ font-weight: bold;
   font-size: 48px;
   text-align: center;
   color: white;
+  margin-top: 50px;
 }
 
 #photo-div img {
