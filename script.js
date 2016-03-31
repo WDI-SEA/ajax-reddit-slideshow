@@ -6,30 +6,32 @@ var nIntervId;
 $(function() {
   // attach the form submission to the search function
   $("#search-form").on('submit', search);
-});
+  });
 
-  function search(event) {
-    // Stop the form from changing the page.
-    event.preventDefault();
+function search(event) {
+// Stop the form from changing the page.
+  event.preventDefault();
+  clearSearchResults();
 
-    var input = $("#query")
-    var userQuery =  input.val();
-    
+  var input = $("#query")
+  var userQuery =  input.val();
 
-    $.get('https://www.reddit.com/search.json', {
-      q: userQuery
-      // nsfw: "no"
-    }).done(function(response) {
-      console.log(response);
-      
-    var results = response.data.children; 
-    for(i = 0; i < results.length; i++) {
-        var redditStuff = results[i].data;
-        if(redditStuff.domain === "i.imgur.com" && redditStuff.url) {
-        imArr.push(redditStuff.url);
-        console.log(imArr);
+
+  $.get('https://www.reddit.com/search.json', {
+    q: userQuery
+  }).done(function(response) {
+    console.log(response);
+  
+
+//changing based on Nat's code
+//this filters through the children to check for the preview tag & find the url
+//then pushes those urls into an array
+response.data.children.filter(function(result) {
+if(result.data.preview && result.data.preview.images[0].source.url) {
+    imArr.push(result.data.preview.images[0].source.url);
+    console.log(imArr);
         } 
-      }
+      });
     changeSlide();
   });
 
@@ -37,9 +39,7 @@ $(function() {
   // Clear previous search results.
   function clearSearchResults() {
     $("#results").html("");
-    $('#photo-div').html(""); 
-    $('#submit').fadeIn();
-    $('#submit').parent.fadeIn();
+    $('#slide-show').html(""); 
     imaArr= [];
   }
 
@@ -51,12 +51,14 @@ $(function() {
 
 
   //stolen from Brent's code shamelessly
+  //this checks the photo-div, clears it (from previous image), then animates the slide based off the image url
+  //if statement is the counter that allows the image to change through each of the search results
   function flashImage() {
-      if ($('#photo-div').html()) {
-        $('#photo-div').html("");
+      if ($('#slide-show').html()) {
+        $('#slide-show').html("");
       }
       var html = '<img class="animate" src="' + imArr[counter] + '"/>'; 
-      $('#photo-div').append(html); 
+      $('#slide-show').append(html); 
       if (counter >= (imArr.length-1)) {
         stopSlide();
         imArr = [];
@@ -66,33 +68,29 @@ $(function() {
       }
   }
 
-
   //timer stuff for slideshow
   function changeSlide() {
-    nIntervId = setInterval(flashImage, 5000);
+    nIntervId = setInterval(flashImage, 3000);
   }
 
   function stopSlide() {
     clearInterval(nIntervId);
+    $("#results").html("");
+    $('#slide-show').html(""); 
+    $('#submit').fadeIn();
   }
 
 }
 
-// // Adds a single result object to the page.
-// function addSearchResult(arr) {
-//  for (i = 0; i < arr.length; i++) {
-//    var sepImage = arr[i];
-//    var html = '<img src="' + sepImage + '"/>';
-//    $('#slideshow').append(html);
-//  }
-// }
 
-
-
-
-
-
+//TO BE COMPLETED
+// loading image while AJAX pulls from
 // $(window).load(function(){
 // $('#dvLoading').fadeOut(2000);
 // });
-// loading stuff
+
+//jquery UI - show and hide JQuery
+
+//Nat did a counter that reset back to Zero to carousel
+//if(counter>=imageArray.length)
+// counter = 0;

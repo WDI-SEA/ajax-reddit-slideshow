@@ -19,9 +19,9 @@ body {
   background-color: black;
   color: white;
   background: gray;
-  bacgkround-image: url("escalator.jpeg");
+  bacgkround-image: url("../escalator.jpeg");
 }
 
 #slideshow{
-  
+
 }
