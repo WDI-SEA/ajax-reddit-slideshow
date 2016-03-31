@@ -60,7 +60,7 @@ $('#stop-slides').hide();
 
 $('#myForm').submit(function (event) {
   event.preventDefault();
-
+  $('#photo-div').html("<p>Loading...</p>");
   var input = $('#query');
   var userText = input.val();
 var searchStr = userText + ' nsfw:no site:i.imgur.com';
@@ -105,16 +105,18 @@ var searchStr = userText + ' nsfw:no site:i.imgur.com';
 function clearSearchResults() {
   $("#results").html("");
   $('#photo-div').html(""); 
-  $('#myForm').show();
+  $('#myForm').fadeIn(1000);
+
   imageArray = [];
   
 }
 
 $('#submit')
   .click(function () {
-    $('#myForm').hide();
-    $('#stop-slides').show();
-  });
+    // $('#myForm').hide();
+    $('#myForm').fadeOut(500);
+    $('#stop-slides').fadeIn(500);
+});
 
 $('#stop-slides').click(function() {
   console.log('stop click');
@@ -129,7 +131,7 @@ function flashImage() {
     if ($('#photo-div').html()) {
       $('#photo-div').html("");
     }
-    var html = '<img src="' + imageArray[counter] + '"/>'; 
+    var html = '<img class="image-responsive img-thumbnail" src="' + imageArray[counter] + '"/>'; 
     $('#photo-div').append(html); 
     if (counter >= (imageArray.length-1)) {
       stop();

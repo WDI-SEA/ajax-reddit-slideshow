@@ -1,7 +1,7 @@
 /*
 *  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
 */
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+/*html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
 body{line-height:1}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 nav ul{list-style:none}
@@ -15,7 +15,7 @@ abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
 table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
 input,select{vertical-align:middle}
-
+*/
 
 body {
   
@@ -23,6 +23,7 @@ body {
 }
 
 input[type=submit] {
+  width: 130px;
   background-color: #333333;
   /*display: inline-block;*/
   border: 1px solid #333333;
@@ -31,27 +32,17 @@ input[type=submit] {
   color: white;
   padding: 6px 12px;
   text-decoration: none;
-  margin: 4px 2px;
   cursor: pointer;
   font-weight: bold;
 }
 
 input[type=button] {
-  display: block;
-  background-color: #333333;
-  border: 1px solid #333333;
-  border-radius: 5px;
-  font-size: 14px;
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-weight: bold;
+/*  display: block;*/
+  
 }
 
 input[type=text] {
-  width: 170px;
+  width: 270px;
   box-sizing: border-box;
   border: 2px solid #bbbbbb;
   border-radius: 4px;
@@ -73,39 +64,54 @@ input[type=text] {
 
 #container {
  /* position: relative;*/
-  width: 960px;
-  margin: 0 auto;
+  
+  /*margin: 0 auto;*/
   margin-top: 50px;
 
 }
 
 #myForm {
-  width: 280px;
-  margin: 0 auto;
+  width: 100%;
+  
 }
 
 #stop-slides {
- margin: 0 auto;
+
  margin-top: 15px;
+ background-color: #333333;
+border: 1px solid #333333;
+border-radius: 5px;
+font-size: 14px;
+color: white;
+padding: 12px 24px;
+text-decoration: none;
+cursor: pointer;
+font-weight: bold;
 }
 
 #photo-div {
   
   background-color: #000000;
-  margin-top: 20px;
-  width: 500px;
+  /*margin-top: 20px;*/
+  /*width: 500px;*/
   height: 500px;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
+/*  display: flex;
+  justify-content: center;*/
+  /*margin: 0 auto;*/
+  font-size: 48px;
+  text-align: center;
+  color: white;
 }
 
 #photo-div img {
-  
   max-height: 100%;
   animation: fadein 2s;
 
 }
+
+/*#photo-div p {
+  margin-top: 200px;
+}*/
 /*#photoframe {*/
   /*background-color: #000000;*/
 /*  position: absolute;
