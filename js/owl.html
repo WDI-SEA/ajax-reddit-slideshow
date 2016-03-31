@@ -14,6 +14,7 @@
   <body>
 
   <div class="owl-carousel owl-theme">
+    <div><img src='http://www.hd-wallpapersdownload.com/upload/bulk-upload/high-resolution-pictures.jpg'></div>
   </div>
   <button id="img-button">New Image</button>
 
@@ -22,22 +23,7 @@
 
   <script type="text/javascript">
     $(document).ready(function(){
-      $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
-        responsive:{
-          0:{
-            items:1
-          },
-          600:{
-            items:3
-          },
-          1000:{
-            items:5
-          }
-        }
-      });
+      $('.owl-carousel').owlCarousel();
       imgs = ["http://cdn.wonderfulengineering.com/wp-content/uploads/2014/03/high-resolution-wallpapers-25.jpg",
         "http://www.ambwallpapers.com/wp-content/uploads/2016/03/Tiger-High-Resolution-Wallpaper.jpg",
         "http://www.hd-wallpapersdownload.com/upload/bulk-upload/high-resolution-pictures.jpg"
@@ -45,13 +31,12 @@
 
       $('#img-button').click(function () {
         // clean the container:
-        $('.owl-carousel').text('');
+        //$('.owl-carousel').text('');
         var div = document.createElement("div");
         var img = document.createElement("img");
         img.src = imgs.pop();
         $(div).append(img);
-        // $(".owl-carousel").data('owlCarousel').addItem(div);
-        $('.owl-carousel').trigger('add.owl.carousel', [$(div), 0]).trigger('refresh.owl.carousel');
+        $('.owl-carousel').owlCarousel('add', div).owlCarousel('refresh');
 
 
       });

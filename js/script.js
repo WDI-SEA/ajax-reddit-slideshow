@@ -3,6 +3,8 @@ $(document).ready(function() {
   // attach the form submission to the search function
   $("#search-form").on('submit', search);
 
+  $('.owl-carousel').owlCarousel();
+
   
 });
 
@@ -57,8 +59,8 @@ function addSearchResult(result) {
   $(div).append(img);
 
   // add the list item to the list of search results
-  $("#results").append(li);
-  $(".carousel").append(div);
-}
+  //$("#results").append(li);
 
-  $('.carousel').slick();
+  $('.owl-carousel').owlCarousel('add', div).owlCarousel('refresh');
+
+}
