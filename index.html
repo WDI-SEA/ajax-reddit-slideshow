@@ -6,26 +6,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <div id="container">  
     <h1> Reddit photo slideshow </h1>
     <form id="inPut">
-    <h3> type in your search result </h3>
-    <input type="text" id="searchField">
-    <input type="submit" value="submit" id="searchButton">
-  </form>
-  <div id="outPut">
-    <div id="images">
-      <img src="" id="slide">
+      <h3> type in your search result </h3>
+      <input type="text" id="searchField">
+      <input type="submit" value="submit" id="searchButton">
+    </form>
+    <div id="outPut">
+      <div id="images">
+        <img src="" id="slide">
+      </div>
+        <input type="submit" value="STOP" id="stop">
+      
     </div>
-    <input type="submit" value="STOP" id="stop">
   </div>
-</div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"> </script>
+  <!-- loading jQuery UI after lib -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js">   </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"> </script>
-<!-- loading jQuery UI after lib -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js">   </script>
-
-<script src="ajax.js"> </script>
+  <script src="ajax.js"> </script>
 </body>
 </html>

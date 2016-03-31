@@ -2,6 +2,7 @@
 var searchTerm; 
 var picArray= [];
 var counter =0;
+var intervalId;
 
 $('#inPut').submit(function(event){
   event.preventDefault();
@@ -15,23 +16,24 @@ $('#inPut').submit(function(event){
     searchReddit(searchTerm);
   }
   $('#searchField').html('');  
-
+ 
 });
 
 //event listener to fade out input once pictures have loaded
 $(document).on('click', '#searchButton', function(){
  $('#inPut').fadeOut();
+ // $('#images').html("<p>Loading...</p>");
+ $('#slide').fadeIn(3000);
 })
 
 //event listener
 $(document).on('click', '#stop', function(){
  $('#slide').fadeOut();
- // picArray=[];
- // picArray.length = 0;
- // $('#slide').removeData();
+ picArray = [];
+ clearInterval(intervalId);
  $('#inPut').fadeIn();
  $('#searchField').val(''); 
- counter =0;
+ counter = 0;
 })
 
 
@@ -40,9 +42,9 @@ var searchReddit = function(text) {
   console.log("searching for: ", searchTerm);
   
   $.get('https://www.reddit.com/search.json', {
-    q: searchTerm
+    q: searchTerm,
+    limit: 100
   }).done(function(response) {
-    console.log(response);
 
     var results=response.data.children ;
 
@@ -56,23 +58,27 @@ var searchReddit = function(text) {
         
       }
     } 
-    setInterval(flashPics, 1000);
+    
+    intervalId = setInterval(flashPics, 1000);
   })
 };
 
 
 function addSearchResult(result) {
-
   picArray.push(result);
-
 };
 
 
 function flashPics() {
-
+  
   $("#slide").attr("src", picArray[counter])
-  counter++;
+  counter++; 
+  if(counter === picArray.length) {
+    counter = 0;
+  }
 }    
+
+
 
 
 
