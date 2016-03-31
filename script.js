@@ -17,15 +17,26 @@ var stop = function(){
 	$('#div_image').append(info);
 }
 
-var cycleImage = function(){
+var hideImage = function(){
 	imageIndex++;
-	if (imageIndex < imageURLs.length){
-		currentImage[0].src = imageURLs[imageIndex];
-		currentImage[0].alt = imageURLs[imageIndex];
-	}
-	else {
-		stop();
-	}
+	$('#div_image').hide( "puff", {}, 1000, nextImage);
+}
+
+//had to make callback nesting to delay the animations
+var nextImage = function(){
+	setTimeout(function(){
+		if (imageIndex < imageURLs.length){
+			currentImage[0].src = imageURLs[imageIndex];
+			currentImage[0].alt = imageURLs[imageIndex];
+
+			setTimeout(function(){
+				$('#div_image').show( "puff", {}, 1000);
+			}, 100);
+		}
+		else {
+			stop();
+		}
+	}, 100)
 }
 
 // Add an event listener
@@ -63,7 +74,7 @@ function search(e) {
 		$('#form_stop').css("display", "inline-block");
 
 		imageIndex = 0;
-		intervalID = setInterval(cycleImage, 5000);
+		intervalID = setInterval(hideImage, 5000);
 	})
 }
 

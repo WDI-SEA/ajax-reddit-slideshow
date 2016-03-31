@@ -59,3 +59,12 @@ form {
 #form_stop {
 	display: none;
 }
+
+#form_pause {
+	display: none;
+	font-size: 20px;
+	font-weight: bolder;
+	color: white;
+	background-color: black;
+	height: 32px;
+}

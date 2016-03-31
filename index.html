@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>reddit Slideshow</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.theme.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,8 +20,12 @@
 			<input type="text" id="input_search" placeholder="Search...">
 			<input type="submit" id="input_play" value="&#9658">
 		</form>
+		<form id="form_pause">
+			<input type="submit" id="input_stop" value="&#9616">
+		</form>
 	</div>
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 	<script src="script.js"></script>
 </body>
 </html>
