@@ -14,7 +14,7 @@ $('#inPut').submit(function(event){
   } else {
     searchReddit(searchTerm);
   }
-  $('#searchField').val('');  
+  $('#searchField').html('');  
 
 });
 
@@ -26,9 +26,12 @@ $(document).on('click', '#searchButton', function(){
 //event listener
 $(document).on('click', '#stop', function(){
  $('#slide').fadeOut();
- // $('#slide').val('');
+ // picArray=[];
+ // picArray.length = 0;
+ // $('#slide').removeData();
  $('#inPut').fadeIn();
  $('#searchField').val(''); 
+ counter =0;
 })
 
 

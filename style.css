@@ -1,4 +1,32 @@
+body{
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  text-align: center
+}
+
+#inPut{
+  margin: 15px;
+  text-align: center
+}
 img {
   width: 800px;
-  height: 500px;
+  height: auto;
+  float: right;
+  margin-right: 200px;
+  margin-top: 15px;
+
+}
+
+#stop{
+  height: 60px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #69D2E7;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px;
+  color: white;
 }
