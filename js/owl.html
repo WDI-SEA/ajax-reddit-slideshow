@@ -1,0 +1,62 @@
+
+<html>
+  <head>
+  <title>My Now Amazing Webpage</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/assets/owl.theme.default.min.css"/>
+    <style type="text/css">
+      /*img {
+        height: 700px;
+        width: 1200px;
+      }*/
+    </style>
+  </head>
+  <body>
+
+  <div class="owl-carousel owl-theme">
+  </div>
+  <button id="img-button">New Image</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.3/owl.carousel.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+          0:{
+            items:1
+          },
+          600:{
+            items:3
+          },
+          1000:{
+            items:5
+          }
+        }
+      });
+      imgs = ["http://cdn.wonderfulengineering.com/wp-content/uploads/2014/03/high-resolution-wallpapers-25.jpg",
+        "http://www.ambwallpapers.com/wp-content/uploads/2016/03/Tiger-High-Resolution-Wallpaper.jpg",
+        "http://www.hd-wallpapersdownload.com/upload/bulk-upload/high-resolution-pictures.jpg"
+      ]
+
+      $('#img-button').click(function () {
+        // clean the container:
+        $('.owl-carousel').text('');
+        var div = document.createElement("div");
+        var img = document.createElement("img");
+        img.src = imgs.pop();
+        $(div).append(img);
+        // $(".owl-carousel").data('owlCarousel').addItem(div);
+        $('.owl-carousel').trigger('add.owl.carousel', [$(div), 0]).trigger('refresh.owl.carousel');
+
+
+      });
+    });
+  </script>
+
+  </body>
+</html>
