@@ -25,8 +25,9 @@ function search(event) {
 
     var results = response.data.children;
     for (var i = 0; i < results.length; i++) {
-      var result = results[i].data;
-      addSearchResult(result);
+      var result = results[i].data.thumbnail;
+      $('#results').append('<img src="'+result+'">')
+       console.log(result);
     }
   });
 }
@@ -39,18 +40,12 @@ function clearSearchResults() {
 // Adds a single result object to the page.
 function addSearchResult(result) {
   // Create a list item to contain the search result link
-  var li = document.createElement("li");
+  var img = document.createElement("img");
 
-  // create an anchor tag
-  var link = document.createElement("a");
-  link.href = result.url; // reset the value of the the href
-  link.textContent = result.title; // set the value of the text in the link
 
-  // put the link inside the list item.
-  $(li).append(link);
 
   // add the list item to the list of search results
-  $("#results").append(li);
+  $("#results").append(img);
 }
 
 
