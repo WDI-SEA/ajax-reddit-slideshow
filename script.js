@@ -11,10 +11,13 @@ function search(event) {
   clearSearchResults();
 
 
+//data.children.preview
+
   // Get the users search input and save it in a variable.
   // Use the input placeholder value (like "kittens") as a default value.
   var input = $("#query")
-  var userQuery =  input.val() || input.attr("placeholder");
+  var userQuery =  input.val();
+  var imArr = [];
 
   console.log("searching for:", userQuery);
 
@@ -25,10 +28,11 @@ function search(event) {
     
   var results = response.data.children; 
   for(var i=0; i < results.length; i++) {
-    var result = results[i].data
-    addSearchResult(result);
-
-  }
+      var imageURL = results[i].data.url;
+      imArr.push(imageURL);
+      console.log(imArr);
+      addSearchResult(imageURL);
+    } 
   });
 }
 
@@ -38,19 +42,24 @@ function clearSearchResults() {
 }
 
 // Adds a single result object to the page.
-function addSearchResult(result) {
-  // Create a list item to contain the search result link
-  var li = document.createElement("li");
-  
-  // create an anchor tag
-  var link = document.createElement("a");
-  link.href = result.url; // reset the value of the the href
-  link.textContent = result.title; // set the value of the text in the link
-
-  // put the link inside the list item.
-  $(li).append(link);
-
-  // add the list item to the list of search results
-  $("#results").append(li);
+function addSearchResult(imageArray) {
+ for (i = 0; i < imageArray.length; i++) {
+   var eachImage = imageArray[i];
+   var html = '<img src="' + eachImage + '"/>';
+   $('#slideshow').append(html);
+ }
 }
 
+
+//hides button and input
+$('input[name=pressMe]')
+.click(function (){
+   $(this).parent().fadeOut();
+   $(this).fadeOut();
+  });
+
+
+// $(window).load(function(){
+// $('#dvLoading').fadeOut(2000);
+// });
+// loading stuff
