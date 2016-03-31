@@ -8,6 +8,13 @@ var stop = function(){
 	clearInterval(intervalID);
 	imageIndex = 0;
 	$('#div_image').empty();
+
+	var info = '<div id="div_info">'
+			 + 'Type something in the box below. <br />'
+			 + 'We\'ll scour reddit for pics and show you a slideshow.'
+			 + '</div>';
+
+	$('#div_image').append(info);
 }
 
 var cycleImage = function(){
@@ -48,9 +55,12 @@ function search(e) {
 
 		console.log(imageURLs);
 
+		$('#div_image').empty();
+
 		currentImage = $('<img src="' + imageURLs[0] + ' alt="' + imageURLs[0] + '>"');
 
 		$('#div_image').prepend(currentImage);
+		$('#form_stop').css("display", "inline-block");
 
 		imageIndex = 0;
 		intervalID = setInterval(cycleImage, 5000);
