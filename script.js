@@ -32,12 +32,14 @@ function search(event) {
       if (result) {
       	//console.log(result);
       	createSlideshow(result);
-
       	// createSlideshow(result);
       }
       
       // addSearchResult(result);
     };
+    startSlideshow();
+    collapseSearchBar();
+    returnSearchBar();
     
     // You must choose how to process the data that returns from the AJAX request
     // and figure out how to display it on the page from here on out.
@@ -47,11 +49,34 @@ function search(event) {
 var newImages = [];
 	var createSlideshow = function(result) {
 		var newArray = newImages.push(result);
-
+		console.log(newImages);
 	}
+
+var counter = 0;
+
 var startSlideshow = function() {
-	
+	setInterval(changeImage, 4000);
+	if (counter > newImages.length) {
+		return;
+	}
 }
+
+var changeImage = function() {
+	$("#slide").attr("src", newImages[counter]);
+	console.log(counter);
+	counter++;
+}
+
+var collapseSearchBar = function() {
+	$('#search-form').fadeOut(); 
+}
+
+var returnSearchBar = function() {
+	$('#slide').on('click', function() {
+		$('#search-form').fadeIn();
+	})
+}
+
 // // Clear previous search results.
 function clearSearchResults() {
   $("#results").html("");
