@@ -29,16 +29,20 @@ var imgResults = [];
 
 	    for (var i = 0; i < results.length; i++) {
 	      var result = results[i].data;
-	      if (result.thumbnail && result.thumbnail !== 'self') {
+	      console.log(result.preview);
+	      if (result.preview !== undefined) {
 	      	imgResults.push(result);
 	      };
 	    }; 
-	    $('#results').html(initializeCarousel);
-	    for (var i = 0; i < imgResults.length; i++) {
-	    	
-	    	addSearchResult(imgResults[i], i);
-	    }
-	    imgResults = [];
+	    if (imgResults.length === 0) {
+	    	$('#results').html('<h3>No images results</h3>');
+	    } else {
+		    $('#results').html(initializeCarousel);
+		    for (var i = 0; i < imgResults.length; i++) {
+		    	addSearchResult(imgResults[i], i);
+		    }
+		    imgResults = [];
+		};
 	    // You must choose how to process the data that returns from the AJAX request
 	    // and figure out how to display it on the page from here on out.
 	  }).always(function() {
@@ -61,7 +65,7 @@ var imgResults = [];
 		};
 
 	  var img = document.createElement('img');
-	  img.src = result.url;
+	  img.src = result.preview.images[0].source.url;
 
 	  $(carouselItem).append(img);
 	  console.log(carouselItem)
