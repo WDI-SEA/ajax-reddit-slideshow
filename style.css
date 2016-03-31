@@ -19,11 +19,12 @@ input,select{vertical-align:middle}
 
 body {
   
+  background-color: black;
 }
 
 input[type=submit] {
   background-color: #333333;
-  display: inline-block;
+  /*display: inline-block;*/
   border: 1px solid #333333;
   border-radius: 5px;
   font-size: 14px;
@@ -36,8 +37,8 @@ input[type=submit] {
 }
 
 input[type=button] {
+  display: block;
   background-color: #333333;
-  display: inline-block;
   border: 1px solid #333333;
   border-radius: 5px;
   font-size: 14px;
@@ -65,45 +66,46 @@ input[type=text] {
 }
 
 @keyframes fadeout {
-  from {opacity: 0;}
-  to { opacity: 1; }
+  from {opacity: 1;}
+  to { opacity: 0; }
 }
 
-img {
-  max-width: 100%
-}
 
 #container {
-  position: relative;
+ /* position: relative;*/
   width: 960px;
+  margin: 0 auto;
+  margin-top: 50px;
 
 }
 
 #myForm {
-  position: absolute;
-  width: 400px;
-  left: 550px;
-  top: 50px;
+  width: 280px;
+  margin: 0 auto;
 }
 
 #stop-slides {
-  position: absolute;
-  left: 640px;
-  top: 620px;
+ margin: 0 auto;
+ margin-top: 15px;
 }
 
-#photoframe {
-/*  background-color: #000000;*/
-  position: absolute;
-  max-width: 475px;
-  max-height: 475px;
+#photo-div {
+  
+  background-color: #000000;
+  margin-top: 20px;
   width: 500px;
   height: 500px;
-  left: 425px;
-  top: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
+#photo-div img {
+  
+  max-height: 100%;
+  animation: fadein 2s;
 
+}
 /*#photoframe {*/
   /*background-color: #000000;*/
 /*  position: absolute;
@@ -114,14 +116,10 @@ img {
   top: 100px;
 }*/
 
-#slide {
 
-}
 
-.animate {
-  animation: ease-in-out 2s;
-}
 
-.fade-out {
+
+/*.fade-out {
   animation: fadeout 1s;
-}
+}*/

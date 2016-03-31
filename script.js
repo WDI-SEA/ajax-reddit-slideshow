@@ -63,31 +63,51 @@ $('#myForm').submit(function (event) {
 
   var input = $('#query');
   var userText = input.val();
-  $.get('https://www.reddit.com/search.json', {
-    q: userText,
-    nsfw: "no"
-  }).done(function (response) {
+var searchStr = userText + ' nsfw:no site:i.imgur.com';
+ 
+   
+    console.log('Starting search for ' + searchStr);
+    $.get('https://www.reddit.com/search.json', {q: searchStr, limit: 100}).done(function(response){
     console.log(response);
 
-    var results = response.data.children
-    for (i = 0; i < results.length; i++) {
-      var redditData = results[i].data;
-      if (redditData.domain === "i.imgur.com" && redditData.url) {
-        imageArray.push(redditData.url);
-      }
-      console.log(imageArray);
+    // var results = response.data.children
+    // var redditData = results[i].data;
 
-    }
+    response.data.children.filter(function (result) {
+      if (result.data.preview && result.data.preview.images[0].source.url) {
+         imageArray.push(result.data.preview.images[0].source.url);
+        console.log(imageArray);
+        //return true;
+      }
+ 
+      
+ 
+     });
   triggerTimer();
+  $('#query').val("");
   });
-});
+
+  });
+ 
+
+
+
+  //   var results = response.data.children
+  //   for (i = 0; i < results.length; i++) {
+  //     var redditData = results[i].data;
+  //     if (redditData.domain === "i.imgur.com" && redditData.url) {
+  //       imageArray.push(redditData.url);
+  //     }
+  //     console.log(imageArray);
+
+
 
 function clearSearchResults() {
   $("#results").html("");
   $('#photo-div').html(""); 
   $('#myForm').show();
   imageArray = [];
-  $('#query').html("");
+  
 }
 
 $('#submit')
@@ -99,6 +119,7 @@ $('#submit')
 $('#stop-slides').click(function() {
   console.log('stop click');
   stop();
+  $('#stop-slides').hide();
   clearSearchResults();
 });
 
@@ -108,7 +129,7 @@ function flashImage() {
     if ($('#photo-div').html()) {
       $('#photo-div').html("");
     }
-    var html = '<img class="animate" src="' + imageArray[counter] + '"/>'; 
+    var html = '<img src="' + imageArray[counter] + '"/>'; 
     $('#photo-div').append(html); 
     if (counter >= (imageArray.length-1)) {
       stop();
