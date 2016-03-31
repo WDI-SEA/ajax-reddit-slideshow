@@ -7,6 +7,9 @@ function search(event) {
   // Stop the form from changing the page.
   event.preventDefault();
 
+    alert("You just did a search!");
+
+
   clearSearchResults();
 
 
@@ -28,7 +31,12 @@ function search(event) {
       var result = results[i].data
       addSearchResult(result)
 
-      if(result === " ")
+    $( "#prev_image" ).click(function(){
+       prev();
+    });
+    $( "#next_image" ).click(function(){
+       next();
+    });
 
     }
 
@@ -54,7 +62,10 @@ var image = document.createElement("img");
 
   $('#images').append(image);
 
+
 }
+
+
 
 
 
