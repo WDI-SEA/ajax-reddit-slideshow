@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
-	$("#Go_Button").on('click', search);
-	var invalidEntries = 0;
+	$("#Go_Button").on('click', search).done;
 	var imageArray = [];
 
 	function search(event) {
@@ -29,9 +28,30 @@ $(document).ready(function() {
 	    addSearchResult(result);
 	    console.log(result);
     }
- 		});
-	}
+ 		})
+ 		//trying to do a hide function after the search function finsihes
+ 		// .done(function(){
+ 		// 	$('#form').hide()
+ 		// 	$("#Go_Button").on ('click', (function(){
+   //  		$("p").toggle();
+			// 	});
+ 		// };
+	};
+	
+	//trying to alternate images
+	// var nIntervId;
+ 
+ // 	function changeImage() {
+ //  nIntervId = setInterval(flashImage, 3000);
+ //  }
+
+	// function flashImage() {
+ //  var oElem = document.getElementById("images");
+ //      oElem.src = oElem.src == "result" ? "result" : "result";
+ //    }
 });
+
+
 
  var image = $('#query').val();
 function addSearchResult(result) {
@@ -39,14 +59,28 @@ function addSearchResult(result) {
 	$('#images').append(pictures);
 
 }
-// $("#Go_Button").click(function(){
-//  		$("#h1").hide();
-//     $('#p').hide();
-//     $('#Go_Button').hide();
-//     $('#query').hide();
+
+//trying to add another click function to hide elements
+// $(".button").click(function(){
+// 	$('h1').css.hide();
+ 		// $("#h1").hide();
+   //  $('#p').hide();
+   //  $('#Go_Button').hide();
+   //  $('#query').hide();
 
 // $("#show").click(function(){
 //     $("p").show();
 // });
 
+
+//trying to find a way to alternate images using interval:
+//  var nIntervId;
  
+//  function changeImage() {
+//   nIntervId = setInterval(flashImage, 3000);
+//   }
+
+// function flashImage() {
+//       var oElem = document.getElementById("images");
+//       oElem.src = oElem.src == "result" ? "result" : "result";
+//     }
