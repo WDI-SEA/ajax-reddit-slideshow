@@ -1,4 +1,23 @@
+body {
+	margin: 0 auto;
+	text-align: center;
+	font-family: 'Domine', serif;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: #fffdab;
+}
 
+h1 {
+	font-size: 40px;
+	text-align: center;
+/*	font-weight: bold;*/
+	font-family: 'Monofett', cursive;
+}
+
+input {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
 
 img {
 	width: 600px;
