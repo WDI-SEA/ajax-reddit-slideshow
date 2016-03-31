@@ -18,7 +18,9 @@ function search(event) {
 
 
   $.get('https://www.reddit.com/search.json', {
-    q: userQuery
+    q: userQuery,
+    limit: 100
+    // nsfw:no
   }).done(function(response) {
     console.log(response);
   
@@ -82,6 +84,7 @@ if(result.data.preview && result.data.preview.images[0].source.url) {
 
 }
 
+//to grab from more pages: see Bonus API documentt
 
 //TO BE COMPLETED
 // loading image while AJAX pulls from
