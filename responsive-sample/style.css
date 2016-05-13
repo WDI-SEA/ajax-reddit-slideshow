@@ -1,0 +1,15 @@
+p {
+  color: yellow;
+}
+
+h1, h2, p {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  img{
+    width: 25%;
+  }
+}
