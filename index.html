@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Searchify</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.theme.min.css">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<h1>The Searchifier</h1>
+<h3>Search Reddit for images that interest you!</h3>
+<h3>Click "searchify" & wait 5 seconds to start slideshow</h3>
+
+<div id = "container">
+  <form id="search-form">
+    <input type="text" id="query" placeholder="cats">
+      <br/>
+    <input type="submit" id="submit" value="SEARCHIFY">
+  </form>
+
+  <!-- loading stuff
+   --><!-- <div id="dvLoading"></div>
+   -->
+
+  <div id="slideshow">
+    <div id="slide-show"></div>
+    <input type="button" id="stop-slides" value="Stop">
+</div> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

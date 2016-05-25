@@ -1,0 +1,27 @@
+/*#dvLoading{
+  background:#000 url(images/loader.gif) no-repeat center center;
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  margin: -25px 0 0 -25px;
+}
+*/
+
+/*loading stuff*/
+
+body {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  background: gray;
+  bacgkround-image: url("../escalator.jpeg");
+}
+
+#slideshow{
+
+}
