@@ -20,10 +20,10 @@ Reddit sometimes contains some offensive images be careful with your search term
 
 ####Page should load with
 
-* Some sort of title
-* A short description telling the user what to do
-* A blank text field
-* A Button ("start" or "go" or "search")
+1. title
+2. A short description telling the user what to do
+3. A blank text field
+4. A Button ("start" or "go" or "search")
 
 ####When the user enters a search term and presses enter
 
@@ -32,7 +32,7 @@ Reddit sometimes contains some offensive images be careful with your search term
 * Fetch related posts from reddit (with ajax)
 * Display animation / slideshow of images (jQuery)
 * Show a button to stop / reset the animation
-* Repeat animation until use clicks "stop"
+* Repeat animation until user clicks "stop"
 
 ####When the user clicks the "stop" button
 
