@@ -1,0 +1,70 @@
+body {
+	background-color: black;
+	text-align: center;
+}
+
+img {
+	height: 100%;
+	margin: 0 auto;
+	object-fit: contain;
+}
+form {
+	display:inline;
+}
+
+#div_image {
+	height: 70%;
+	width: 100%;
+	position: absolute;
+	top: 5%;
+	margin: 0 auto;
+}
+
+#div_info {
+	color: white;
+	font-size: 25px;
+	padding-top: 10%;
+	line-height: 40px;
+}
+
+#div_bottom {
+	height: 15%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	margin: 0 auto;
+}
+
+#input_search {
+	height: 25px;
+	width: 200px;
+	font-size: 25px;
+}
+
+#input_play {
+	font-size: 20px;
+	color: white;
+	background-color: black;
+	height: 29px;
+}
+
+#input_stop {
+	font-size: 20px;
+	font-weight: bolder;
+	color: white;
+	background-color: black;
+	height: 32px;
+}
+
+#form_stop {
+	display: none;
+}
+
+#form_pause {
+	display: none;
+	font-size: 20px;
+	font-weight: bolder;
+	color: white;
+	background-color: black;
+	height: 32px;
+}
