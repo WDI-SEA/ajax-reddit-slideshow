@@ -1,0 +1,58 @@
+
+
+body{
+  background-color: black;
+}
+
+#container {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+h1 {
+  color: white;
+  text-align: center
+}
+
+#inPut{
+  margin: 15px;
+  text-align: center
+}
+
+#images{
+  width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+img {
+ height: 100%;
+}
+
+#searchButton {
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #69D2E7;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-left: 5px;
+  color: white;
+}
+
+#stop {
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #69D2E7;
+  text-align: center;
+  font-size: 16px;
+  margin: 0 auto;
+  margin-top: 15px;
+  color: white;
+  display: block;
+}
