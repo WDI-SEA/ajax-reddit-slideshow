@@ -38,18 +38,18 @@ $(document).ready(function() {
 
   function showImage(images) {
     images.forEach(function(url) {
-      $('.imageReturn').html('<div><img src="'+ url +'"></div>');
+     $('.imageReturn').append('<div><img src="'+ url +'"></div>');
     })
+
+    $('.imageReturn > div:gt(0)').hide();
+
     setInterval(function() {
-      $('.imageReturn > div')
+      $('.imageReturn > div:first')
         .fadeOut(1000)
         .next()
-        .fadeIn(2000)
+        .fadeIn(1000)
         .end()
         .append('.imageReturn');
     }, 3000);
   }
-
-
-
 });
