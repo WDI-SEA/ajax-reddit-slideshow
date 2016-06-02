@@ -5,6 +5,7 @@ $(document).ready(function() {
 //    "Access-Control-Allow-Origin": true
 //  }
 // });
+$('#exit').hide();
 // Click function
 $('#startSearch').click(function() {
   var query = $('#userInput').val().trim();
@@ -13,27 +14,43 @@ $('#startSearch').click(function() {
     // Fetch related posts from reddit with ajax
     // q: $('#userInput').val()
   }).done(function(data) {
+    $('#header').fadeOut(300);
+    $('#exit').show(20000);
     var finalPicturesArray = getPicturesArray(data);
     // console.log(finalPicturesArray);
-    startShow(finalPicturesArray, intervalID);
-    pictureFormat();
+    startShow(finalPicturesArray);
+  }).fail(function(data) {
   }).always(function(data) {
-  });
+  })
 });
   //Display Images in an animation slideshow
 var myInterval;
 var intervalID = 0;
 // console.log(intervalID);
 
-function startShow(pictures, id) {
-  myInterval = setInterval(runShow(pictures, id), 3000);
+function startShow(pictures) {
+  myInterval = setInterval(function() {
+    runShow(pictures);
+    // pictureFormat();
+    intervalID++;
+  }, 3000);
   console.log("test");
 }
+$('#exit').click(function() {
+  clearInterval(myInterval);
+  myInterval = null;
+  $('#userInput').val("");
+  $('img').hide();
+  $('#exit').hide();
+  $('#header').slideDown(300);
 
-function runShow(pictures, id) {
-  $('#pictureResults').html('<img src="' + pictures[id] + '">');
-  intervalID++;
-  console.log(pictures[id]);
+});
+
+
+function runShow(pictures) {
+  // $('#pictureResults').html('<img src="' + pictures[intervalID] + '">');
+  $('#pictureResults').attr('src', pictures[intervalID]);
+  console.log(pictures[intervalID]);
   console.log(intervalID);
 }
 
