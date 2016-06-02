@@ -39,7 +39,7 @@ $('document').ready(function() {
       q: searchString
     }).done(function(data) {
       // console.log('success!');
-      // console.log(data);
+      // console.log(JSON.stringify(data));
       findPics(data);
     }).fail(function(data) {
       // console.log('failed!');
