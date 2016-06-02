@@ -1,0 +1,25 @@
+html{
+  height: 100%;
+  }
+
+body{
+  height: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+
+#photo {
+  height: 400px;
+  width: 800px;
+  outline: 1px solid black;
+}
+
+img {
+  height: 400px;
+}
+
+.hide {
+  display: none;
+}

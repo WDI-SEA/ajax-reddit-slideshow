@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" type="text/css" href="css/ajaxSlideshow.css">
+  <title>AJAX Reddit Slideshow</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div id="container">
+    <div id="hide">
+      <h1>Reddit Slideshow</h1>
+      <h2>Enter search term to find related pictures</h2>
+      <form>
+       <input type="text" id="input" value="Enter Text Here" >
+       <button type="submit" id="search">Search</button>
+      </form>
+    </div>
+  <div id="photo"></div>
+  <button type="reset" id="reset">Reset</button>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/ajaxSlideshow.js"></script>
 </body>
 </html>
