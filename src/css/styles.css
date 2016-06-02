@@ -1,0 +1,30 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+  color: grey;
+  margin-top: 200px;
+  background-color: #246;
+}
+.hidden {
+  visibility: hidden;
+}
+.shown {
+  visibility: visible;
+}
+button {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: grey;
+}
+
+input {
+  background-color: #246;
+  border: 0px solid;
+  outline: none;
+}
+
+#slides {
+  width:600px;
+  height:400px;
+}

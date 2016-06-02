@@ -3,9 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>GIPHY slide show</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <h1 id="title">GIPHY slide show (getting images from reddit is being dumb)</h1>
+
+  <div id="description"><p>Welcome to the Giphy slide show, enter your search term and we will respond with pictures that match that keyword.</p></div>
+
+  <form id="searchForm">
+    <input id="inputForm" type="text" placeholder="Search Photos">
+    <button id="searchButton">Search!</button>
+  </form>
+
+  <button id="stopButton" class="hidden">Stop</button>
+
+  <div id='searchReturn'>
+    <img src="" id="slides">
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+
 </body>
 </html>
