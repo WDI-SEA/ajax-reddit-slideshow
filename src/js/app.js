@@ -21,7 +21,7 @@ $('document').ready(function() {
       }
         // console.log(urlArray[index]);
       $('#results').html('<img src="' + urlArray[index] + '">');
-    }, 5000);
+    }, 1000);
   };
 
   $('#textForSearch').keyup(function(event) {
