@@ -1,0 +1,33 @@
+#slide-cont {
+  /*display: none;*/
+  margin: 1px solid red;
+  width: 800px;
+  margin: 0 auto;
+}
+
+#slides {
+  /*display: none;*/
+}
+
+.center {
+  border: 1px solid red;
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.center input {
+  width: 85%;
+  display: inline;
+}
+
+.center img {
+  width: 300px;
+  float: right;
+  margin-bottom: -10px;
+}
+
+.img-container {
+  border: 1px solid red;
+}
+

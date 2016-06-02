@@ -3,9 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/imagebox.css">
+  <link rel="stylesheet" type="text/css" href="css/imgbox.css">
+  <title>Reddit</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+
+  <div class="container">
+    <div class="center">
+      <div class="img-container"><img src="images/cat.png" alt=""></div>
+      <form>
+        <input class="form-control" type="text" id="inputform" text="search" value="">
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <div id='slide-cont'>
+    <div id="slides">
+      <img src="http://placehold.it/940x528">
+      <img src="http://placehold.it/940x528">
+      <img src="http://placehold.it/940x528">
+      <img src="http://placehold.it/940x528">
+      <img src="http://placehold.it/940x528">
+    </div>
+  </div>
+
+
 </body>
+<script type="text/javascript" src="js/app.js"></script>
+<script src="js/jquery.slides.min.js"></script>
 </html>
