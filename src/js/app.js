@@ -10,7 +10,8 @@ $(function() {
   })
 
   $('#back-btn').click(function() {
-    // $('#set-images').carousel(1);
+    location.reload();
+    console.log("reloaded");
   })
 })
 
