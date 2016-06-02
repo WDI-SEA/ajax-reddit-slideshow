@@ -1,0 +1,22 @@
+* {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#results {
+  width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: black;
+}
+
+img {
+  max-width: 100%
+}
+
+button:hover {
+  background-color: yellow;
+}
