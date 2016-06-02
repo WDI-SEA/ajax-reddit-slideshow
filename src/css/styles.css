@@ -1,0 +1,20 @@
+.limiter {
+  margin: 0 auto;
+}
+
+.center {
+  width: 600px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.center input {
+  width: 85%;
+  display: inline;
+}
+
+.center img {
+  width: 300px;
+  float: right;
+  margin-bottom: -10px;
+}
