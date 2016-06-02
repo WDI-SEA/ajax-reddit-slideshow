@@ -26,7 +26,7 @@ $('document').ready(function(){
         index = 0;
     }
     console.log(urlArray[index]);   // set new news item into the ticker
-    $('#results').html('<img src="' + urlArray[index] + '"></img>');
+    $('#results').html('<img src="' + urlArray[index] + '">');
 }, 5000);
   };
 

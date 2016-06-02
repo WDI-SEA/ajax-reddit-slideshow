@@ -1,6 +1,15 @@
 * {
   text-align: center;
+  background-color: black;
+  color: white;
 }
-#results {
 
+#results {
+  width: 400px;
+  margin: 0 auto;
+  background-color: black;
+}
+
+img {
+  max-width: 100%
 }
