@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Your Reddit Slideshow</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <h1>Your Reddit Slideshow</h1>
+  <div id="header">
+    <h2>Enter a topic and get a picture show!</h2>
+    <input type="text" id="userInput" placeholder="Enter Topic">
+    <button type="button" id="startSearch">Get my Pics!</button>
+  </div>
+  <button type="button" id="exit">Please, no more!</button>
+  <div class="imgContainer">
+    <img src="" id="pictureResults">
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
