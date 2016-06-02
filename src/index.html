@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>rise - reddit image search engine</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div id="header">
+    <h1>rise - reddit image search engine</h1>
+  <!-- <button type="button" id="testButton">Button</button> -->
+  </div>
+  <div id="mainPage">
+    <div>
+      <div id="rules">
+        <h3>rise is a search engine for images from the website reddit.com</h3>
+        <p>Type what you'd like to search for into the search field, press enter, and enjoy a slideshow of your favorite cat images, or whatever... Weirdo...</p>
+      </div>
+      <form>
+        <input id="searchInput" type="text" placeholder="What would you like to search for?">
+        <button id="searchSubmit" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
