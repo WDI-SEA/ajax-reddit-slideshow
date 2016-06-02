@@ -38,8 +38,16 @@ $(document).ready(function() {
 
   function showImage(images) {
     images.forEach(function(url) {
-      $('.imageReturn').append('<img src="'+ url +'">');
+      $('.imageReturn').html('<div><img src="'+ url +'"></div>');
     })
+    setInterval(function() {
+      $('.imageReturn > div')
+        .fadeOut(1000)
+        .next()
+        .fadeIn(2000)
+        .end()
+        .append('.imageReturn');
+    }, 3000);
   }
 
 
