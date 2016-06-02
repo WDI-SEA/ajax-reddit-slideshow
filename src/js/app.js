@@ -46,16 +46,16 @@ function intoArray(data) {
 
 function doStuff(images) {
   images.forEach(function(url) {
-    $('#slideshow').html('<div><img src="'+url+'"></div>');
+    $('#slideshow').append('<div><img src="'+url+'"></div>');
   })
   $("#slideshow > div:gt(0)").hide();
 
 setInterval(function() {
   $('#slideshow > div:first')
     .fadeOut(1000)
-    // .next()
+    .next()
     .fadeIn(1000)
-    // .end()
+    .end()
     .appendTo('#slideshow');
 },  3000);
 }
