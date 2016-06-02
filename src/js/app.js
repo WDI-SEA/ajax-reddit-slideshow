@@ -15,19 +15,26 @@ $('#startSearch').click(function() {
   }).done(function(data) {
     var finalPicturesArray = getPicturesArray(data);
     // console.log(finalPicturesArray);
-    runShow(finalPicturesArray);
+    startShow(finalPicturesArray, intervalID);
+    pictureFormat();
   }).always(function(data) {
   });
 });
   //Display Images in an animation slideshow
-
-// var intervalID = 0;
+var myInterval;
+var intervalID = 0;
 // console.log(intervalID);
 
-function runShow(pictures) {
-//   intervalID = setInterval(
-  $('#pictureResults').html('<img src="' + pictures[0] + '">');
-//     5000);
+function startShow(pictures, id) {
+  myInterval = setInterval(runShow(pictures, id), 3000);
+  console.log("test");
+}
+
+function runShow(pictures, id) {
+  $('#pictureResults').html('<img src="' + pictures[id] + '">');
+  intervalID++;
+  console.log(pictures[id]);
+  console.log(intervalID);
 }
 
 function getPicturesArray(data) {
@@ -51,7 +58,10 @@ function getPicturesArray(data) {
   return showArray;
 } // end of getPicturesArray
 
-
+// add pic formatting
+function pictureFormat() {
+  $('img').addClass('imageStyle');
+}
 // Stop an interval with clear interval
 
 }); // end of doc ready
