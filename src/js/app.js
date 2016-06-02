@@ -7,14 +7,30 @@ $(document).ready(function() {
 // });
 // Click function
 $('#startSearch').click(function() {
-  console.log('clicked');
+  var query = $('#userInput').val().trim();
+  $.get('https://www.reddit.com/search.json', {
+    q: query,
+    // Fetch related posts from reddit with ajax
+    // q: $('#userInput').val()
+  }).done(function(data) {
+    var finalPicturesArray = getPicturesArray(data);
+    // console.log(finalPicturesArray);
+    runShow(finalPicturesArray);
+  }).always(function(data) {
+  });
 });
+  //Display Images in an animation slideshow
 
-$.get('https://www.reddit.com/search.json', {
-  q: 'cats',
-  // Fetch related posts from reddit with ajax
-  // q: $('#userInput').val()
-}).done(function(data) {
+// var intervalID = 0;
+// console.log(intervalID);
+
+function runShow(pictures) {
+//   intervalID = setInterval(
+  $('#pictureResults').html('<img src="' + pictures[0] + '">');
+//     5000);
+}
+
+function getPicturesArray(data) {
   var childrenArray = data.data.children;
   var showArray = [];
   // loop through childrenArray to get images array
@@ -22,7 +38,7 @@ $.get('https://www.reddit.com/search.json', {
     // Filter out preview object to only those that have an image prop
     var previewObject = childrenArray[i].data.preview;
     var dataObject = childrenArray[i].data;
-    console.log(previewObject);
+    // console.log(previewObject);
     if (dataObject.hasOwnProperty('preview')
       && previewObject.hasOwnProperty('images')) {
       var imageArray = childrenArray[i].data.preview.images;
@@ -32,13 +48,10 @@ $.get('https://www.reddit.com/search.json', {
       }
     }
   }
-  console.log(showArray)
-  //   = data.children
-  // $('#pictureResults').html("<img src='https://i.redditmedia.com/m9iPnqVVMghlSC4bFUjHSft2Ltuq6d0Kc1gtPxrFOfE.jpg?s=08e2a271ef2d9108df62ba950b1448aa'>");
-}).always(function(data) {
-  // console.log(data);
-});
+  return showArray;
+} // end of getPicturesArray
 
 
+// Stop an interval with clear interval
 
 }); // end of doc ready
