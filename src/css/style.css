@@ -1,0 +1,47 @@
+body {
+
+	background-color: darkgrey;
+	text-align: center;
+
+}
+
+#mainDiv {
+
+	margin-top: 200px;
+
+}
+
+h1 {
+
+}
+
+#textDiv {
+
+}
+
+form {
+
+}
+
+#formId {
+
+}
+
+#textInput {
+
+}
+
+#buttonId {
+
+}
+
+.stop {
+
+	display: none;
+
+}
+
+#image{
+	width: 500px;
+	height: 300px;
+}
