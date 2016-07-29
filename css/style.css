@@ -1,0 +1,13 @@
+body {
+  background-color: #333333;
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#btn {
+  margin: 20px;
+}
