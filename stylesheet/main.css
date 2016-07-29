@@ -1,0 +1,32 @@
+body{
+  background-color: blue;
+}
+
+form{
+  text-align: center;
+}
+
+button{
+  width: 200px;
+  height: 75px;
+  /*text-align: center;did not center*/
+  /*margin: 0 auto; did not center*/
+
+
+}
+
+#search-box{
+  width: 300px;
+  height: 50px;
+  /*text-align: center;did not center*/
+  /*margin: 0 auto; did not center*/
+  font-size: 40px;
+}
+
+h1{
+  text-align: center;
+}
+
+#stop-button{
+  text-align: center;
+}
