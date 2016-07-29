@@ -1,0 +1,87 @@
+.slideme_container {
+	position: relative;
+}
+
+.slideme {
+	padding: 0;
+	position: relative;
+	margin: 0;
+	width: 100%;
+}
+
+.slideme > * {
+	display: none;
+	height: 100%;
+	list-style: none outside;
+	left: 0;
+	margin: 0;
+	opacity: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.slideme > *:first-child {
+	display: block;
+	opacity: 1;
+	position: relative;
+}
+
+.slideme_container .slideme > *:first-child {
+	display: none;
+	opacity: 0;
+	position: absolute;
+}
+
+.slideme .itemsForSlide {
+	float: left;
+	display: inline;
+}
+
+.resizable .slideme {
+	overflow: hidden;
+}
+
+.slideme_container .slideme > .current, .slideme_container .slideme > .next {
+	display: block;
+	position: absolute;
+	opacity: 1;
+	z-index: 50;
+}
+
+.slideme-slide .slideme > .current, .slideme-page .slideme > .current{
+	z-index: 100;
+}
+
+.slideme-slide .slideme > .next, .slideme-page .slideme > .next {
+	z-index: 200;
+}
+
+.slideme-fade .slideme > .current {
+	z-index: 200;
+}
+
+.slideme-fade .slideme > .next {
+	z-index: 100;
+}
+
+.slideme-slide .slideme > *, .slideme-page .slideme > * {
+	-webkit-transition: left .5s ease-in-out;
+	-moz-transition: left .5s ease-in-out;
+	-ms-transition: left .5s ease-in-out;
+	-o-transition: left .5s ease-in-out;
+	transition: left .5s ease-in-out
+}
+
+.slideme-fade .slideme > * {
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-ms-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out
+}
+
+.workingSlideme .slideme {
+	overflow: hidden!important;
+}
