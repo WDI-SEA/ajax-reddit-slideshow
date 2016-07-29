@@ -1,0 +1,41 @@
+#container{
+   width:800px;
+   margin:0 auto;
+   text-align: center;
+   padding-left: 20px;
+}
+
+#search{
+   width:782px;
+   padding:10px;
+   font-family: Verdana;
+   font-size: 22px;
+}
+
+#button{
+   display: block;
+   width: 100px;
+   height:30px;
+   border:solid #366FEB 1px;
+   background: #91B2FA;
+   font-family: Verdana;
+   font-size: 18px;
+}
+
+li:hover{
+   background: #A592E8;
+}
+
+a{
+   text-decoration: none;
+   font-size: 18px;
+}
+h1 {
+   text-align: center;
+}
+body {
+   font-family: Verdana;
+}
+ul {
+    display:none;
+}
