@@ -1,0 +1,14 @@
+body{
+  color:white;
+  margin:0 auto;
+  text-align: center;
+  font-family: "Futura";
+  background-color: black;
+}
+#pic{
+  height:600px;
+  width:800px;
+  margin: 0 auto;
+  border: 1px solid black;
+
+}
