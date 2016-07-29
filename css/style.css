@@ -1,0 +1,22 @@
+body{
+	background: url("../img/pine.jpg");
+	margin: 0 align;
+}
+div{
+	background: rgba(200, 200, 200, 01);
+	height: 300px;
+	width: 400px;
+	margin: 10px
+	color:#e8e8e8;
+	font-size: 20px;
+	padding:20px;
+}
+#display{
+	min-width: 100px
+	min-height: 100px;
+	background: rgba(100, 100, 200, 01);
+}
+/*div:hover{
+	background: rgba(200, 200, 200, 0.5);
+}
+*/
