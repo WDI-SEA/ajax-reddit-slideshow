@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
-</head>
-<body>
-  <h1>Hello Front-End</h1>
-</body>
+<html>
+	<head>
+		<title>Reddit Photoshoot</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css" >
+	</head>
+	<body>
+		<div class='open'>
+			<h1>Searching For Wet Money &#128293; Pics</h1>
+		</div>
+			
+			<div id="redditPics"></div>
+
+		<div class='open'>
+			<p>Find All Dem Reddit Pics You've Been Wanting. Search and Enjoy!</p>
+			<br><br>
+			
+
+			<form id="searchBar">
+				<input type="text" name="search" placeholder="What's your fancy?" id="input">
+				<button type="submit" id="submitbutton">Search</button>
+			</form>
+		</div>
+
+		<button type="reset" id="resetButton">I wanna do it again!</button>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	</body>
 </html>
