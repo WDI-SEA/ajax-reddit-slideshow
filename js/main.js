@@ -10,47 +10,53 @@ Page.prototype = {
 
 }
 
-function Slideshow() {
-
+function Slideshow(imageURLs) {
+	this.shlideshowContainer = $(".slide-show-wrapper");
+	this.imageURLs = imageURLs;
 }
 Slideshow.prototype = {
+	appendImage: function(parentEl, imageURL) {
+		parentEl.append("<img>")
+
+	},
+	removeImage: function() {
+
+	}
 
 }
 
 function Form() {
-	// //form input
-	// this.searchTerm = "";
 	//submit button
 	this.submitButton = $(".submit-button");
 	this.submitButton.click(function(event) {
 		event.preventDefault();
-		this.getImagesFromData();
+		this.getImageURLsFromData(function(imageURLs) {
+			var slideshow = new Slideshow(imageURLs);
+		});
 	}.bind(this));
-	//data
-	this.images = [];
 }
 Form.prototype = {
-	submitSearchTerm: function(){
-		this.searchTerm = $(".form-input").val();
-		return this.searchTerm;
+	_getSearchTerm: function(){
+		return $(".form-input").val();
 	},
-	getDataFromURL: function(url) {
-		this.searchTerm = this.submitSearchTerm();
+	_getDataFromURL: function(url, searchTerm, callback) {
 		$.get(url, {
-			q: this.searchTerm
+			q: searchTerm + " nsfw:no"
 		}).done(function(info) {
-			console.log(info.data.children)
-			this.postArray = info.data.children;
-			return this.postArray;
+			var posts = info.data.children;
+			callback(posts);
 		});
 	},
-	getImagesFromData: function() {
-		this.postArray = this.getDataFromURL("http://www.reddit.com/search.json");
-		console.log(this.postArray);
-		this.postArray.forEach(function(post){
-			if (post.data.preview) {
-				this.images.push(post.data.preview.images[0].source.url);
-			}
+	getImageURLsFromData: function(callback) {
+		var imageURLs = [];
+		var searchTerm = this._getSearchTerm();
+		this._getDataFromURL("http://www.reddit.com/search.json", searchTerm, function(posts){
+			posts.forEach(function(post) {
+				if(post.data.preview) {
+					imageURLs.push(post.data.preview.images[0].source.url);
+				} 
+			});
+			callback(imageURLs);
 		});
 	}
 }
