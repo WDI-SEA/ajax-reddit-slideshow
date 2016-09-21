@@ -1,11 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>Reddit Slideshow</title>
+
+	  <style>
+
+	  	body {
+	  		text-align: center;
+	  		background-color:#822630;
+	  	}
+	  	
+	  	img {
+	  		height:250px;
+	  		width:250px;
+	  		margin:10px;
+	  	}
+
+	  	ul {
+	  		max-width: 750px;
+	  		margin:20px 0 0 20%;
+	  	}
+
+	  	ul li {
+	  		list-style:none;
+	  		display:inline;
+	  		float:left;
+	  	}
+
+	  	img:hover {
+	  		height:300px;
+	  		width:300px;
+	  		border:5px solid black;
+	  		border-radius:30%;
+	  	}
+
+
+	  </style>
+
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+
+<!-- - - - - Header and Form Field - - - - - - - - - - - - -->
+
+
+	  <h1>Reddit Slide Show</h1>
+
+	<form>
+		<input type="text" placeholder="Pictures of what?" id="searchText">
+		<input type="button" value="Search!" id="searchButton">
+	</form>
+
+
+<!-- - - - - Slide Show - - - - - - - - - - - - - - -->
+
+
+	<ul class="slideShow bxslider">
+	<!--
+	<li><img src="#"></li>
+	<li><img src="#"></li>
+	<li><img src="#"></li>
+	<li><img src="#"></li>
+	-->
+	</ul>
+
+
+
+<!-- - -JavaScript Links Below This Line- - - - - - - -->
+
+	  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	  <script src="js/main.js"></script>
+
 </body>
 </html>
