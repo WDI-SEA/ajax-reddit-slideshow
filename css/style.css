@@ -1,0 +1,73 @@
+body {
+    background-image:url('../img/bg2.jpg');
+    background-position: top;
+}
+.container {
+	margin: 0 auto;
+	width: 700px;
+	text-align:center;
+	position:relative;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 2px;
+    padding-bottom:30px;
+	height:100%;
+	margin-top:40px;
+    color:white;
+}
+h1 {
+    font-size:55pt;
+    margin-bottom:25px;
+    margin-top:2px;
+    font-family: 'Courgette', sans serif;
+}
+.slideShow {
+    font-size:20pt;
+    text-transform:uppercase;
+    font-family: 'Quicksand', sans serif;
+}
+#slideShowImages {
+    height:320px;
+}
+
+#form {
+    margin-top:14px;
+}
+#searchButton {
+	background-color: #78909C; 
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius:5px;
+    background: rgba(255, 255, 255, 0.4);
+    font-family: 'Quicksand', sans serif;
+}
+#searchText {
+    font-size:25px;
+    width:300px;
+    padding: 8px 10px;
+    border: none;
+    color: white;
+    border-radius:5px;
+    background: rgba(255, 255, 255, 0.4);
+    font-family: 'Quicksand', sans serif;
+}
+#stopButton {
+    background-color: #78909C; 
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size:20px;
+    border-radius:5px;
+    background: rgba(255, 255, 255, .2);
+    font-family: 'Quicksand', sans serif;
+}
+ul {
+    list-style:none;
+}

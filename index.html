@@ -3,9 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Reddit Slideshow</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Quicksand|Trirong" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+	<div class="container">
+
+		<div class="heading">
+		<h1>Reddit Slideshow</h1>
+		</div>
+
+		<div class="slideShow">
+		<span id="searchReddit">
+		Search all of reddit:<br>
+		</span>
+			<form id="form" class="search">
+				<input type="text" id="searchText">
+				<input type="button" value="Go!" id="searchButton"></form>
+			</form>
+
+			<div id="slideShowImages">
+			</div>
+			<input type="button" value="Stop" id="stopButton"></form>
+		</div>
+
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
