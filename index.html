@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>reddit image search</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+<div id="container">
+  <div id="formDiv">
+  <form id="hideForm">
+    <input type="text" placeholder="Enter Search Name" id="searchText">
+    <br>
+    <button value="click to search" id="searchButton">Click to search</button>
+  </form>
+
+  </div>
+  <div id="results"></div>
+  <div id="slides">
+
+  </div>
+
+  <div id="stopDiv">
+    <button id="stopButton">STOP</button>
+  </div>
+
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/app2.js"></script>
+
 </body>
 </html>
