@@ -1,0 +1,62 @@
+body {
+	font-family: 'Oswald', sans-serif;
+	background-color: #cee3f8;
+}
+
+.image {
+	width: 400px;
+	padding: 10px 10px 40px 10px;
+	background-color: white;
+}
+
+.imageList {
+	list-style-type: none;
+}
+
+.navigation {
+	width: 100%;
+}
+
+.slidePosition {
+	display: inline;
+	display: inline-block;
+    font-size: 24px;
+}
+.container {
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.ssContainer {
+	width: 800px;
+	height: 300px;
+	margin: 0 auto;
+	display: table;
+}
+
+.ssImage {
+	display: block;
+}
+
+
+.previous, .next {
+	width: 40px;
+	display: inline;
+}
+
+
+.previousButton {
+	width: 40px;
+	display: inline;
+}
+
+.nextButton {
+	width: 40px;
+	padding-top: 20px;
+	display: inline;
+}
+
+.searchForm {
+	margin-bottom: 20px;
+}
