@@ -7,22 +7,38 @@ function Page() {
 	this.form = new Form();
 }
 Page.prototype = {
-
+	_hideHeader: function(header) {
+		header.style.css("visibility: hidden")
+	},
+	_showHeader: function(header) {
+		header.style.css("visibility: visible")
+	}
 }
 
 function Slideshow(imageURLs) {
-	this.shlideshowContainer = $(".slide-show-wrapper");
+	this.slideshowWrapper = $(".slideshow-wrapper");
+	this.slideshowImageEl = $(".slideshow-image");
 	this.imageURLs = imageURLs;
+	this.imageIndex = 0;
+	this._cycleThroughImages();
 }
 Slideshow.prototype = {
-	appendImage: function(parentEl, imageURL) {
-		parentEl.append("<img>")
-
+	_appendImage: function(parentEl, imageURL) {
+		parentEl.append("<img src='" + imageURL + "'/>");
 	},
-	removeImage: function() {
-
+	_removeImage: function(parentEl) {
+		parentEl.empty();
+	},
+	_cycleThroughImages: function() {
+		this.slideshowWrapper.css("visibility= 'visible'")
+		setInterval(function() {
+			this._removeImage(this.slideshowImageEl);
+			this._appendImage(this.slideshowImageEl, this.imageURLs[this.imageIndex]);
+			this.imageIndex++;
+			// use modulo for going in circles!
+			this.imageIndex = this.imageIndex % this.imageURLs.length;
+		}.bind(this), 3000);
 	}
-
 }
 
 function Form() {
@@ -30,7 +46,7 @@ function Form() {
 	this.submitButton = $(".submit-button");
 	this.submitButton.click(function(event) {
 		event.preventDefault();
-		this.getImageURLsFromData(function(imageURLs) {
+		this._getImageURLsFromData(function(imageURLs) {
 			var slideshow = new Slideshow(imageURLs);
 		});
 	}.bind(this));
@@ -47,7 +63,7 @@ Form.prototype = {
 			callback(posts);
 		});
 	},
-	getImageURLsFromData: function(callback) {
+	_getImageURLsFromData: function(callback) {
 		var imageURLs = [];
 		var searchTerm = this._getSearchTerm();
 		this._getDataFromURL("http://www.reddit.com/search.json", searchTerm, function(posts){
