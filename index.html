@@ -4,8 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hello Front-End</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+
+
+
+
+
+<div class="container">
+	<img src="../img/redditAlien.png" width="100px">
+	<h1>IMAGES FROM REDDIT</h1>
+
+<form class="searchForm">
+	<input type="text" id="searchText" placeholder="search here">
+	<input type="button" id="searchButton" value="click">
+	<input type="reset" id="resetButton" value="reset">
+</form>
+
+	<div class="ssContainer" id="ssContainer">
+		
+		<div class="navigation" id="navigation">
+			<!-- <div class="previous" id="previous"> -->
+				<img src="../img/previous.png" id="previousImage" class="previousButton">
+			<!-- </div> -->
+	
+			<div id="slidePosition" class="slidePosition"></div>
+
+			<!-- <div class="next" id="next"> -->
+				<img src="../img/next.png" id="nextImage" class="nextButton">
+			<!-- </div> -->
+		</div>
+
+		<div class="ssImage" id="ssImage">
+
+			<div id="welcome">GOOD AFTERNOON - SEARCH FOR SOMETHING ABOVE TO SEE ALL THE REDDIT IMAGES OF IT</div>
+
+			<ul id="imageList" class="imageList"></ul>
+
+		</div>
+
+
+		
+
+	</div>
+
+	
+
+
+
+</div>
+
+
+<!-- <ul id="imagesFromArray"></ul> -->
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/app.js"></script>
+
 </body>
 </html>
