@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: Arial;
+}
+
+/* HEADER */
+
+h1 {
+	margin-top: 20px;
+	font-size: 3em;
+}
+
+h2 {
+	margin: 10px 0 20px 0;
+}
+
+/* INPUTS */
+
+input#textBox, input#searchButton {
+	display: block;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+
+input#textBox {
+	padding: 20px 80px;
+}
+
+input#searchButton {
+	padding: 10px 30px;
+	margin-top: 20px;
+}
+
+/* SLIDESHOW */
+
+img.slideshowImg {
+	height: 400px;
+	margin-bottom: 20px;
+}
+
+button#stop {
+	font-size: 1.5em;
+	padding: 10px 30px;
+	margin: 20px 0;
+	display: none;
+}
+
+/* RELATED POSTS */
+
+section.relatedSection {
+	border: 3px solid black;
+	margin: 20px 0;
+	display: none;
+}
+
+h3 {
+	font-size: 2em;
+	margin: 20px 0;
+}
+
+p.related {
+	margin-bottom: 30px;
+}
