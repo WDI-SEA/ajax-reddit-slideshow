@@ -1,3 +1,15 @@
-/*.slideshow-wrapper {
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.slideshow-wrapper {
 	visibility: hidden;
-}*/
+}

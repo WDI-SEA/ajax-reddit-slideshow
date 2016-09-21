@@ -4,51 +4,73 @@
 
 function Page() {
 	this.headerContainer = $(".header-wrapper");
-	this.form = new Form();
+	this.form = new Form(this);
+	this.stopButton = $(".clear-slideshow");
+	this.stopButton.click(function() {
+		this._showHeader(this.headerContainer);
+		this._hideStopButton(this.stopButton);
+		console.log(this.form.slideshow);
+		this.form.slideshow._stopCyclingThroughImages();
+		this.form.slideshow.imageURLs = "";
+	}.bind(this));
 }
 Page.prototype = {
 	_hideHeader: function(header) {
-		header.style.css("visibility: hidden")
+		header.css("visibility", "hidden");
 	},
 	_showHeader: function(header) {
-		header.style.css("visibility: visible")
+		header.css("visibility", "visible");
+	},
+	_showStopButton: function(button) {
+		button.css("visibility", "visible");
+	},
+	_hideStopButton: function(button) {
+		button.css("visibility", "hidden");
 	}
 }
 
 function Slideshow(imageURLs) {
 	this.slideshowWrapper = $(".slideshow-wrapper");
-	this.slideshowImageEl = $(".slideshow-image");
+	this.slideshowImageEl = $("body");
 	this.imageURLs = imageURLs;
 	this.imageIndex = 0;
+	this.timer = null;
 	this._cycleThroughImages();
+
 }
 Slideshow.prototype = {
-	_appendImage: function(parentEl, imageURL) {
-		parentEl.append("<img src='" + imageURL + "'/>");
+	_appendImage: function(imageEl, imageURL) {
+		imageEl.css("background-image", "url(" + imageURL + ")");
 	},
-	_removeImage: function(parentEl) {
-		parentEl.empty();
+	_removeImage: function(imageEl) {
+		imageEl.css("background-image", "url(" + ")");
 	},
 	_cycleThroughImages: function() {
-		this.slideshowWrapper.css("visibility= 'visible'")
-		setInterval(function() {
-			this._removeImage(this.slideshowImageEl);
+		this.slideshowWrapper.css("visibility", "visible");
+		this.timer = setInterval(function() {
 			this._appendImage(this.slideshowImageEl, this.imageURLs[this.imageIndex]);
 			this.imageIndex++;
 			// use modulo for going in circles!
 			this.imageIndex = this.imageIndex % this.imageURLs.length;
 		}.bind(this), 3000);
+	},
+	_stopCyclingThroughImages: function() {
+		clearTimeout(this.timer);
+		this._removeImage(this.slideshowImageEl);
 	}
 }
 
-function Form() {
+function Form(page) {
 	//submit button
 	this.submitButton = $(".submit-button");
+	this.slideshow = null;
 	this.submitButton.click(function(event) {
 		event.preventDefault();
 		this._getImageURLsFromData(function(imageURLs) {
-			var slideshow = new Slideshow(imageURLs);
-		});
+			this.slideshow = new Slideshow(imageURLs);
+		}.bind(this));
+		page._hideHeader(page.headerContainer);
+		page._showStopButton(page.stopButton);
 	}.bind(this));
 }
 Form.prototype = {
