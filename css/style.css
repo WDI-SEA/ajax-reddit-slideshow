@@ -1,0 +1,62 @@
+body{
+	background-image: url("http://i.imgur.com/VRi7OWV.png");
+	background-color: black;
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+img{
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	margin-top: 0;
+}
+h1 {
+	font-family: 'Bowlby One SC', cursive;
+	color: white;
+	font-size: 45px;
+	text-align: center;
+}
+p {
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 20px;
+	color: white;
+}
+div {
+	margin: 0 auto;
+	height: 150px;
+	padding-right: 50px;
+}
+#stopButton {
+	display: none;
+}
+#container{
+	margin: auto;
+	text-align: center;
+	height: auto;
+	width: 400px;
+}
+#wrapper {
+	margin: 100px auto;
+	border: 3px solid white;
+	width: 500px;
+	padding: 50px 0 200px;
+	background:rgba(0,0,0,0.8);
+}
+#result{
+	margin-top: 0px;
+	text-align: left;
+}
+#searchButton {
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 20px;
+	margin: 0 68px;
+	height: 50px;
+	width: 310px;
+}
+#searchText{
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 20px;
+	margin: 0 70px;
+	height: 25px;
+	width: 300px;
+}
