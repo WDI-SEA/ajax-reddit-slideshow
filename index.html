@@ -4,8 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hello Front-End</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Open+Sans" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+    <div id ="wrapper">
+		<h1>Slideshow</h1>
+		<div id=container>
+
+			<form id="questionForm">
+				<input type="text" placeholder="search all of reddit:" id="searchText">
+				<input type="button" value="Search" id="searchButton">
+			</form>
+			<div id="picture">
+				<div id="results"></div>
+			</div>
+
+		</div>
+	<div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
