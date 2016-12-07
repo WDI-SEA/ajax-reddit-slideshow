@@ -2,6 +2,10 @@ $( document ).ready(function() {
 
   //Stores user input field data (string)
   var newSearch = $("input").val();
+  var i = 0;
+
+  //Store all images as array for slideShow
+  var slideShow = [];
 
   //Clear input field on click
   $("input").focus(function() {
@@ -39,8 +43,11 @@ $( document ).ready(function() {
           //Check to see if image preview (image) exists
           if(image.data.preview){
             console.log(image.data.preview.images[0].source.url);
-            //Append image to imageContainer
-            $("#imageContainer").append("<img src= " + image.data.preview.images[0].source.url + ">");
+            //Append image URL to slideShow array
+            slideShow.push(image.data.preview.images[0].source.url);
+            console.log(slideShow);
+              // $("#imageContainer").append("<img src= " + image.data.preview.images[0].source.url + ">");
+
           }
           else {
             console.log("Item has no image")
@@ -48,17 +55,44 @@ $( document ).ready(function() {
           // console.log(image.data.title);
           // $("#imageContainer").append(response.data.children.data.preview.images.source.url);
         });
+        if(slideShow.length > 0) {
+          setInterval(function(){
+          //Clear previous image
+            $("#imageContainer").html("");
+          //Append image to imageContainer
+            $("#imageContainer").append("<img src=" + slideShow[i] + "/>");
+            console.log(slideShow[i]);
+            i++;
+          }, 5000);
+        }
       },
       error: function(respone) {
         console.log(response);
       }
     });
+
+    // if(slideShow.length > 0) {
+    //   setInterval(function(){
+    //   //Clear previous image
+    //     $("#imageContainer").html("");
+    //   //Append image to imageContainer
+    //     $("#imageContainer").append("<img src=" + slideShow[i] + "/>");
+    //     console.log(slideShow[i]);
+    //     i++;
+    //   }, 2000);
+    // }
+
   })
+  // if(slideShow.length > 0) {
+  //   setInterval(function(){
+  //   //Clear previous image
+  //     $("#imageContainer").html("");
+  //   //Append image to imageContainer
+  //     $("#imageContainer").append("<img src=" + slideShow[i] + "/>");
+  //     console.log(slideShow[i]);
+  //     i++;
+  //   }, 2000);
+  // }
+
+
 });
-
-
-// $.get('https://www.reddit.com/search.json', {
-//   q: 'kittens'
-// }).done(function(data) {
-//   console.log(data);
-// });
