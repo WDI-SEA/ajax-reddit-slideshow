@@ -14,7 +14,7 @@ $(document).ready(function() {
                 console.log(response);
             }
         });
-        console.log(searchTerm );
+        // console.log(searchTerm );
     });
 
 
@@ -38,7 +38,7 @@ function getImage(response) {
   });
   $('#slideshow').html("");
   $('#searchform').append("<h1>I LIKE WHAT YOU'VE GOT!</h1>");
-  $('#slideshow').append(slideshowPics[i+1]);
+  $('#slideshow').append(slideshowPics[i]);
   setInterval(function(){
     if(i == slideshowPics.length) {i=0};
     $('#slideshow').html("");
