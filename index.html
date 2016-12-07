@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" type="text/css" href="css/slide.css">
+  <title>reddit-slideshow</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <h1>Photo Slideshow</h1>
+  <h3>Search awesome photos</h3>
+  <form id="search-form">
+    <input type="text" name="search" placeholder="Enter search">
+    <input type="submit" value="Start">
+  </form>
+  <button id="stop">Stop</button>
+  <div id="container"><img id="img"></div>
 </body>
+  <script type="text/javascript" src="js/slide.js"></script>
 </html>
