@@ -1,0 +1,37 @@
+body {
+  background-color: brown;
+}
+
+#container {
+  background-color: goldenrod;
+  width: 500px;
+  height: 500px;
+
+}
+
+#theater {
+  display: block;
+  background-color: brown;
+  height: 400px;
+  text-align: center;
+}
+
+#screen {
+  background-color: black;
+}
+
+#caption {
+  background-color: darkgray;
+  color: white;
+  height: 100px;
+}
+
+#search-form {
+  background-color: black;
+  text-align: center;
+}
+
+img {
+  max-height: 200px;
+  margin: 0 auto;
+}
