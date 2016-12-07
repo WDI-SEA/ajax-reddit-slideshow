@@ -1,0 +1,105 @@
+body {
+  /*background-color: black;*/
+  background: url(wall.jpg);
+  background-repeat: no-repeat;
+}
+
+
+#images {
+ width: 100%;
+ overflow: hidden;
+ height: 500px;
+ position: relative;
+}
+
+/*img {
+  width:100%;
+  border: none;
+  border-radius: 5px;
+  min-height: 100%;
+}*/
+
+.container {
+  margin: auto;
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  min-height: 300px;
+  border-radius: 8px;
+  border: 20px solid black;
+  position: absolute;
+  margin-left: 300px;
+  margin-top: 100px;
+
+}
+
+#search-form {
+  margin: auto;
+  position: absolute;
+  margin: 120px 0px 0px 150px;
+
+}
+
+#images {
+   width:600px;
+   height:400px;
+   margin-top:0px;
+  
+}
+
+
+h1 {
+  position: absolute;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 400px;
+  color: black;
+  font-family: 'Special Elite';
+}
+
+
+/* Button Styling */
+
+
+.buttons {
+  position: absolute;
+  margin-top: 50px;
+
+}
+
+#prev {
+  width:40px;
+  height:40px;
+  border-radius: 5px;
+
+}
+
+#next {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  margin-left: 510px
+}
+
+/* Search Form */
+
+#search-form {
+  position: absolute;
+  margin-bottom: 300px;
+  margin-left: 200px;
+ }
+ 
+
+#query {
+  background-color: transparent;
+  border: none;
+
+}
+
+#query .placeholder {
+  color: black;
+
+}
+
+
+
