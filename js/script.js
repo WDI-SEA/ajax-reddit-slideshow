@@ -33,6 +33,28 @@ var responseImagesToObject = function(input){
   });
 };
 
+//Map/filter example for how to do the above
+// var posts = [
+//   {data: {url:"google.com"}},
+//   {data: {url:"giphy.com/cat.jpg"}},
+//   {data: {url:"facebook.com/profilepic.png"}},
+//   {data: {url:"reddit.com/r/img/funny.png"}},
+//   {data: {url:"ebay.com"}}
+// ];
+//
+// var mapped = posts.map(function(post){
+//   return post.data.url;
+// });
+//
+// console.log("only mapped:", mapped);
+// console.log();
+//
+// images = posts.map(function(post){
+//   return post.data.url;
+// }).filter(function(url){
+//   return url.endsWith(".png")||url.endsWith(".jpg");
+// });
+
 var printResponseToConsole = function(input){
   console.log("AJAX error");
 };
