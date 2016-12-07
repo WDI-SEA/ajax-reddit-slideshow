@@ -1,6 +1,6 @@
 var images = [];
 var posts = {};
-var count = 0;
+var count = 1;
 var jsonObject = {};
 var interval;
 
@@ -12,8 +12,8 @@ var getAjaxRedditImages = function(term){
     success: function(response){
       responseImagesToObject(response);
       jsonObject = response;
-      intervalChange();
-      hideSearchAndDarken();
+      intervalChange(); //these need to be here or wont have ajax images
+      hideSearchAndDarken(); //these need to be here or wont have ajax images
     },
     error: function(response){
       printResponseToConsole(response);
