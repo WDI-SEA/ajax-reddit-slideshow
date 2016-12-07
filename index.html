@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
-</head>
-<body>
-  <h1>Hello Front-End</h1>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>slideshow</title>
+
+  </head>
+  <body>
+    <div id="container">
+      <div id="visible">
+    <h1>Search Reddit for image slideshow</h1>
+    <form id="searchform">
+      <input type="text" name="searchfield" placeholder="Enter search">
+      <input type="submit">
+    </form>
+  </div>
+    <div id="slideshow">
+
+    </div>
+    <button id="stop">Stop</button>
+  </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
