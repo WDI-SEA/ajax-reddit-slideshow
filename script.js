@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('#searchform').submit(function(event) {
         event.preventDefault();
+        $('#visible').hide();
 
         var searchTerm = event.target.searchfield.value;
         $.ajax({
@@ -34,4 +35,8 @@ $(document).ready(function() {
             });
         }
     });
+    $("#stop").click(function(){
+      clearInterval();
+      $('#visible').show();
+    })
 });
