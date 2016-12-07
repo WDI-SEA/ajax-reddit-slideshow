@@ -11,9 +11,9 @@ var getAjaxRedditImages = function(term){
     method: 'GET',
     success: function(response){
       responseImagesToObject(response);
-      jsonObject = response;
-      intervalChange(); //these need to be here or wont have ajax images
       hideSearchAndDarken(); //these need to be here or wont have ajax images
+      // jsonObject = response;
+      intervalChange(); //these need to be here or wont have ajax images
     },
     error: function(response){
       printResponseToConsole(response);
@@ -27,6 +27,8 @@ var responseImagesToObject = function(input){
     var str = post.data.url;
     if(str.endsWith(".png")||str.endsWith(".jpg")){
       images.push(str);
+    } else{
+      //dont add to images because not image file
     }
   });
 };
@@ -51,24 +53,21 @@ var intervalChange = function(){
     }
     // console.log(linkFromArray);
     count++;
-  },2000);  //is it possible to run this immediately, or have the AJAX run..
+  },2000);
 };
 
 var hideSearchAndDarken = function(){
-  $("#inputBox").fadeOut();
-  $("#submitButton").fadeOut();
-  $("h1").fadeOut();
-  $("h5").fadeOut();
+  $("#inputBox").hide();
+  $("#submitButton").hide();
+  $("h1").hide();
+  $("h5").hide();
   $("body").css("background-image","linear-gradient(rgb(100, 100, 100),rgb(0, 0, 0))");
 };
 
 $("#search-form").submit(function(event){
   event.preventDefault();
   var searchTerm = event.target.search.value;
-  getAjaxRedditImages(searchTerm);  //is it possible to run this in sequence so the images object exists?
-  // changeBackground(images[0]);
-  // intervalChange();
-  // hideSearchAndDarken();
+  getAjaxRedditImages(searchTerm);
 });
 
 $("#resetButton").click(function(event){
