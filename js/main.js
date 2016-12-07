@@ -56,11 +56,12 @@ $( document ).ready(function() {
           // $("#imageContainer").append(response.data.children.data.preview.images.source.url);
         });
         if(slideShow.length > 0) {
+          $("#imageContainer").append("<img src=" + slideShow[0] + "/>");
           setInterval(function(){
           //Clear previous image
             $("#imageContainer").html("");
           //Append image to imageContainer
-            $("#imageContainer").append("<img src=" + slideShow[i] + "/>");
+            $("#imageContainer").append("<img src=" + slideShow[i+1] + "/>");
             console.log(slideShow[i]);
             i++;
           }, 5000);
