@@ -6,34 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Reddit Slideshow</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <!-- Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/style.css">
-
   </head>
 
   <body>
-
-  <div class="container">
+    <div class="container">
 
     <div class="row">
-
-      <h1>Reddit Slideshow</h1>
-    <div id="searchBox" class="col-xs-12">
-      <form action="submit">
-        <input type="text" value="Enter Image">
+      <div class="title">
+        <h1>Reddit Slideshow</h1>
+      </div>
+    <div id="searchBox" class="col-lg-12">
+      <form id ="userInput" action="submit">
+        <input type="text" name="search" value="Image Search">
+        <hr width="40%">
+        <button type="submit" class="btn btn-outline secondary grow">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>Search
+        </button>
       </form>
-      <hr width="50%">
-      <button type="button" class="btn btn-outline-secondary">
-        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-      Search
-      </button>
     </div>
   </div>
 
-  <div id="slideshow"></div>
+  <div id="slideshow">
+    <div id="imageContainer"></div>
+  </div>
 
 </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

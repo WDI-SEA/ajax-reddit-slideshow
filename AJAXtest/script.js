@@ -22,3 +22,16 @@ $(document).ready(function(){
     });
 });
 });
+
+//reddit images destination = Object --> Data --> Children --> Data --> Preview ---> Images --> Source ---> url
+var posts = response.data.children;
+
+  posts.forEach(function(post) {
+    if (post.data.preview) {
+      console.log(post.data.preview.images[0].source.url);
+
+    } else {
+      console.log("skipped, has no image");
+    }
+
+    response.data.children[i].data.preview.images[i].source.url
