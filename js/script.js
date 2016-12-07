@@ -2,6 +2,7 @@ var images = [];
 var posts = {};
 var count = 0;
 var jsonObject = {};
+var interval;
 
 var getAjaxRedditImages = function(term){
   $.ajax({
@@ -37,7 +38,7 @@ var changeBackground = function(link){
 
 var intervalChange = function(){
   changeBackground(images[0]); //why isnt images an object yet? How do i start immediately?
-  setInterval(function(){
+  interval = setInterval(function(){
     var linkFromArray = images[count];
     changeBackground(linkFromArray);
     if(count==images.length){
@@ -51,7 +52,8 @@ var intervalChange = function(){
 };
 
 var hideSearchAndDarken = function(){
-  $("#search-form").fadeOut();
+  $("#inputBox").fadeOut();
+  $("#submitButton").fadeOut();
   $("h1").fadeOut();
   $("h5").fadeOut();
   $("body").css("background-image","linear-gradient(rgb(100, 100, 100),rgb(0, 0, 0))");
@@ -64,4 +66,19 @@ $("#search-form").submit(function(event){
   // changeBackground(images[0]);
   intervalChange();
   hideSearchAndDarken();
+});
+
+$("#resetButton").click(function(event){
+  $("body").css("background-image", "linear-gradient(rgb(59, 161, 245),rgb(126, 188, 245))");
+  $("#slide").css("background-image", "url('')");
+  $("#inputBox").val("");
+  images = [];
+  posts = {};
+  count = 0;
+  jsonObject = {};
+  $("#inputBox").fadeIn();
+  $("#submitButton").fadeIn();
+  $("h1").fadeIn();
+  $("h5").fadeIn();
+  clearInterval(interval);
 });
