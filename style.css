@@ -1,0 +1,16 @@
+body {
+  font-family: Helvetica;
+  background-color: rgb(208, 208, 208);
+}
+h1 {
+  color:red;
+}
+img {
+  margin-top: 20px;
+  width: 500px;
+  height: 500px;
+}
+#container {
+  text-align: center;
+  margin: 0 auto;
+}
