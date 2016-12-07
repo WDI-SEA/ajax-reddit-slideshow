@@ -1,0 +1,34 @@
+body {
+    height: 800px;
+    background: url("../img/bg.jpg")no-repeat fixed;
+    background-size: cover;
+
+}
+
+#container {
+    position: relative;
+}
+
+#search {
+    position: absolute;
+    left: 700px;
+    top: 100px;
+}
+
+input {
+    height: 30px;
+    width: 160px;
+}
+
+img {
+    height: 20%;
+    width: 50%;
+    display: block;
+}
+
+#slideshow{
+    position: absolute;
+    width: 70%;
+    left: 660px;
+    top: 250px;
+}
