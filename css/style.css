@@ -1,0 +1,30 @@
+.container {
+  height: 500px;
+  width: 800px;
+  background-color: #333333;
+  border: 1px solid black;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-weight: bolder;
+  font-style: oblique;
+}
+input {
+  border: none;
+  border-color: transparent;
+  background: transparent;
+  font-size: 25px;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: -10px;
+  margin-bottom: -20px;
+}
