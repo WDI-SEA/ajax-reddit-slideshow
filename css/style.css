@@ -1,0 +1,12 @@
+#slide{
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  margin: 30px;
+  height: 60vw;
+  width: 60vw;
+}
+
+#search-form{
+  margin: 10px 0 0 0;
+}
