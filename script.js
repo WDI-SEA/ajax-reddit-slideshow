@@ -37,6 +37,7 @@ $(document).ready(function() {
     });
     $("#stop").click(function(){
       clearInterval();
+      $("slideshow").html("");
       $('#visible').show();
     })
 });
