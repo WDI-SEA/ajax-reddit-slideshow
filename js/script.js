@@ -4,6 +4,7 @@ var count = 0;
 var jsonObject = {};
 var interval;
 
+//added a search query +url%3Apng to return only png inclusive terms
 var getAjaxRedditImages = function(term){
   $.ajax({
     url: 'https://www.reddit.com/search.json?q='+term+'+url%3Apng',
@@ -11,6 +12,8 @@ var getAjaxRedditImages = function(term){
     success: function(response){
       responseImagesToObject(response);
       jsonObject = response;
+      intervalChange();
+      hideSearchAndDarken();
     },
     error: function(response){
       printResponseToConsole(response);
@@ -64,8 +67,8 @@ $("#search-form").submit(function(event){
   var searchTerm = event.target.search.value;
   getAjaxRedditImages(searchTerm);  //is it possible to run this in sequence so the images object exists?
   // changeBackground(images[0]);
-  intervalChange();
-  hideSearchAndDarken();
+  // intervalChange();
+  // hideSearchAndDarken();
 });
 
 $("#resetButton").click(function(event){
