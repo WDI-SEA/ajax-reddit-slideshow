@@ -1,20 +1,15 @@
 var images = [];
 var posts = {};
 var count = 0;
-
-$("#search-form").submit(function(event){
-  event.preventDefault();
-  var searchTerm = event.target.search.value;
-  getAjaxRedditImages(searchTerm);
-  intervalChange();
-});
+var jsonObject = {};
 
 var getAjaxRedditImages = function(term){
   $.ajax({
-    url: 'https://www.reddit.com/search.json?q='+term,
+    url: 'https://www.reddit.com/search.json?q='+term+'+url%3Apng',
     method: 'GET',
     success: function(response){
       responseImagesToObject(response);
+      jsonObject = response;
     },
     error: function(response){
       printResponseToConsole(response);
@@ -25,7 +20,10 @@ var getAjaxRedditImages = function(term){
 var responseImagesToObject = function(input){
   posts = input.data.children;
   posts.forEach(function(post){
-    images.push(post.data.url);
+    var str = post.data.url;
+    if(str.endsWith(".png")||str.endsWith(".jpg")){
+      images.push(str);
+    }
   });
 };
 
@@ -38,15 +36,32 @@ var changeBackground = function(link){
 };
 
 var intervalChange = function(){
+  changeBackground(images[0]); //why isnt images an object yet? How do i start immediately?
   setInterval(function(){
+    var linkFromArray = images[count];
+    changeBackground(linkFromArray);
     if(count==images.length){
       count=0;
     } else{
       //nothing
     }
-    var linkFromArray = images[count];
-    changeBackground(linkFromArray);
-    console.log(linkFromArray);
+    // console.log(linkFromArray);
     count++;
-  },1000);
+  },2000);
 };
+
+var hideSearchAndDarken = function(){
+  $("#search-form").fadeOut();
+  $("h1").fadeOut();
+  $("h5").fadeOut();
+  $("body").css("background-image","linear-gradient(rgb(100, 100, 100),rgb(0, 0, 0))");
+};
+
+$("#search-form").submit(function(event){
+  event.preventDefault();
+  var searchTerm = event.target.search.value;
+  getAjaxRedditImages(searchTerm);  //is it possible to run this in sequence so the images object exists?
+  // changeBackground(images[0]);
+  intervalChange();
+  hideSearchAndDarken();
+});
