@@ -18,7 +18,7 @@ $("document").ready(function(){
       method: "GET",
       success: function(response) {
         console.log(response);
-
+        // hide search form & show stop button
         toggleButtons();
 
         var photos = [];
