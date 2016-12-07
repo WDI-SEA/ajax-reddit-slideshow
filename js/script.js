@@ -10,6 +10,7 @@ $(document).ready(function() {
 		// HIDE SEARCH BAR AND DISPLAY SLIDESHOW AREA
 
 		$('#search-form').hide();
+		$('#reddit-logo').hide();
 		$('#loading').show();
 		$('#slideshow-imgs').show();
 		$('#stop').show();
@@ -58,6 +59,7 @@ $(document).ready(function() {
 		$("#stop").click(function () {
 			clearInterval(startSlideshow);
 			$('#search-form').show();
+			$('#reddit-logo').show();
 			$('#slideshow-imgs').hide();
 			$('#stop').hide();
 			$('#loading').hide();
