@@ -37,7 +37,7 @@ var changeBackground = function(link){
 };
 
 var intervalChange = function(){
-  changeBackground(images[0]); //why isnt images an object yet? How do i start immediately?
+  changeBackground(images[0]); //why isnt images an object yet? How do i start immediately? AJAX not run..
   interval = setInterval(function(){
     var linkFromArray = images[count];
     changeBackground(linkFromArray);
@@ -48,7 +48,7 @@ var intervalChange = function(){
     }
     // console.log(linkFromArray);
     count++;
-  },2000);
+  },2000);  //is it possible to run this immediately, or have the AJAX run..
 };
 
 var hideSearchAndDarken = function(){
