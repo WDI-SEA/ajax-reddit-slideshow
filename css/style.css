@@ -1,0 +1,26 @@
+body{
+  background-image: linear-gradient(rgb(59, 161, 245),rgb(126, 188, 245));
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#slide{
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  width: 60vw;
+  display: inline-block;
+}
+
+#search-form{
+  margin: 10px 0 0 0;
+}
+
+#inputBox{
+  width: 40vw;
+}
