@@ -18,14 +18,14 @@ body {
 }
 
 #container {
-	margin-top: 19%;
+	margin-top: 20%;
 }
 
 #reddit-logo {
 	height: 70px;
 	display: block;
 	margin: 0 auto;
-	margin-bottom: 20px;
+	margin-bottom: 12px;
 }
 
 #search-form {
