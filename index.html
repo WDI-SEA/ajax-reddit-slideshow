@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <title>AJAX Assignment</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div id="container">
+    <h1>Reddit Image Search</h1>
+    <p>Enter a search term and hit submit to see photos.</p>
+    <form id="search-form">
+      <input type="text" name="search" placeholder="Enter Search">
+      <input type="submit">
+    </form>
+
+    <div class="image-container"></div>
+  </div>
 </body>
 </html>
