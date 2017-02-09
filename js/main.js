@@ -1,40 +1,65 @@
 $('document').ready(function() {
 	console.log('ready to work');
-
+	var galleryArr = [];
 	// add event listener to button
 	$('#submitBtn').on('click', function() {
-		var userRequest = $('#userEntry').val()
+		var userRequest = $('#userEntry');
 		
 		//let user know search in progress
 		console.log('now searching');
 		
-		if (userRequest === '') {
+		if (userRequest.val() === '') {
 			alert('Please enter something to search for');
 			return;
 		}
-		//reddit.com/r/SEARCHTERM.json
+
 		$.get('https://www.reddit.com/r/pics.json', {
-			q: userRequest,
-			limit: 25
+			q: userRequest.val(),
+			limit: 25,
+			restrict_sr: "on", 
+			sort: "new"
 		}).done(function(data) {
-			var galleryArr = []
 			var dataArr = data.data.children;
 			console.log('done searching'); // place holder
-			//run filter function to search for things only from the domain "imgur.com"
-			for (var i = 0; i < dataArr.length; i++) {
-				console.log(dataArr[i].data.url);
-				if (dataArr[i].data.domain === 'i.redd.it' || dataArr[i].data.domain === 'imgur.com') {
-				galleryArr.push(dataArr[i].data.url)	
-				}
-				//add to anchor tags
-			}
-			console.log(dataArr);
+			
+			storeImages(dataArr);
+
+			displayImage();
+			userRequest.val(''); 
 		})
 	})
+
+
+
+	function storeImages(dataArr) {
+		galleryArr = [];
+		for (var i = 0; i < dataArr.length; i++) {
+			if (dataArr[i].data.domain === 'i.redd.it' || dataArr[i].data.domain === 'imgur.com' ||
+				dataArr[i].data.domain === 'i.reddituploads.com') {
+				galleryArr.push(dataArr[i].data.url);
+			}
+		}
+		console.log(galleryArr);
+	}
+	function displayImage() {
+		for (var i = 0; i < galleryArr.length; i++) {
+			var img = "<img src="+ galleryArr[i] + ">";
+			$('#displayArea').append(img);
+		}
+	}
 
 		// display animation
 		// show stop / reset button
 		// animation to be on loop
+
+
+
+
+
+
+
+
+
 
 
 })
