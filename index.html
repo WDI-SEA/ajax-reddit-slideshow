@@ -3,9 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>AJAX Reddit Slideshow</title>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <!-- <img id="finn"> -->
+  <img id="jake" src="img/jake.png">
+  <img id="lady-r" src="img/lr.png">
+  <img id="lsp" src="img/lsp.png">
+  <div class="speech-bubble sb-jake"><span class="speech-jake">Bad biscuits make the baker broke, bro</span></div>
+  <div class="speech-bubble sb-lady-r"><span class="speech-lady-r">누구세요?</span></div>
+  <div class="speech-bubble sb-lsp"><span class="speech-lsp">WHATEVERS 2009!</span></div>
+  <div id="container">
+    <img id="image">
+    <br>
+    <button id="stop-slideshow">Stop Slideshow</button>
+
+  </div>
+
+  <form>
+    <h1>AJAX Reddit Slideshow</h1>
+    <p>Enter something to look for on reddit</p>
+
+    <input id="search-text" type="text">
+    <br>
+    <br>
+    <button id="search-button">Search</button>
+    <button id="start-slideshow">Start Slideshow</button>
+    <br>
+    <br>
+    <p id="loading">Loading...</p>
+    <p id="activity-msg"></p>
+  </form>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
