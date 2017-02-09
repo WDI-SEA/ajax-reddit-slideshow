@@ -3,9 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Reddit Show</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <h1>Reddit Show</h1>
+
+  <div id="UI">
+    <form id="searchForm">
+      <input id="search" type="text" placeholder="Request show theme" name="userInput">
+      <input type="submit" id="submitButton">
+    </form>
+  </div>
+  <div id="errorMessage"><p>Reddit isn't up for another show right now. Please come back later.</p></div>
+
+  <div id="container">
+
+  </div>
+
+  <button id="stop">Stop</button>
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </body>
 </html>

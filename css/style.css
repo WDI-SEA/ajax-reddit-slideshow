@@ -1,0 +1,33 @@
+body{
+  text-align: center;
+  background-image: url('../img/background.jpg');
+  background-size: 100%;
+}
+h1{
+  text-shadow: 2px 2px 0px rgba(000,000,000,0.4);
+  color: white;
+  font-style: inLights;
+  font-family: 'Monoton', cursive;
+  font-size: 70px
+}
+img{
+width: 500px;
+height: 400px;
+}
+#submitButton{
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: red;
+}
+button{
+  border-radius: 40px;
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  color: white;
+}
+p{
+  font-size: 30px;
+  color: darkRed;
+}
