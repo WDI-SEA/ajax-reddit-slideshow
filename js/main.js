@@ -4,7 +4,7 @@ $('#searchButton').click(function mySearch(e) {
   q: q,
   restrict_sr: "on", 
   sort: "new"
-  
+
 }).done(function(data) {
   var kitPosts = data; 
   var kitObjects = kitPosts.data.children;
@@ -20,12 +20,14 @@ $('#searchButton').click(function mySearch(e) {
 function postToPage(urls){
   var containerDiv = $('#link');
   var imgIncludes = urls.data.url;
-  if (imgIncludes.includes(".jpg")) {
+  if (imgIncludes) {
     containerDiv.append('<img src="' + imgIncludes + '">')
  } else {
   console.log("there are no images");
  }
 };
+
+
 
 
 
