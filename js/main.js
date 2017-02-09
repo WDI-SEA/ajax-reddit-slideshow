@@ -15,6 +15,7 @@ $('#searchButton').click(function mySearch(e) {
 });
   $('.hide').hide();
   e.preventDefault();
+  closeButton ();
 });
 
 function postToPage(urls){
@@ -25,6 +26,11 @@ function postToPage(urls){
  } else {
   console.log("there are no images");
  }
+};
+
+function closeButton () {
+
+  $("#link").prepend("<button>CLOSE</button>").click(function() { location.reload();});
 };
 
 
