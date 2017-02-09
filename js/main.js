@@ -5,16 +5,16 @@ $('document').ready(function() {
 	$('#submitBtn').on('click', function() {
 		var userRequest = $('#userEntry');
 		
-		//let user know search in progress
-
 		if (invalidEntry(userRequest)) {
 			return;
 		}
-
 		$('#searching').show();
 		jsonRequest(userRequest);
 		userRequest.val(''); 
-	})
+		
+	});
+
+
 	function invalidEntry(userRequest) {
 		if (userRequest.val() === '') {
 			alert('Please enter something to search for');
@@ -49,10 +49,7 @@ $('document').ready(function() {
 		}
 	}
 	function displayImage() {
-		for (var i = 0; i < galleryArr.length; i++) {
-			var img = "<img src="+ galleryArr[i] + ">";
-			$('#displayArea').append(img);
-		}
+ 
 	}
 
 		// display animation

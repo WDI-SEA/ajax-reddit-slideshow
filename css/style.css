@@ -1,7 +1,9 @@
 #displayArea {
-	height: 450px;
+	height: 400px;
 	width: 650px;
 	border: 1px solid red;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 img {
 	height: 250px;
@@ -12,5 +14,9 @@ img {
 	width: 350px;
 	background: white;
 	position: absolute;
-	border: 1px solid red;
+	top: 25%;
+	left: 25%;
+	line-height: 3em;
+	font-size: 60px;
+
 }
