@@ -7,10 +7,13 @@
 	<title>Reddit Slide Show</title>
 </head>
 	<body>
-		<div id='container'>
+		<div class='container'>
 			<h1>Slide Show</h1>
-			<input id='userEntry' type='text' placeholder='search for ...'>
-			<button id='submitBtn'>Show me!</button>
+			<div class='nav'>
+				<input id='userEntry' type='text' placeholder='search for ...'>
+				<button id='submitBtn'>Show me!</button>
+				<button id='stopBtn'>Stop</button>
+			</div>
 			<div id='searching' hidden>Searching. . .</div>
 			<div id="displayArea"></div>
 		</div>
