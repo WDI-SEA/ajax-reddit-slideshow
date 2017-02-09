@@ -1,0 +1,12 @@
+#display {
+	display: block;
+}
+
+#reset {
+	display: block;
+}
+
+.scaled {
+	height: 400px;
+	width: 600px;
+}
