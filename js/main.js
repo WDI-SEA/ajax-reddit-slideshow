@@ -4,7 +4,9 @@ $(document).ready(function(){
 		var search = $('#input').val();
 		$.get('https://www.reddit.com/r/pics/search.json', {
 			q: search,
-			restrict_sr: "on"
+			nsfw: 0,
+			restrict_sr: "on",
+			sort: "new"
 		}).done(function(data){
 			var imgPosts = data;
 			var imgObjects = imgPosts.data.children;
@@ -22,7 +24,7 @@ $(document).ready(function(){
 	function showResults(urls){
 		var containerDiv = $('#display');
 		var imgURL = urls.data.url;
-		if (imgURL.includes('.jpg')){
+		if (imgURL){
 			containerDiv.append('<img class="scaled" src="'+imgURL+'">')
 		} else{
 			console.log('No images');
@@ -32,7 +34,8 @@ $(document).ready(function(){
 
 	function hideIntro(){
 		$('#intro').hide();
-		$('#display').prepend("<button id='reset'>Close</button>").click(function(){
+		$('#display').prepend("<button id='reset'>Close</button>")
+		$('#reset').click(function(){
 			resetSearch();
 		})
 	}
