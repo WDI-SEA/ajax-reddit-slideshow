@@ -1,0 +1,10 @@
+div {
+	width: 650px;
+	height: 100%;
+
+}
+
+a {
+	display: inline-block; 
+	margin: 5px;
+}
