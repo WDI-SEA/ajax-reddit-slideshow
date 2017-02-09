@@ -1,13 +1,3 @@
-// console.log('1. Beginning of the page');
-
-// $('#button').click(function() {
-// 	var item = $('#toInput').val();
-// 	addNewItem(item);
-// });
-
-// function addNewItem(param){
-// 	$('#todoList').append('<li class="1">' + param + '</li>');
-// };
 
 $('#button').click(function() {
 	var item = $('#toInput').val();
@@ -38,3 +28,14 @@ $('#button').click(function() {
 		// })
 	};
 
+
+
+// get your textbox/submit  button working
+
+// call the reddit API and get data from it basd on the search query
+
+// done function, store data in an array
+
+// set interval (set in the done function) : change the index of the array
+
+//loop, start the index at 1
