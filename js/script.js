@@ -1,13 +1,15 @@
 $(document).ready(function() {
 
-//Hide stop button and error message so not there on load
+//Hide stop button, loading and error messages so not there on load
  $('#stop').hide();
   $('#errorMessage').hide();
+  $('#loading').hide();
 
  $('#searchForm').submit(function(event) {
    event.preventDefault();
-//Hide UI, show slideshow
+//Hide UI, show loading message then slideshow & button
    $('#UI').hide();
+   $('#loading').show();
    $('#container').show();
    $('#stop').show();
 
@@ -24,20 +26,24 @@ $(document).ready(function() {
    });
 // Search results
  function returnImages(response){
+   $('#loading').hide();
    var slideshowImgs = [];
    var posts = response.data.children;
    var index = 0;
    posts.forEach(function(post){
-     if (post.data.preview) {
-       slideshowImgs.push('<img src="' + post.data.preview.images[0].source.url + '">');
-       }
+      if (post.data.preview) {
+        slideshowImgs.push('<img src="' + post.data.preview.images[0].source.url + '">');
+      }
    });
-   console.log(slideshowImgs);
+  console.log(slideshowImgs);
 // Play images in slideshow
   var startSlideshow = setInterval(function(){
       $('#container').html('');
       $('#container').append(slideshowImgs[index]);
       index++;
+      if (index > slideshowImgs.length){
+          index = 0;
+        }
     }, 3000);
 
     $("#stop").click(function(){
@@ -48,6 +54,6 @@ $(document).ready(function() {
       $('#stop').hide();
       $('#search').val('');
     });
- }
+  }
  });
 });
