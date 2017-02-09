@@ -1,0 +1,48 @@
+h1 {
+	text-align: center; 
+}
+body {
+	display: flex;
+	justify-content: center;
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 60%;
+	flex-direction: column;
+}
+#displayArea {
+	height: 400px;
+	width: 100%;
+	border: 1px black dashed;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+.nav {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding-bottom: 20px;
+}
+#userEntry {
+	height: 32px;
+	width: 250px;
+	font-size: 20px;
+}
+button {
+	font-size: 18px;
+	height:36px;
+	width: 120px;
+}
+#searching {
+	height: 200px;
+	width: 350px;
+	background: white;
+	position: absolute;
+	top: 25%;
+	left: 40%;
+	line-height: 3em;
+	font-size: 60px;
+}
