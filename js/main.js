@@ -26,7 +26,7 @@ function invalidEntry(userRequest) {
 	}
 }
 function jsonRequest(userRequest) {
-	$.get('https://www.reddit.com/r/pics.json', {
+	$.get('https://www.reddit.com/r/pics/search.json', {
 		q: userRequest.val(),
 		limit: 50,
 		restrict_sr: "on", 
@@ -35,15 +35,9 @@ function jsonRequest(userRequest) {
 		var dataArr = data.data.children;
 		storeImages(dataArr);
 		$('#searching').hide();
+
+		$('#displayArea').css('background-image', "url('" + displayArea[0] + "')");
 		changeImage = setInterval(displayImage, 2000);
-
-		//playground below
-		// changeImage = setInterval(function() {
-		// 	var randomNum = Math.floor(Math.random() * galleryArr.length);
-		// 	$('#displayArea').css('background-image', 'url("' + galleryArr[randomNum] + '")');
-		// 	$('#displayArea').fadeIn()
-		// }, 2000)
-
 
 	})
 }
@@ -54,12 +48,19 @@ function cleanUi(userRequest) {
 }
 function storeImages(dataArr) {
 	galleryArr = [];
-	for (var i = 0; i < dataArr.length; i++) {
-		if (dataArr[i].data.domain === 'i.redd.it' || dataArr[i].data.domain === 'imgur.com' ||
-			dataArr[i].data.domain === 'i.reddituploads.com') {
-			galleryArr.push(dataArr[i].data.url);
+	dataArr.forEach(function(child) {
+		if (usableImg(child)) {
+			galleryArr.push(child.data.url);
 		}
+	})
+}
+function usableImg(child) {
+	if (child.data.url.includes('.jpg') && !child.data.url.includes('i.reddituploads.com')) {
+		return true;
+	} else {
+		return false;
 	}
+
 }
 function displayImage() {
 	var randomNum = Math.floor(Math.random() * galleryArr.length);
