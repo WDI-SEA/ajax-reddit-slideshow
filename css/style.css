@@ -1,0 +1,115 @@
+body {
+  text-align: center;
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1.5px;
+  background-image: url("../img/curtain_close.jpg");
+  background-position: center;
+}
+
+img {
+  margin: 20px;
+  height: 600px;
+}
+
+form {
+  margin-top: 200px;
+}
+
+button {
+  color: white;
+  background: rgba(0,0,0,0);
+  border: solid 3px white;
+  padding: 10px;
+  margin: 3px;
+  font-size: 1.5em;
+  font-family: 'Orbitron', sans-serif;
+}
+
+button:hover,
+button.hover {
+  border-color: gray;
+  color: gray;
+}
+
+button:active,
+button.active {
+  border-color: DarkGray;
+  color: DarkGray;
+}
+
+#search-text {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+  width: 50%;
+  font-size: 3em;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  color: white;
+}
+
+#jake {
+  height: 200px;
+  position: absolute;
+  bottom: 20px;
+  left: 80px;
+}
+
+#lady-r {
+  height: 400px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+#lsp {
+  position: absolute;
+  height: 200px;
+  bottom: 10px;
+  right: 30px;
+}
+
+.speech-bubble{
+  background-image: url("../img/speech.svg");
+  /*background-position: center;*/
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 150px;
+  color: black;
+  font-size: 10px;
+  position: absolute;
+}
+
+.sb-jake {
+  bottom: 143px;
+  left: 180px;
+}
+
+.sb-lady-r {
+  bottom: 200px;
+  left: 80px;
+}
+
+.sb-lsp {
+  bottom: 200px;
+  right: 20px;
+}
+
+.speech-jake{
+  position: relative;
+  top: 30px;
+}
+
+.speech-lady-r{
+  position: relative;
+  top: 40px;
+}
+
+.speech-lsp{
+  position: relative;
+  top: 40px;
+}
