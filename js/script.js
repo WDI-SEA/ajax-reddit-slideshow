@@ -20,7 +20,6 @@ $('#button').click(function() {
 		console.log(kitPosts.data.children);
 		var kitObjects = kitPosts.data.children;    // sort through array 
 
-
 		for (var i = 0; i < kitObjects.length; i++) {
 			console.log(kitObjects[i]);
 			postToPage(kitObjects[i]);
@@ -33,6 +32,9 @@ $('#button').click(function() {
 
 	function postToPage(urls){
 		var containerDiv = $('#links');
-		containerDiv.append('<a href = " ' + urls.data.url + ' " > ' +urls.data.url+ ' </a>')
+		// if(url.contains('.jpg', '.png'){
+		containerDiv.append('<img src =   + urls.data.url +  >')
+
+		// })
 	};
 
