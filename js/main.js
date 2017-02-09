@@ -12,11 +12,23 @@ $('document').ready(function() {
 			alert('Please enter something to search for');
 			return;
 		}
-		$.get('https://www.reddit.com/search.json', {
+		//reddit.com/r/SEARCHTERM.json
+		$.get('https://www.reddit.com/r/pics.json', {
 			q: userRequest,
 			limit: 25
 		}).done(function(data) {
-			console.log(data);
+			var galleryArr = []
+			var dataArr = data.data.children;
+			console.log('done searching'); // place holder
+			//run filter function to search for things only from the domain "imgur.com"
+			for (var i = 0; i < dataArr.length; i++) {
+				console.log(dataArr[i].data.url);
+				if (dataArr[i].data.domain === 'i.redd.it' || dataArr[i].data.domain === 'imgur.com') {
+				galleryArr.push(dataArr[i].data.url)	
+				}
+				//add to anchor tags
+			}
+			console.log(dataArr);
 		})
 	})
 
