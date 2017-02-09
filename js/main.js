@@ -16,6 +16,7 @@ $('document').ready(function() {
 		userRequest.val(''); 
 		$('#stopBtn').on('click', stopSlideShow);
 	});
+
 function invalidEntry(userRequest) {
 	if (userRequest.val() === '') {
 		alert('Please enter something to search for');
@@ -25,7 +26,7 @@ function invalidEntry(userRequest) {
 	}
 }
 function jsonRequest(userRequest) {
-	$.get('https://www.reddit.com/r/pics.json', {
+	$.get('https://www.reddit.com/r/pics/search.json&q=kittens', {
 		q: userRequest.val(),
 		limit: 50,
 		restrict_sr: "on", 
@@ -34,7 +35,16 @@ function jsonRequest(userRequest) {
 		var dataArr = data.data.children;
 		storeImages(dataArr);
 		$('#searching').hide();
-		changeImage = setInterval(displayImage, 2000);
+		//changeImage = setInterval(displayImage, 2000);
+
+		//playground below
+		changeImage = setInterval(function() {
+			var randomNum = Math.floor(Math.random() * galleryArr.length);
+			$('#displayArea').css('background-image', 'url("' + galleryArr[randomNum] + '")');
+			$('#displayArea').fadeIn(1500);
+		}, 2000)
+
+
 	})
 }
 function cleanUi(userRequest) {

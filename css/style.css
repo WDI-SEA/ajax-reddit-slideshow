@@ -15,7 +15,7 @@ body {
 #displayArea {
 	height: 400px;
 	width: 100%;
-	border: 1px solid red;
+	border: 1px black dashed;
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
