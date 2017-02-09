@@ -6,13 +6,24 @@ $('document').ready(function() {
 		var userRequest = $('#userEntry');
 		
 		//let user know search in progress
-		console.log('now searching');
-		
-		if (userRequest.val() === '') {
-			alert('Please enter something to search for');
+
+		if (invalidEntry(userRequest)) {
 			return;
 		}
 
+		$('#searching').show();
+		jsonRequest(userRequest);
+		userRequest.val(''); 
+	})
+	function invalidEntry(userRequest) {
+		if (userRequest.val() === '') {
+			alert('Please enter something to search for');
+			return true;
+		} else {
+			return false;
+		}
+	}
+	function jsonRequest(userRequest) {
 		$.get('https://www.reddit.com/r/pics.json', {
 			q: userRequest.val(),
 			limit: 25,
@@ -23,13 +34,10 @@ $('document').ready(function() {
 			console.log('done searching'); // place holder
 			
 			storeImages(dataArr);
-
+			$('#searching').hide();
 			displayImage();
-			userRequest.val(''); 
 		})
-	})
-
-
+	}
 
 	function storeImages(dataArr) {
 		galleryArr = [];
@@ -39,7 +47,6 @@ $('document').ready(function() {
 				galleryArr.push(dataArr[i].data.url);
 			}
 		}
-		console.log(galleryArr);
 	}
 	function displayImage() {
 		for (var i = 0; i < galleryArr.length; i++) {
