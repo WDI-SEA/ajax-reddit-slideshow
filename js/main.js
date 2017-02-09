@@ -1,7 +1,10 @@
 $('#searchButton').click(function mySearch(e) {
   var q = $("#searchInput").val();
-  $.get('https://www.reddit.com/search.json', {
-  q: q
+  $.get('https://www.reddit.com/r/pics/search.json', {
+  q: q,
+  restrict_sr: "on", 
+  sort: "new"
+  
 }).done(function(data) {
   var kitPosts = data; 
   var kitObjects = kitPosts.data.children;
