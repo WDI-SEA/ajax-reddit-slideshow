@@ -17,7 +17,7 @@ body {
 	width: 100%;
 	border: 1px solid red;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100%;
 }
 .nav {
 	width: 100%;

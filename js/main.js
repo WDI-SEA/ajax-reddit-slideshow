@@ -11,18 +11,11 @@ $('document').ready(function() {
 		}
 		$('#searching').show();
 		jsonRequest(userRequest);
+		cleanUi(userRequest);
+		// reset entry field
 		userRequest.val(''); 
-
-		$('#submitBtn').hide();
-		$('#userEntry').hide();
-		$('#stopBtn').on('click', function() {
-			$('#displayArea').css('background', 'white');
-			clearInterval(changeImage);
-
-		})
+		$('#stopBtn').on('click', stopSlideShow);
 	});
-
-
 function invalidEntry(userRequest) {
 	if (userRequest.val() === '') {
 		alert('Please enter something to search for');
@@ -39,14 +32,16 @@ function jsonRequest(userRequest) {
 		sort: "new"
 	}).done(function(data) {
 		var dataArr = data.data.children;
-		console.log('done searching'); // place holder
-		
 		storeImages(dataArr);
 		$('#searching').hide();
 		changeImage = setInterval(displayImage, 2000);
 	})
 }
-
+function cleanUi(userRequest) {
+		$('#title').text(userRequest.val());
+		$('#submitBtn').hide();
+		$('#userEntry').hide();
+}
 function storeImages(dataArr) {
 	galleryArr = [];
 	for (var i = 0; i < dataArr.length; i++) {
@@ -59,6 +54,13 @@ function storeImages(dataArr) {
 function displayImage() {
 	var randomNum = Math.floor(Math.random() * galleryArr.length);
 	$('#displayArea').css('background-image','url("' + galleryArr[randomNum] + '")');
+}
+function stopSlideShow() {
+	$('#displayArea').css('background', 'white');
+	$('#submitBtn').show();
+	$('#userEntry').show();
+	clearInterval(changeImage);
+	$('#title').text('Slide Show Generator')
 }
 
 
