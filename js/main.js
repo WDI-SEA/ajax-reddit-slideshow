@@ -20,7 +20,7 @@ $('#submit').click(function(){
 function postToPage(urls){
 	var query = $('#userContent').val();
 	var containerDiv = $('#links');
-	containerDiv.append('<a href=" '+urls.data.url +'">'+ urls.data.url+ '</a>') // I don't know what this line is doing to the page 
+	containerDiv.append('<img src=" '+urls.data.url +'">'+ urls.data.url+ '>')
 	console.log(containerDiv); // is this the right var to console log?
 	
 }
