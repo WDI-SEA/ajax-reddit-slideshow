@@ -3,25 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
   <title>Reddit API Slideshow</title>
 </head>
 <body>
-  <h1 id="h1">Reddit Slideshow</h1>
-  <h3 id="description">Enter keyword to search for images on Reddit</h3>
-  <div id="contaier">
-    <form id="searchForm">
-      <input id="searchInput" type="text" name="input" placeholder="Enter your search">
-      <button id="searchBtn" type="submit">Search</button>
+  <div id="container">
+    <h1>Reddit Slideshow</h1>
+    <h3>Enter a search term to return images that have been posted to Reddit</h3>
+    <form>
+      <input type="text" id="input" name="input" placeholder="Enter Keyword">
+      <input type="submit" id="inputSearch" name="search" value="Search">
     </form>
   </div>
-    <div class="Output">
-    </div>
-    <button id="stopBtn">Stop Animation</button>
+  <div id="output">
+  </div>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="//code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="../js/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
 </body>
 </html>
 
