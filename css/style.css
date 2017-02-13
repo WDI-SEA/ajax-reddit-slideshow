@@ -1,6 +1,7 @@
 div{
-	width: 650px;
-	height: 100%;
+	width: 720px;
+	height: 400px;
+	float: left;
 }
 a{
 	display: inline-block;

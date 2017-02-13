@@ -19,9 +19,14 @@ $('#submit').click(function(){
 
 function postToPage(urls){
 	var query = $('#userContent').val();
-	var containerDiv = $('#links');
+	var containerDiv = $('#images');
 	containerDiv.append('<img src=" '+urls.data.url +'">'+ urls.data.url+ '>')
-	console.log(containerDiv); // is this the right var to console log?
-	
+	console.log(containerDiv); // is this the right var to console log?	
 }
 
+$(function() {
+	setInterval(function() {
+	$('images' .query).animate({'margin-left': '-=720px'}, 1000);
+}, 3000);
+
+});	
