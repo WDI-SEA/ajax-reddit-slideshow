@@ -1,0 +1,14 @@
+div{
+	width: 720px;
+	height: 400px;
+	float: left;
+}
+a{
+	display: inline-block;
+	margin: 5px;
+	
+}
+body{
+	text-align: center;
+	margin-top: 30%;
+}
