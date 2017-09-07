@@ -1,0 +1,18 @@
+button{
+	background-color: pink;
+}
+.box{
+    display: none;
+    width: 100%;
+}
+
+a:hover + .box,.box:hover{
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+#pics{
+	width: 500px;
+	height: 500px;
+
+}
