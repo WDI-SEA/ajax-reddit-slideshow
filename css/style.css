@@ -1,0 +1,43 @@
+body{
+  margin: 0 auto;
+  text-align: center;
+  background: lightgrey;
+}
+
+input{
+  padding: 10px;
+  border: none;
+  margin: 0 20px;
+  border-radius: 2px;
+}
+button{
+  border: none;
+  background: white;
+  padding: 10px;
+  width: 70px;
+  border-radius: 2px;
+}
+#slides{
+  height: 800px;
+}
+.slidesjs-container{
+    margin: 10px auto;
+}
+
+.slidesjs-navigation{
+  padding: 4px 10px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  margin-left: 15px;
+}
+
+li{
+  display: none;
+}
+
+#clear{
+  position: relative;
+  bottom: 200px;
+  z-index: 1;
+}
