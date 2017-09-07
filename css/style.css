@@ -1,0 +1,26 @@
+div, label {
+  display: block;
+  margin: .5em;
+}
+
+h1, h2 {
+  font-family: sans-serif;
+}
+
+label {
+
+}
+
+input {
+  margin: .5em;
+}
+
+#inputtext {
+    border: 1px solid grey;
+    box-shadow: 0 1px 0 #2f6627;
+    border-radius: 5px;
+    width: 20em;
+    padding-left: 1em;
+    font-size: 16px;
+    overflow: auto;
+}

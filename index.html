@@ -3,9 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/start/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css" />
   <title>Hello Front-End</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div class="wrapper">
+    <div id="effect">
+      <header>
+        <h1>Reddit Image Feed</h1>
+        <h2>Enter a query for reddit and return some images.</h2>
+      </header>
+      <form>
+        <input type="text" name="inputtext" id="inputtext" placeholder="kittens"/>
+        <input type="button" name="submit" id="button" class="ui-button ui-widget ui-corner-all" value="Submit"/>
+      </form>
+    </div>
+    <div id="output"></div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
