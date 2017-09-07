@@ -1,7 +1,7 @@
 body{
   margin: 0 auto;
   text-align: center;
-  background: lightgrey;
+  background: #666666;
 }
 
 input{
@@ -28,7 +28,9 @@ button{
   padding: 4px 10px;
   text-decoration: none;
   color: black;
-  border: 1px solid black;
+  background: white;
+  border: none;
+  border-radius: 2px;
   margin-left: 15px;
 }
 
@@ -37,7 +39,10 @@ li{
 }
 
 #clear{
-  position: relative;
-  bottom: 200px;
-  z-index: 1;
+  background: white;
+  margin-top: 50px;
+}
+
+#slidesContainer{
+  margin-top: 50px;
 }

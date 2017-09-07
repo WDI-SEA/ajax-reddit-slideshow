@@ -8,11 +8,13 @@ function search(event) {
 
   var input = $("#query");
   var userQuery = input.val();
+  var div = document.createElement("div");
+  div.setAttribute("id", "slides");
 
   $.get('https://www.reddit.com/search.json', {
     q: userQuery
   }).done(function(response) {
-
+    $("#slidesContainer").append(div);
     var results = response.data.children;
     for (var i = 0; i < results.length; i++) {
       var arrayOfImages = [];
@@ -28,13 +30,11 @@ function search(event) {
           height: 528
     });
   });
-  $("#toggle").hide();
-  $("#clear").show();
+  $("#toggle").toggle();
+  $("#clear").toggle();
+  input.val("");
 }
 
-function clearSearchResults() {
-  $("#slides").html("");
-}
 
 function addSearchResult(result) {
   var image = document.createElement("img");
@@ -42,9 +42,10 @@ function addSearchResult(result) {
   $("#slides").append(image);
 };
 
-//i know this refresh  is shitty but when I had an actual refresh function I couldn't get it to
-//remove the .slidejs() and reapply it to the new search
 function reset(){
- location.reload();
-}
+  $("#toggle").toggle();
+  $("#clear").toggle();
+  $("#slides").html("");
+  $("#slidesContainer").empty();
 
+}
