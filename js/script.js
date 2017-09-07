@@ -4,10 +4,7 @@ $(function() {
 });
 
 function search(event) {
-  // Stop the form from changing the page.
   event.preventDefault();
-
-  // clearSearchResults();
 
   var input = $("#query");
   var userQuery = input.val();
@@ -45,6 +42,8 @@ function addSearchResult(result) {
   $("#slides").append(image);
 };
 
+//i know this refresh  is shitty but when I had an actual refresh function I couldn't get it to
+//remove the .slidejs() and reapply it to the new search
 function reset(){
  location.reload();
 }
