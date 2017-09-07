@@ -1,0 +1,13 @@
+body {
+	text-align: center;
+}
+
+div {
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
+	border: solid black;
+	text-align: center; /* to center the img tags */
+}
+
+
