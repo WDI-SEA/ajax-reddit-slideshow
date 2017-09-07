@@ -1,0 +1,45 @@
+body {
+	text-align: center;
+	background: lightblue;
+	font-family: copperplate;
+}
+
+h1 {
+	font-size: 48px;
+	text-decoration: underline;
+	color: navy;
+}
+
+h3 {
+	font-weight: lighter;
+}
+
+#submit {
+	float: bottom;
+}
+
+#content {
+	display: inline-block;
+	padding: 40px;
+	width: 500px;
+}
+
+#query {
+	font-size: 24px;
+}
+
+button {
+	font-size: 24px;
+	font-family: copperplate;
+	color: navy;
+}
+
+#search-form {
+	margin: 50px;
+}
+
+img {
+	max-height: 300px;
+	max-width: 300px;
+	margin-left: 100px;
+}

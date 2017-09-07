@@ -1,11 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
-</head>
-<body>
-  <h1>Hello Front-End</h1>
-</body>
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Reddit Slideshow</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+	<div id="container">
+		<h1>Reddit slideshow</h1>
+		<h3>(Enter search item to begin slideshow)</h3>
+	</div>
+
+    <div id="content">
+    	<img id="results" src=""/>
+    </div>
+
+	<form id="search-form">
+  		<input id="query" placeholder="Type Here">
+  		<button type="submit" id="hideshow">Start!</button>
+	</form>
+
+	<button type="reset" value="Reset" id="reset">RESET</button>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="plugins/jquery.slides.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
