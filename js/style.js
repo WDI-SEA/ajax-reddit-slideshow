@@ -1,55 +1,51 @@
-var getInput = $("#userInput");
 var getClick = $("#userClick");
 var selectDiv = $("div");
 var imageHolder = [];
 
-$("getClick").on("click", search()); //define search() as the function that performs the search...
-
+$(function() {
+	getClick.on("click", search); //define search() as the function that performs the search...
+});
+	
+//function queries the api and returns an array imageHolder array with images
 function search(event) {
+	var getInput = $("#userInput").val(); 
 	console.log("search for ", getInput);
-
 	//run the .get business
-	$.get("https://www.reddit.com/search.json", {
-		q: getInput //use the super short version , this is the ajax part
-	}).done(function(response) { //** I understand the use of .done as the promise but what is "response"?
-		console.log(response);
-		//out the search API function stuff here
-		//I guess there's no need to write this as a function... it's just one thing
-		var results = response.data.children; //unclear here on "response"
-		var i = 0;
-		while (i<25) {
-			if (results[i].data.hasOwnProperty("preview")) { //check for preview property, should eval to true
-				var result = results[i].data.thumbnail;
-				//imageHolder[i] = "<img src='" + result + "'>";
-				imageHolder[i]; //just keep track of length/which gets saved in imageHolder
-				selectDiv.append("<img id='" + i + "' src='" + result + "'>"); //give the id as i...
-				i++;
+	$.get('https://www.reddit.com/search.json', {
+		q: getInput 
+	}).done(function(response) { 
+		imageHolder = []; //declare local so it refreshed every search
+		var results = response.data.children; 
+		for (i=0; i<results.length; i++) {
+			var thumbnail = results[i].data.thumbnail;
+			if (thumbnail === "self" || thumbnail === "image" || thumbnail === "default") { //check for thumbnail content
+				//console.log("no thumbnail content");
 			} else {
-				console.log("no match"); //if there was no preview
-				i++;
+				//console.log(thumbnail);	
+				imageHolder.push(thumbnail); //put all of the images into the imageHolder array
 			}
 		}
+		console.log("after loop", imageHolder.length);
+		playImages();
 	}).fail(function() {
 		console.log("something failed");
 	});
+	//console.log(imageHolder.length);
 }
 
-//put the sliedshow effects on the pix
-setInterval(slideImg(), 3000);
-
-function slideImg() {
-	for (i=0; i<imageHolder.length; i++) {
-		//find a way to traverse the div imgs by adding 1 to the ids
-		//change the zindex up one every time
-	}
+//playImages();
+//make the images appear in the div every couple seconds
+function playImages() {
+	var i = 0;
+	setInterval(function(){
+		if (i<imageHolder.length) {
+			selectDiv.css("background-image", "url(" + imageHolder[i] + ")");
+			i++;
+		} else {
+			console.log("done");
+		}
+	}, 3000);
 }
-
-
-
-//so I have the div with all the images inside them... 
-//maybe I can write a function to display one of them at a time
-//by giving them all the same position initially and then
-//making the z-values of one of them change over time... 
 
 
 
