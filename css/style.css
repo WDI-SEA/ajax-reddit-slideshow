@@ -26,10 +26,25 @@ p {
 }
 
 button {
-	width: 10%;
+	width: 20%;
 	height: 8%;
+
 	font-size: 30px;
 	font-family: fantasy;
 	background-color: red;
+}
 
+#slides {
+	display: none;
+}
+
+ul {
+	color: black;
+}
+
+#clearDiv {
+	height: 50px;
+	margin: auto;
+	width: 20%;
+	text-align: center;
 }
