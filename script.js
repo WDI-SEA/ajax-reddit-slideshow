@@ -9,6 +9,8 @@ var display = $("#slide-container");
 //   $("#search-form").on('submit', search);
 // });
 
+
+
 function search(event) {
   clearSearchResults(); 
 
@@ -25,7 +27,7 @@ function search(event) {
     	});
     for (var i = 0; i < results.length; i++) {
     	var result = results[i].data;
-    	addSearchResult(result);
+    	addSearchResult(response);
     }
   }).fail(function() {
     console.log("something failed");
@@ -39,20 +41,22 @@ function clearSearchResults() {
 // Adds a single result object to the page.
 function addSearchResult(result) {
   // Create a list item to contain the search result link
-  var img = document.createElement("img");
+  var pic = document.createElement("div");
 
   var link = document.createElement("img");
-  link.href = result.url; // reset the value of the the href
-  link.textContent = result.title; // set the value of the text in the link
+  // link.href = result.url; // reset the value of the the href
+  // link.textContent = result.title; // set the value of the text in the link
 
   // put the link inside the list item.
-  $(img).append(link);
+  $(link).append(pic);
 
   // add the list item to the list of search results
-  $("#results").append(link);
+  search.append(link);
 }
 
 start.click(function(){	
+	addSearchResult();
+	console.log("click works")
 	display.fadeIn(1000);
 	// display.setInterval(4000);
 	display.fadeOut(1000);
