@@ -3,9 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Reddit Slideshow</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+<div id="header">
+  <h1>Reddit Slideshow feat. AJAX</h1>
+  <h4>This webpage selects what you search and presents a
+  slideshow of pictures from Reddit based on your search. This
+  process is powered by AJAX with JSON, using the jQuery library addon to Javascript.</h4> 
+</div>
+
+<form id="slideshow-form">
+	<input id="query" placeholder="Search">
+	<button type="button">Search Reddit</button>
+</form>
+
+<ol id="results"></ol>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
