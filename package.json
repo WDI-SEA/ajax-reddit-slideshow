@@ -17,4 +17,6 @@
     "eslint-plugin-jsx-a11y": "^1.2.0",
     "eslint-plugin-react": "^5.0.1"
   }
+  
+  }
 }

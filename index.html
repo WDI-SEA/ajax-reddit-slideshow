@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Reddit Slideshow</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+<div id="container">
+  <header><h1>Welcome to the Reddit Slideshow!</h1></header>
+  <p id="instructions">Enter images of what you want to see here and we will pull images from Reddit to provide for you in a slideshow!</p>
+  <p id="warning">Don't Worry!</br> We've got a NSFW filter going! </br>You don't need to worry about your eyes bleeding!</p>
+
+  <form id="startform">
+  	<input id="user-input" placeholder="Your Request">
+ 	<button id="submit-button" type="button">Let's Go!</button>
+ 	
+  </form>
+</div>
+<button id="reset" onclick="reset();">Again! Again!</button>
+
+  <div id="slideshow">
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/jquery.slides.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="js/jquery.slides.min.js"></script>
+<script src="js/ajax.js"></script> -->
 </body>
 </html>
+
+
