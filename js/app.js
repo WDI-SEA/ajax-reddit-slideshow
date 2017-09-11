@@ -41,8 +41,8 @@ function search(event) {
 };
 
 vardisplayImages = function(url) {
-	var image = document.createElement ("img");
-	image.src = url;
+	var image = document.createElement("img");
+	link.src = url;
 	$('#slides').append(image);
 };
 
@@ -51,4 +51,4 @@ function clearSearchResults() {
   $(".top").show()
 };
 
-$('#clear').on('click', clearResults);
+$('#clear').on('click', clearSearchResults);
