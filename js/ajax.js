@@ -13,17 +13,20 @@ function search(event) {
 
   $.get('https://www.reddit.com/search.json', {
     q: userQuery +"/nsfw:no" 
+    // console.log("reddit get request");
   }).done(function(response) {
+    // console.log("reddit get request");
     $("#slideshow").append(div);
     var results = response.data.children;
+    console.log(results);
     for (var i = 0; i < 100; i++) {
       var imageArray = [];
       if(results[i].data.hasOwnProperty('preview')){
         imageArray.push(results[i]);
       }
-      // for(var j=0; j<imageArray.length; j++){
-      //   addSearchResult(imageArray[j].data.preview.images['0'].source.url);
-      // }
+      for(var j=0; j<imageArray.length; j++){
+        addSearchResult(imageArray[j].data.preview.images['0'].source.url);
+      }
     }
     $("#slides").slidesjs({
           width: 940,
@@ -42,7 +45,7 @@ function search(event) {
 
 function addSearchResult(result) {
   var image = document.createElement("img");
-  img.setAttribute("id", "currentImg")
+  // img.setAttribute("id", "currentImg")
   image.src = result;
   $("#slides").append(image);
   // // $('#currentImg').on('click', function(){
