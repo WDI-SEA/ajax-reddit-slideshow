@@ -1,0 +1,36 @@
+body {
+   font-family: 'Open Sans Condensed', sans-serif;
+   background-color: #a0e0f0;
+}
+
+.inputDiv {
+   margin: 0 auto;
+   width: 400px;
+   text-align:center;
+   position: relative;
+   top: 500px;
+}
+
+.inputDiv input{
+   border: 1px solid #fff;
+   background-color: rgba(0,0,0,0);
+   margin-left: 10px;
+   height: 20px;
+   font-family: 'Open Sans Condensed';
+   font-size: 14px;
+}
+
+.button {
+   line-height: 20%;
+   padding: 10px;
+   vertical-align: middle;
+}
+
+.wheel-img {
+   position:absolute;
+   /*float:left;*/
+   top:0px;
+   left:0px;
+   width:200px;
+   height:200px;
+}
