@@ -1,0 +1,20 @@
+body {
+	text-align: center;
+}
+
+#slideshowBox {
+	display: none;
+}
+
+img {
+	height: 200px;
+	width: 200px;
+}
+
+a {
+	display: block;
+}
+
+button {
+	margin: 20px;
+}
