@@ -30,9 +30,8 @@ function clearSearchResults() {
 // Adds a single result object to the page.
 function addSearchResult(results) {
   console.log(results);
-  // for(var i = 0; i < results.length; i++)
- // setInterval(function(){ alert("Hello"); }, 3000);
-
+  // setInterval()
+for(var i = 0; i < results.length; i++){
   // Create a list item to contain the search result link
   var div = document.createElement('div');
 
@@ -50,15 +49,13 @@ function addSearchResult(results) {
   // add the list item to the list of search results
   $('#results').append(div);
 
-
-
 //   var results = $('#results');
 // for(var i=0;i < results.length; i++) {
 //     var arrValue = results[i];
 //     console.log(arrValue);
 //  }
 }
-
+}
 
 // var x = $('img').src gets url
 // setInterval(functionX(),
