@@ -4,17 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reddit Slideshow</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="section" id="search-bar">
+	<div id="search-bar">
 		<h1>I'd like to watch a slideshow of...</h1>
 		<form id="search-form">
-			<input id="query" type="text" placeholder="kittens">
+			<input id="query" type="text" placeholder="doggo">
 			<button type="submit">Start</button>
     	</form>
+    	<p>Images sourced from Reddit</p>
 	</div>
-	<div class="section" id="results">
+	<div id="results">
 		<div id="loading"></div>
 		<div id="slideshow"></div>
 	</div>

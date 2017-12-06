@@ -1,6 +1,6 @@
 body {
 	text-align: center;
-	font-family: Helvetica;
+	font-family: 'Lato', sans-serif;
 	background: #00010D;
 	background: linear-gradient(to bottom right, #00010D, #0A131A);
 	background-size: cover;
@@ -9,13 +9,19 @@ body {
 
 #search-bar {
 	transition: opacity 4s height 10s;
+	background: rgb(86, 102, 105);
 	background: rgba(86, 102, 105, .25);
 	color: white;
 	display: inline-block;
 	padding: 100px;
 	position: relative;
-	margin: 100px auto;
+	margin: 80px auto 0 auto;
 	z-index: 99;
+}
+
+p {
+	text-align: left;
+	padding-left: 20px;
 }
 
 input {
@@ -62,23 +68,24 @@ button:focus {
 #loading {
 	position: absolute;
 	display: block;
-	margin: 40px 40%;
+	margin: 200px 45%;
 	z-index: -1;
 	text-align: center;
-	font-size: 50px;
+	font-size: 36px;
 	color: white;
 }
 
 #slideshow {
-	height: 0px;
+	height: 0;
 	display: block;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
-	transition: background 1s linear;
+	background-repeat: no-repeat;
+	transition: background 1.5s;
 }
 
 #slideshow.inprogress {
-	height: 575px;
+	height: 600px;
 }
 
 #quit {
@@ -86,6 +93,8 @@ button:focus {
 	position: absolute;
 	right: 20px;
 	top: 20px;
+	border: 0;
+	padding: 20px;
 }
 
 #quit.inprogress {
