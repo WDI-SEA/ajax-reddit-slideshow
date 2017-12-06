@@ -2,6 +2,7 @@
 var viewerStatus = false;
 var displayNumber = 0;
 
+var rotate;
 var userInput
 var imgArray = [];
 var linkArray = [];
@@ -32,12 +33,12 @@ function buttonSwitch(){
 }
 
 function startTimer(){
-	setInterval(carousel, 3000);
+	rotate = setInterval(carousel, 3000);
 }
 
-// function stopTimer(){
-// 	clearInterval(startTimer);
-// }
+function stopTimer(){
+	clearInterval(rotate);
+}
 
 //convert input to variable
 function getInput(){
@@ -52,7 +53,7 @@ function clearSearchResults(){
 	buttonSwitch();
 	imgArray = [];
 	//turn off setinterval
-	// stopTimer();
+	stopTimer();
 }
 
 //looks up userInput var, finds reddit pics
