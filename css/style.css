@@ -1,0 +1,104 @@
+body {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	background: #00010D;
+	background: linear-gradient(to bottom right, #00010D, #0A131A);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#search-bar {
+	transition: opacity 4s height 10s;
+	background: rgb(86, 102, 105);
+	background: rgba(86, 102, 105, .25);
+	color: white;
+	display: inline-block;
+	padding: 100px;
+	position: relative;
+	margin: 80px auto 0 auto;
+	z-index: 99;
+}
+
+#search-bar.inprogress {
+	display: none;
+}
+
+p {
+	text-align: left;
+	padding-left: 20px;
+}
+
+a {
+	color: white;
+	text-decoration: underline;
+}
+
+input {
+	background: black;
+	color: white;
+	padding: 20px;
+	width: 300px;
+	margin: 10px;
+	font-size: 24px;
+	border-radius: 30px;
+	border: 2px solid white;
+}
+
+input:focus {
+	color: white;
+	outline: 0; 
+}
+
+button {
+	font-size: 18px;
+	padding: 24px 30px;
+	margin: 5px;
+	border-radius: 30px;
+	border: 2px solid white;
+	background: white;
+	color: #00010D;
+}
+
+button:focus {
+	outline: 0;
+}
+
+#results {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	transition: all 4s;
+}
+
+#loading {
+	position: absolute;
+	display: block;
+	margin: 200px 45%;
+	z-index: -1;
+	text-align: center;
+	font-size: 36px;
+	color: white;
+}
+
+#slideshow {
+	height: 0;
+	display: block;
+	transition: background 1.5s;
+}
+
+#slideshow.inprogress {
+	height: 600px;
+}
+
+#quit {
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	border: 0;
+	padding: 20px;
+}
+
+#quit.inprogress {
+	display: inline-block;
+}
