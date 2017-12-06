@@ -12,6 +12,17 @@ li{
 	list-style-type: none;
 	float: left;
 }
+#loading-img{
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif");
+	background-size:cover;
+	background-position: center;
+	width: 13em;
+	height: 13em;
+	position: absolute;
+	left: 38.4em;
+	top: 15em;
+	display: none;
+}
 #logo-container{
 	background-image:url("http://i.imgur.com/sdO8tAw.png");
 	background-size:cover;

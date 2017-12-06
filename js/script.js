@@ -25,7 +25,7 @@ function search(event){
 	event.preventDefault();
 	$("#search-form").css("display","none");
 	$("#logo-container").css("display","none");
-	//display loading div here
+	$("#loading-img").css("display","block");
 	let userInput = $("#search-box").val()||"Bob Ross";
 	$.get("https://www.reddit.com/search.json",{
 		q:userInput,
@@ -65,7 +65,7 @@ function createSlide(url){
 }
 function displaySlides(){
 	$("#slide-input-wrapper").css("display","block");
-	//hide loading div here
+	$("#loading-img").css("display","none");
 	slideInterval =  setInterval(function(){
 		var totalLi = $("li").length;
 		var offset = parseInt(slideWidth) * totalLi;
