@@ -1,7 +1,6 @@
 //indicates if images are displayed
 var viewerStatus = false;
 var displayNumber = 0;
-
 var rotate;
 var userInput
 var imgArray = [];
@@ -52,7 +51,6 @@ function clearSearchResults(){
 	$('a').html('');
 	buttonSwitch();
 	imgArray = [];
-	//turn off setinterval
 	stopTimer();
 }
 
@@ -96,4 +94,3 @@ function search(event){
 	buttonSwitch();
 	startTimer();
 }
-
