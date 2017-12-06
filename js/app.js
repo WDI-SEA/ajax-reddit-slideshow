@@ -35,11 +35,11 @@ var offset =0;
          $(dest).animate({
             top:spot[j].y+"px",
             left:spot[j].x+"px"
-         },1100,"linear");
+         },500,"swing");
          $(dest+" img").animate({
             width: 200*spot[j].size,
             height: 200*spot[j].size
-         },1100);
+         },500,"swing");
       }
 
       offset++;
@@ -107,7 +107,7 @@ var offset =0;
                imgList.push(data.items[i].media.m);
             }
          }
-         console.log("imglist ",imgList);
+         // console.log("imglist ",imgList);
          turnWheel();
 
          //addSearchResult(data.data.children);
@@ -121,7 +121,7 @@ var offset =0;
          $("#redditForm label input").val("");
       });
 
-      setInterval(turnWheel, 1000);
+      setInterval(turnWheel, 2000);
 
       wheelTotal = $(".wheel-img").length;
 
