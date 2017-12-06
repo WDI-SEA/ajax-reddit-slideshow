@@ -4,6 +4,7 @@ var displayNumber = 0;
 
 var userInput
 var imgArray = [];
+var linkArray = [];
 
 //display imgs on click
 $(function() {
@@ -24,12 +25,19 @@ function buttonSwitch(){
 		.attr('id','addButton')
 		.text('Go')
 		.off('click', clearSearchResults)
-		.on('click', search)
-		clearSearchResults();
+		.on('click', search);
+		// clearSearchResults();
 		viewerStatus = false;
 	}
 }
 
+function startTimer(){
+	setInterval(carousel, 3000);
+}
+
+// function stopTimer(){
+// 	clearInterval(startTimer);
+// }
 
 //convert input to variable
 function getInput(){
@@ -40,15 +48,17 @@ function getInput(){
 function clearSearchResults(){
 	$('#displayedImg').html('');
 	$('h1').html('The Internet can be a scary place<br>Discover The Internet below!');
+	$('a').html('');
 	buttonSwitch();
 	imgArray = [];
 	//turn off setinterval
+	// stopTimer();
 }
 
 //looks up userInput var, finds reddit pics
 function picLookUp(){
 	$.get('https://www.reddit.com/search.json', {
-		q: userInput + '+nsfw:no',
+		q: userInput,
 		limit: 25
 	}).done(function(response) {
   		createDisplay(response.data.children);
@@ -57,14 +67,8 @@ function picLookUp(){
 
 function createDisplay(results){
 	for(var i = 0; i < results.length; i++){
-		imgArray.push(results[i].data.url);
-		//declare variables
-		// var img = document.createElement('img');
-		//create img gallary
-		// img.src = results[i].data.thumbnail;
-		// img.a = results[i].data.url;
-		// $('h1').html('');
-		// $(displayedImgs).append(img);
+		imgArray.push(results[i].data.thumbnail);
+		linkArray.push(results[i].data.url);
 	}
 }
 
@@ -78,15 +82,17 @@ function carousel(){
 }
 
 function postImg(){
-	$('#displayedImg').html('<img src="' + imgArray[displayNumber] + '">')
+	var p = ('<a href="' + linkArray[displayNumber] + '">Post ' + (displayNumber + 1) + '</a>');
+	$('#displayedImg').html('<img src="' + imgArray[displayNumber] + '">').append(p);
 }
 
-//run on click function
+//run on click search 
 function search(event){
 	getInput();
 	event.preventDefault(); 
 	picLookUp();
+	$('h1').html('');
 	buttonSwitch();
-	setInterval(carousel, 500);
+	startTimer();
 }
 
