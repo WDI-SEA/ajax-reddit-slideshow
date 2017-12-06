@@ -1,0 +1,48 @@
+body{
+	background-image: url("../img/tealstripes.jpg");
+	background-size: cover;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	color: black;
+}
+#container{
+	background-image: url("../img/polaroid.jpeg");
+	background-size: contain;
+	background-size: cover;
+	height: 400px;
+	width: 350px;
+	margin: 0 auto;
+	text-align: center;
+}
+#textbox {
+	margin-top: 50%;
+	height: 20px;
+	border: 2px dashed blue;
+	text-align: center;
+}
+#submit{
+	margin: 150px 100px;
+	height: 30px;
+	width: 80px;
+	border: 2px dashed blue;
+
+}
+.redletter {
+	color: red;
+}
+
+/*  #draggable { 
+  	width: 100px; 
+  	height: 100px; 
+  	padding: 0.5em; 
+  	float: left; 
+  	margin: 10px 10px 10px 0; 
+  }*/
+
+  #droppable { 
+  	width: 150px; 
+  	height: 150px; 
+  	padding: 0.5em; 
+  	float: left; 
+  	margin: 10px;
+  	border: 2px solid black;
+ }
