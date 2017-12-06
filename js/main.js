@@ -5,8 +5,8 @@ $(function() {
   /*Post Constructor*/
   var Post = function(title, url, imageLink) {
     this.title = title,
-    this.url = url,
-    this.imageLink = imageLink
+      this.url = url,
+      this.imageLink = imageLink
   }
   var that = this;
   /*
@@ -20,7 +20,7 @@ $(function() {
     $.get('http://www.reddit.com/search.json', {
       q: searchQuerry,
       limit: 5,
-      type:'img'
+      type: 'img'
     }).done(function(ret) {
       renderResult(parseData(ret));
     })
@@ -29,7 +29,7 @@ $(function() {
   function renderResult(arr) {
     console.log('render', arr[0]);
     initCarosel(arr);
-  
+
   }
 
   function parseData(ret) {
@@ -38,16 +38,10 @@ $(function() {
     for (let i = 0; i < ret.data.children.length; i += 1) {
       let title, url, imgLink;
 
-      // console.log(ret.hasOwnProperty('data.children[i].data.preview.images["0"].source.url'));
-      // if(typeof(ret.data.children[i].data.preview.images["0"].source.url) !== "undefined"){}
-
       title = ret.data.children[i].data.title;
       url = ret.data.children[i].data.url;
       imgLink = ret.data.children[i].data.preview.images[0].source.url;
       postsArr.push(new Post(title, url, imgLink));
-
-
-      console.log('imgLink ', ret.data.children[i].data.preview.images["0"].source.url);
     }
     console.log('parse', postsArr[0]);
     return postsArr;
@@ -57,64 +51,10 @@ $(function() {
     btnSubmit.on('click', (e) => {
       e.preventDefault();
       getData($('#user-input').val());
-
+      $('.hide').hide();
     });
 
-  }
-
-function randomGenerator(){
-    return Math.floor((Math.random() * 5) + 1);
-}
-
-  function initCarosel(arr) {
-    console.log('carosel', arr[0]);
-    body.vegas({
-      shuffle: true,
-      loop: true,
-      autoplay: true,
-      timer: false,
-      cover: true,
-
-    play: function(index, slideSettings) {
-        console.log(index);
-        $('.hide').hide();
-        //hide the form 
-      },
-      end: function(index, slideSettings) {
-        console.log('end');
-        arr = [];
-        //clear the images 
-        //bring back the form
-      },
-      pause: function(index, slideSettings) {
-        console.log('pause');
-        //enlare the post title
-      },
-        walk: function(index, slideSettings) {
-            console.log('index',index);
-            console.log(arr[index].title)
-            $('#link-title').text(arr[index].title);
-            // $('#post-link').attr(arr[index].title);
-
-
-        },
-      slides: [
-        { src: arr[0].imageLink },
-        { src: arr[1].imageLink },
-        { src: arr[2].imageLink },
-        { src: arr[3].imageLink },
-        { src: arr[4].imageLink }
-      ]
-      // slides: [
-      //   { src: 'https://i.redditmedia.com/a29lk6XbfdGy3xvOLqcsxkw_IdsQkAKaXKuzTFmRXUM.jpg?s=9316532dab2a7f86e8d4d32b9fb4820a' },
-      //   // {src: arr[0].imageLink}
-      // ]
-    });
-  }
-
-
-  init();
-
+    $('.controls').hide();
 
   $('a#pause').on('click', function() {
     body.vegas('pause');
@@ -129,8 +69,58 @@ function randomGenerator(){
   $('a#stop').on('click', function() {
     body.vegas('destroy');
     $('#input-form').show();
-
-
+   $('.controls').hide();
+   $('#link-title').text('');
   });
+
+  }
+
+  function initCarosel(arr) {
+    console.log('carosel', arr[0]);
+    body.vegas({
+      shuffle: true,
+      loop: true,
+      autoplay: true,
+      timer: false,
+      cover: true,
+
+      play: function(index, slideSettings) {
+        $('.controls').show();
+        console.log(index);
+        
+        //hide the form 
+      },
+      end: function(index, slideSettings) {
+        console.log('end');
+        arr = [];
+        //clear the images 
+        //bring back the form
+      },
+      pause: function(index, slideSettings) {
+        console.log('pause');
+        //enlare the post title
+      },
+      walk: function(index, slideSettings) {
+        console.log('index', index);
+        console.log(arr[index].title)
+        $('#link-title').text(arr[index].title);
+        // $('#post-link').attr(arr[index].title);
+
+
+      },
+      slides: [
+        { src: arr[0].imageLink },
+        { src: arr[1].imageLink },
+        { src: arr[2].imageLink },
+        { src: arr[3].imageLink },
+        { src: arr[4].imageLink }
+      ]
+    });
+  }
+
+
+  init();
+
+
 
 }());
