@@ -1,0 +1,127 @@
+body {
+  text-align: center;
+  background: black;
+  color: white;
+  font-family: "Karla", sans-serif;
+  margin: 100px auto;
+}
+
+@keyframes rock {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(1deg);
+  }
+  20% {
+    transform: rotate(2deg);
+  }
+  30% {
+    transform: rotate(3deg);
+  }
+  40% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(4deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+  80% {
+    transform: rotate(2deg);
+  }
+  90% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#reddit-icon {
+  height: 200px;
+  animation: rock;
+  animation-duration: .8s;
+  animation-iteration-count: infinite;
+  transition: 4s;
+}
+
+#title {
+  font-family: "Unica One";
+  font-size: 60px;
+  margin: 0;
+}
+
+p {
+  font-size: 25px;
+}
+
+form {}
+
+input {
+  display: inline-block;
+  background-color: transparent;
+  border: 0px solid;
+  color: #CCC;
+  text-align: center;
+}
+
+#search-box {
+  margin-top: 60px;
+  font-size: 30px;
+  width: 500px;
+  padding: 5px;
+}
+
+hr {
+  margin-bottom: 25px;
+  width: 500px;
+}
+
+#search-button {
+  border: 1px solid grey;
+  padding: 10px 25px 33px 25px;
+  height: 20px;
+  width: 160px;
+  font-size: 20px;
+}
+
+#search-button:hover {
+  border: 2px solid darkgrey;
+  font-weight: 600;
+}
+
+#resultDiv {
+  border: 1px solid rgba(47, 79, 79, .7);
+  width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 10px;
+}
+
+#resultDiv img {
+  max-width: 500px;
+  vertical-align: middle;
+}
+
+#stop {
+  display: block;
+  background-color: transparent;
+  border: 1px solid grey;
+  color: #CCC;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px 25px 33px 25px;
+  height: 20px;
+  width: 200px;
+  font-size: 20px;
+}
+
+#stop:hover {
+  border: 2px solid darkgrey;
+  font-weight: 600;
+}
