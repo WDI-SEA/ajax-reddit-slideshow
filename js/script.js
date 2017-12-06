@@ -2,20 +2,34 @@
 var viewerStatus = false;
 
 var inputField = $('#inputField');
-var button = $('#button');
-var removeButton = 
-var displayedImgs = $('#displayedImgs');
 var userInput
 
 //display imgs on click
 $(function() {
-	$(button).on('click', search);
+	$('#addButton').on('click', search);
 });
 
 //remove img display on click
 $(function(){
-	$()
-})
+	$('#removeButton').on('click', clearSearchResults);
+});
+
+//alternate between search and clear buttons
+function buttonSwitch(){
+	if(viewerStatus === false){
+		$('button')
+			.attr('id','removeButton')
+			.text('Clear');
+			viewerStatus = true;
+	}else{
+		$('button')
+			.attr('id','addButton')
+			.text('Go');
+			viewerStatus = false;
+	}
+	
+}
+
 
 //convert input to variable
 function getInput(){
@@ -24,7 +38,7 @@ function getInput(){
 
 //clears returned images
 function clearSearchResults(){
-	$(displayedImgs).html('');
+	$('#displayedImgs').html('');
 }
 
 //looks up userInput var, finds reddit pics
@@ -52,11 +66,11 @@ function createDisplay(results){
 //run on click function
 function search(event){
 	getInput();
-	event.preventDefault();
-	viewerStatus = true; 
+	event.preventDefault(); 
 	clearSearchResults();
 	console.log('user input: ', userInput);
 	picLookUp();
+	buttonSwitch();
 }
 
 
