@@ -1,0 +1,26 @@
+body{
+	background-image: url(../img/backdrop.jpg);
+	text-align: center;
+}
+h1{
+	color: darkgrey;
+	margin-top: 48px;
+}
+#text {
+	border: none;
+	border-bottom: 3px solid darkgrey;
+	background: none;
+	width: 56%;
+	display: inline-block;
+	text-align: center;
+	line-height: 100px;
+	font-size: 48px;
+	margin-top: 56px;
+}
+#submit{
+	color: darkgrey;
+	border: none;
+	background: none;
+	font-size: 24px;
+	margin-top: 20px;
+}
