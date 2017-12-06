@@ -32,9 +32,9 @@ function clearSearchResults() {
 // Adds a single result object to the page.
 function addSearchResult(results) {
   for(var i=0; i < results.length; i++){
-    // if(results[i]data.thumbnail === 'nsfw' || results[i]data.thumbnail === 'default' || results[i]data.thumbnail === 'self'){
-    //   return;
-    // }
+    if(results[i].data.thumbnail === 'nsfw' || results[i].data.thumbnail === 'default' || results[i].data.thumbnail === 'self'){
+      return;
+    };
   //TO DO
   // Create a list item to contain the search result link
   var li = document.createElement('li');
