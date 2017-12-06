@@ -8,13 +8,13 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "babel-eslint": "^6.0.4",
-    "browser-sync": "^2.12.5",
-    "csslint": "^0.10.0",
-    "eslint": "^2.9.0",
-    "eslint-config-airbnb": "^8.0.0",
-    "eslint-plugin-import": "^1.6.1",
-    "eslint-plugin-jsx-a11y": "^1.2.0",
-    "eslint-plugin-react": "^5.0.1"
+    "babel-eslint": "^8.0.3",
+    "browser-sync": "^2.18.13",
+    "csslint": "^1.0.5",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1"
   }
 }
