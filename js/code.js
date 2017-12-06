@@ -21,6 +21,7 @@ function search(event) {
     limit: 10
   }).done(function(response) {
     addSearchResult(response.data.children);
+    console.log(response);
   });
 
   hideLoader();
@@ -35,7 +36,7 @@ function clearSearchResults() {
 function addSearchResult(results) {
   for(var i = 0; i < results.length; i++) {
   	document.getElementsByClassName("slide")[i].style.display = "inline";
-    document.getElementsByClassName("slide")[i].src = results[i].data.thumbnail;
+    document.getElementsByClassName("slide")[i].src = results[i].data.preview.images[0].source.url;
 	console.log(results[i].data.thumbnail);
   }
   document.getElementById("search-form").style.display = "none";
@@ -55,7 +56,7 @@ function addSearchResult(results) {
 function animateSlides() {
   $('#slides').slidesjs({
     width: 940,
-    height: 528,
+    height: 428,
     play: {
       active: true,
       auto: true,

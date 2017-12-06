@@ -1,6 +1,10 @@
 body {
 	text-align: center;
-	margin: 10%;
+	margin: 0 10%;
+	background-image: url("../img/projector.jpg");
+	background-repeat: no-repeat;
+	background-size: 110% 150%;
+	background-position: -70px -80px
 }
 
 ol {
