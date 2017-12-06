@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SlideShow</title>
+	<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+	<div id="new-search">
+		<h1>Show me pictures of...</h1>
+		<form id="search-form">
+    		<input id="query" placeholder="">
+    		<button type="submit">I'm ready!</button>
+		</form>
+		<div id="instructions">
+			<p>(Type a keyword to watch a slide show)</p>
+		</div>
+	</div>
+	<div id="happening">
+		<h1>Enjoy these photos!</h1>
+		<div id="slide-show">	
+		</div>
+		<button id="stop">New Search!</button>
+	</div>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="./js/app.js"></script>
 </body>
 </html>
+
+<!-- //LOAD WITH
+//Some sort of title
+//A short description telling the user what to do
+//A blank text field
+//A Button ("start" or "go" or "search")
+
+//SEARCH TERM ENTERED
+//The form / title / description should hide
+//Show a loading message (optional)
+//Fetch related posts from reddit (with ajax)
+//Display animation / slideshow of images (jQuery)
+//Show a button to stop / reset the animation
+//Repeat animation until use clicks "stop"
+
+//STOP BUTTON CLICKED
+//Form / title / description are shown again
+//User can enter a new search term -->
+
+
+
+    <!-- The div where results will be displayed. -->
