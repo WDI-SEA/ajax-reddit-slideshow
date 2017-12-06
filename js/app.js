@@ -76,17 +76,18 @@ var offset =0;
    }
 
    // function getQuery(word) {
-   //    $.getJSON("https://www.reddit.com/r/pics.json", {
+   //    $.getJSON("https://www.reddit.com/search.json", {
    //      q: word,
    //      limit:10
    //    }).done( function(data) {
    //       console.log(data);
    //
    //       imgList = [];
+   //       var redditList = data.data.children;
    //
-   //       for(var i=0; i<data.data.children.length; i++) {
-   //          if (data.data.children[i].data.preview && data.data.children[i].data.preview.images) {
-   //             imgList.push(data.data.children[i].data.preview.images[0].source.url);
+   //       for(var i=0; i<redditList.length; i++) {
+   //          if (redditList[i].data.preview && redditList[i].data.preview.images) {
+   //             imgList.push(redditList[i].data.preview.images[0].source.url);
    //          }
    //       }
    //       console.log("imglist ",imgList);
@@ -117,7 +118,8 @@ var offset =0;
    function init() {
       $("#redditForm").submit( function(e) {
          e.preventDefault();
-         getQuery($("#redditForm").val());
+
+         getQuery($("#redditInput").val());
          $("#redditForm label input").val("");
       });
 
@@ -132,8 +134,8 @@ var offset =0;
       let sz=1.0;
 
       for (var i=0; i<wheelTotal; i++) {
-         x = x0 + RADIUS*Math.cos(theta);
-         y = y0 - RADIUS*Math.sin(theta);
+         x = x0 + RADIUS*Math.cos(theta-Math.PI/2);
+         y = y0 - RADIUS*Math.sin(theta-Math.PI/2);
          if (y0<y) {
             sz=y0/y;
          }
