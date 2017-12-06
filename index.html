@@ -5,19 +5,19 @@
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
   </head>
   <body>
-    <h1>Reddit Image Fun</h1>
+    <h1>reddit image search</h1>
     <div id="directions">
-      <p>user directions</p>
+      <p>search reddit for just about any image</p>
+      <img id="redditIcon" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Reddit_logo_and_wordmark.svg/1200px-Reddit_logo_and_wordmark.svg.png">
     </div>
-
     <form id="search-form">
       <input id="query" placeholder="search it here!">
       <button type="submit">search reddit</button>
     </form>
-    <div id="slideshow">
-    </div>
     <ol id="results"></ol>
+    <button id="reset" onClick="window.location.reload()">Search Again</button>
   </body>
 </html>
