@@ -1,0 +1,14 @@
+body{
+  text-align: center;
+  margin-top: 100px;
+}
+
+li{
+  list-style-type: none;
+  display: inline-block;
+}
+.slideShow{
+  max-width: 300px;
+  position: relative;
+  margin: auto;
+}
