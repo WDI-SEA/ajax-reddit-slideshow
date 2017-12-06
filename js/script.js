@@ -18,6 +18,8 @@ function search(event) {
   limit: 50
 }).done(function(response) {
   addSearchResult(response.data.children);
+  document.getElementById("reset").style.display = "inline-block";
+
   setInterval(function(){
     count++
     console.log(images[count])

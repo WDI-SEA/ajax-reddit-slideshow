@@ -17,6 +17,18 @@ p{
 	height: 10%;
 	width: auto;
 }
+
+.imgDiv{
+	text-align: center;
+	top: .5vw;
+	left: 36vw;
+	position: relative;
+	height: 200px;
+	width: 250px;
+	background-color: white;
+}
+
+
 #query,
 #submit{
 	text-align: center;
@@ -24,10 +36,10 @@ p{
 	font-size: 16px;
 }
 #reset{
-	display: show;
-	position: absolute; 
-	top: 240px; 
-	right: 450px;
+	display: none;
+	position: relative;
+	left-margin: 50%; 
+	margin-top: 20px;
 	color: rgb(121,197, 211);
 	font-size: 18px;
 	text-align: center;
