@@ -1,0 +1,10 @@
+h1 {
+	color: pink;
+	text-transform: uppercase;
+}
+
+body{
+	text-align: center;
+	background-color: black;
+	margin-top: 20%;
+}
