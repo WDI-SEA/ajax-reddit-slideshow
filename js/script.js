@@ -25,6 +25,7 @@ function buttonSwitch(){
 		.text('Go')
 		.off('click', clearSearchResults)
 		.on('click', search)
+		clearSearchResults();
 		viewerStatus = false;
 	}
 }
@@ -37,7 +38,7 @@ function getInput(){
 
 //clears returned images
 function clearSearchResults(){
-	$('#displayedImgs').html('');
+	$('#displayedImg').html('');
 	$('h1').html('The Internet can be a scary place<br>Discover The Internet below!');
 	buttonSwitch();
 	imgArray = [];
@@ -50,7 +51,6 @@ function picLookUp(){
 		q: userInput + '+nsfw:no',
 		limit: 25
 	}).done(function(response) {
-		// console.log(response.data.children)
   		createDisplay(response.data.children);
 	});
 }
@@ -59,35 +59,34 @@ function createDisplay(results){
 	for(var i = 0; i < results.length; i++){
 		imgArray.push(results[i].data.url);
 		//declare variables
-		var img = document.createElement('img');
+		// var img = document.createElement('img');
 		//create img gallary
-		img.src = results[i].data.thumbnail;
-		img.a = results[i].data.url;
-		$('h1').html('');
-		$(displayedImgs).append(img);
+		// img.src = results[i].data.thumbnail;
+		// img.a = results[i].data.url;
+		// $('h1').html('');
+		// $(displayedImgs).append(img);
 	}
 }
 
 function carousel(){
 	console.log(displayNumber);
+	postImg();
 	displayNumber ++;
 	if (displayNumber >= imgArray.length){
 		displayNumber = 0;
 	}
 }
 
-// function postImg(){
-// 	$('#displayedImgs').html('<img src="' + imgArray[displayNumber] + '">')
-// }
+function postImg(){
+	$('#displayedImg').html('<img src="' + imgArray[displayNumber] + '">')
+}
 
 //run on click function
 function search(event){
 	getInput();
 	event.preventDefault(); 
-	clearSearchResults();
-	console.log('user input: ', userInput);
 	picLookUp();
 	buttonSwitch();
-	setInterval(carousel, 200);
+	setInterval(carousel, 500);
 }
 
