@@ -33,7 +33,6 @@ function search(event){
 		sort:"top",
 		t:"all"
 	}).done(function(r){
-		console.log(r.data);
 		handleResponse(r);
 	});
 }
@@ -84,4 +83,5 @@ function resetPage(){
 	$("#slide-input-wrapper").css("display","none");
 	$("#search-form").css("display","block");
 	$("#logo-container").css("display","block");
+	$("#search-box").val("");
 }
