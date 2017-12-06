@@ -16,5 +16,9 @@
     "eslint-plugin-import": "^1.6.1",
     "eslint-plugin-jsx-a11y": "^1.2.0",
     "eslint-plugin-react": "^5.0.1"
+  },
+  "dependencies": {
+    "cors-anywhere": "^0.4.1",
+    "vegas": "^2.4.0"
   }
 }
