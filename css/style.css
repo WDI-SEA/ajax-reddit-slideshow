@@ -19,9 +19,18 @@ body {
 	z-index: 99;
 }
 
+#search-bar.inprogress {
+	display: none;
+}
+
 p {
 	text-align: left;
 	padding-left: 20px;
+}
+
+a {
+	color: white;
+	text-decoration: underline;
 }
 
 input {
@@ -54,10 +63,6 @@ button:focus {
 	outline: 0;
 }
 
-#search-bar.inprogress {
-	display: none;
-}
-
 #results {
 	position: relative;
 	display: block;
@@ -78,9 +83,6 @@ button:focus {
 #slideshow {
 	height: 0;
 	display: block;
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
 	transition: background 1.5s;
 }
 
