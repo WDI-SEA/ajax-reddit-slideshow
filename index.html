@@ -1,11 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
-</head>
-<body>
-  <h1>Hello Front-End</h1>
-</body>
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Reddit Slideshow</title>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.js"></script>
+    <script src="./js/code.js"></script>
+  </head>
+  <body>
+    <h1>Ready Reddit</h1>
+    <div id="slides">
+      <img src="./img/pikachu.jpg" class="slide">
+      <img src="./img/pikachu.jpg" class="slide">
+      <img src="./img/pikachu.jpg" class="slide">
+      <img src="./img/pikachu.jpg" class="slide">
+      <img src="./img/pikachu.jpg" class="slide">
+      <img src="./img/pikachu.jpg" class="slide">
+      <img src="./img/pikachu.jpg" class="slide">
+      <img src="./img/pikachu.jpg" class="slide">
+      <img src="./img/pikachu.jpg" class="slide">
+      <img src="./img/pikachu.jpg" class="slide">
+    </div>
+
+    <form id="search-form">
+      <input id="query" placeholder="kittens">
+      <button type="submit">search reddit</button>
+    </form>
+
+    <!-- Kept because I like the line it makes -->
+    <ol id="empty"></ol>
+    <div class="loader">Loading...</div>
+  </body>
 </html>
