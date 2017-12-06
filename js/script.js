@@ -1,6 +1,5 @@
-//Set initial count = 0
+//Set Global Variables
 var count=0;
-
 var slideShowInterval;
 
 
@@ -10,6 +9,7 @@ $(function() {
 });
 
 
+// Search 
 function search(event) {
   // Stop the form from changing the page.
   event.preventDefault();
@@ -19,7 +19,7 @@ function search(event) {
     }).done(function(response) {
       //console.log(response.data.children); 
   
-      addslideShowElements();
+      //addslideShowElements();
       slideControlCommands(); 
       slideShowInterval =  setInterval(function(){interval(addSearchResult(response.data.children))},1000);
     });
@@ -41,21 +41,21 @@ function addSearchResult(results) {
         images.push(source);
       };
   };
-
    return images;
-
 }
 
-// Add DOM content for slide show images
-function addslideShowElements() {
-    var div = document.createElement('div');
-    var img = document.createElement('img');
-    $('#slideshow').append(div);
-    $(div).append(img);
-}
+// // Add DOM content for slide show images
+// function addslideShowElements() {
+//     var div = document.createElement('div');
+//     var img = document.createElement('img');
+//     $('#slideshow').append(div);
+//     $(div).append(img);
+// }
 
 // To display slide show control commands
 function slideControlCommands() {
+  document.getElementById('imageContainer').style.display = 'block';
+  document.getElementById('slideImages').style.display = 'inline-block';
   document.getElementById('slideControl').style.display = 'block';
 
 }
@@ -67,12 +67,13 @@ function stopSlideShow() {
 
 
 // To reset interval
+// I am unclear as how to reset the interval - unfortunately the reset button is not working as planned :(
 function resetSlideShow() {
-    console.log('count'+count);
+  console.log('count'+count);
   count = 0;
     //console.log('count'+count);
-
-  slideShowInterval =  setInterval(function(){interval(addSearchResult(response.data.children))},1000);
+  clearInterval(slideShowInterval);   
+  slideShowInterval = setInterval(function(){interval(addSearchResult(response.data.children))},1000);
 
 }
 
@@ -86,5 +87,7 @@ function interval(array) {
 // Load Page Content
 document.addEventListener("DOMContentLoaded", function() {
   //document.getElementById('reset').addEventListener('click', reset);
+  document.getElementById('imageContainer').style.display = 'none';
   document.getElementById('slideControl').style.display = 'none';
+  document.getElementById('slideImages').style.display = 'none';
 });
