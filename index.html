@@ -3,9 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Ajax Reddit Slideshow</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+	<div id="container">
+  	<h1>Ajax Reddit Slideshow</h1>
+  	<p>Here is what you do next...</p>
+  	<form id="search-form">
+	    <button id="button" type="submit" value="Search">Search</button>
+		<input id="input" type="text"></input>
+	</form>
+	<ol id="results"></ol>
+	</div>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script type="text/javascript" src="js/ajax.js"></script>
 </body>
 </html>
