@@ -3,9 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+   crossorigin="anonymous"></script>
+   <link href="./css/style.css" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <title>Reddit Finder</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+
+
+   <div class="imageCircle">
+      <div class="wheel-img" id="wheel0"><img></img></div>
+      <div class="wheel-img" id="wheel1"><img></img></div>
+      <div class="wheel-img" id="wheel2"><img></img></div>
+      <div class="wheel-img" id="wheel3"><img></img></div>
+      <div class="wheel-img" id="wheel4"><img></img></div>
+      <div class="wheel-img" id="wheel5"><img></img></div>
+      <div class="wheel-img" id="wheel6"><img></img></div>
+      <div class="wheel-img" id="wheel7"><img></img></div>
+      <div class="wheel-img" id="wheel8"><img></img></div>
+      <div class="wheel-img" id="wheel9"><img></img></div>
+      <div class="inputDiv">
+        <h1>Reddit Finder</h1>
+        <form id="redditForm">
+          <label>Enter a search term:<input id="redditInput" type="text" title="Enter a search term:"></label>
+          <input class="button" type="button" value="GET IMAGES">
+        </form>
+      </div>
+   </div>
+
+
+
+  <script src="./js/app.js"></script>
 </body>
 </html>
