@@ -3,9 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Search for Useless Info</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+<h1>Search Reddit for Useless Information</h1>
+<h2>Let's be real - it's all useless</h2>
+
+<div id = "searchInput">
+    <form id="search-form">
+    	<p> Enter a word to search reddit for all relative articles </p>
+      	<input id="query" placeholder="puppies"><br>
+      	<button type="submit" id="searchSubmit">Search Reddit!</button>
+    </form>
+</div>
+    <div id ="slideshow">
+    	<div id="imageContainer"><img id="slideImages"></div>
+    </div>
+    <div id="slideControl">
+    <button type="submit" id="stopSlideShow" onclick="stopSlideShow()">Stop Images</button>
+    <button type="submit" id="resetSlideShow" onclick="resetSlideShow()">Restart Images</button>
+    </div>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
