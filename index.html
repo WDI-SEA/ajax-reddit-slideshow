@@ -3,9 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla|Unica+One" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <title>Reddit Slideshow</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+
+	<div id="before-search">
+		<img id="reddit-icon" src="http://i.imgur.com/mA15m.png">
+  <h1 id="title">Reddit Slideshow!</h1>
+  <p>See the top 10 of favorite things... in a slideshow!</p>
+
+  <form id="form">
+  	<input id="search-box" type="text" name="" placeholder="e.g. Pancakes... sunsets... narwhal...">
+  	<hr>
+<!--   	<input id="pictureCount-box" type="number" name="" placeholder="How many pictures would you like? 1 - 100">
+  	<hr> -->
+  	<input id="search-button" type="submit" value="Search">
+  </form>
+  
+</div>
+
+<div id="after-search">
+	  	<img id="reddit-icon" src="http://i.imgur.com/mA15m.png">
+  <div id="resultDiv">
+  	Loading images
+  </div>
+  	<button id="stop">Search again?</button>
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script.js" ></script>
 </body>
 </html>
