@@ -1,0 +1,51 @@
+body{
+	text-align: center;
+	font-family: 'Play', sans-serif;
+
+}
+h1{
+	color: black;
+	font-size: 42px;
+	background-color: rgb(121,197, 211);
+	padding-top: 2px;
+	padding-bottom: 4px;
+}
+p{
+	font-size: 24px;
+}
+#redditIcon{
+	height: 10%;
+	width: auto;
+}
+
+.imgDiv{
+	text-align: center;
+	top: .5vw;
+	left: 36vw;
+	position: relative;
+	height: 200px;
+	width: 250px;
+	background-color: white;
+}
+
+
+#query,
+#submit{
+	text-align: center;
+	font-family: 'Play', sans-serif;
+	font-size: 16px;
+}
+#reset{
+	display: none;
+	position: relative;
+	left-margin: 50%; 
+	margin-top: 20px;
+	color: rgb(121,197, 211);
+	font-size: 18px;
+	text-align: center;
+	font-family: 'Play', sans-serif;
+	height: 40px;
+	width: 150px;
+	background-color: black;
+}
+

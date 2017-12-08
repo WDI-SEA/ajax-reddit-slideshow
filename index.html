@@ -1,11 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
-</head>
-<body>
-  <h1>Hello Front-End</h1>
-</body>
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Reddit Image Fun</title>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+  </head>
+  <body>
+    <h1>reddit image search</h1>
+    <div id="directions">
+      <p>search reddit for just about any image</p>
+      <img id="redditIcon" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Reddit_logo_and_wordmark.svg/1200px-Reddit_logo_and_wordmark.svg.png">
+    </div>
+    <form id="search-form">
+      <input id="query" placeholder="search it here!">
+      <button type="submit">search reddit</button>
+    </form>
+    <div class="imgDiv">
+    <ol id="results"></ol>
+  </div>
+    <button id="reset" onClick="window.location.reload()">Search Again</button>
+  </body>
 </html>
