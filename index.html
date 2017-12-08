@@ -1,11 +1,39 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <script src="./js/script.js"></script>
+  <title>Reddit Image Search</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <h1></h1>
+  <form id="searchform">
+    <input id="mainsub" type="text" placeholder="Search Reddit Photos"></input>
+    <button id="button" type="submit">Go!</button>
+  </form>
+  <ol id="results"></ol>
 </body>
+</html> -->
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Reddit AJAX Search</title>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+  </head>
+  <body>
+    <h1></h1>
+
+    <form id="search-form">
+      <input id="query" placeholder="Image Search Reddit">
+      <button id="button" type="submit">Go</button>
+    </form>
+
+    <!-- The div where results will be displayed. -->
+    <ol id="results"></ol>
+    <div id="background"></div>
+  </body>
 </html>
