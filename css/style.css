@@ -1,0 +1,30 @@
+body{
+	text-align: center;
+	font-family: "Berkshire Swash", cursive;
+}
+h1{
+	font-family: "Berkshire Swash", cursive;
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+#search-form{
+	margin-top: -10px;
+}
+#query{
+	padding: 10px;
+	border-radius: 6px;
+}
+button{
+	padding: 5px;
+	font-size: 15px;
+	border-radius: 7px;
+	font-family: "Berkshire Swash", cursive;
+	margin-left: 15px;
+	background-color: orange;
+	border-color: white;
+	color: white;
+	margin-top: 20px;
+}
+p{
+	margin-top: 35px;
+}
