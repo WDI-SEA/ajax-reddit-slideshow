@@ -1,11 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
-</head>
-<body>
-  <h1>Hello Front-End</h1>
-</body>
+<!DOCTYPE>
+<html>
+  <head>
+    <title>Reddit Finder</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div class='finder'>
+    <h1>Reddit Finder</h1>
+    <h2>Use this finder to locate posts on your interests!</h2>
+  </div>
+    <form id="search-form">
+      <input id="query" placeholder="what are you looking for?">
+      <button type="submit">search reddit</button>
+    </form>
+
+
+    <div id="results"></div>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
