@@ -16,15 +16,16 @@ function search(event) {
 	var userInput = $("#query").val() || "babies";
 	console.log("User Input was", userInput);
 
-	$get("http://www.reddit.com/search.json", {
+	$.get("http://www.reddit.com/search.json", {
 	q: userInput,
 	limit: 10
 	}).done(function(response){
 		console.log(response.data.children);
-		addSearchResult(response.data.children);
+		// addSearchResult(response.data.children);
 	});
 }
 
+//clear the results when I hit search again
 function clearSearchResults(){
 	$("#results").html("");
 }
