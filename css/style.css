@@ -1,0 +1,54 @@
+body{
+  margin: 0 auto;
+  text-align: center;
+  background: lightgrey;
+}
+
+input{
+  padding: 10px;
+  border-bottom: solid black 2px;
+  margin: 0 20px;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+}
+button{
+  border: none;
+  background: white;
+  padding: 10px;
+  width: 150px;
+  border-radius: 2px;
+}
+#slides{
+  height: 100px;
+}
+.slidesjs-container{
+    margin: 10px auto;
+}
+
+.slidesjs-navigation{
+  padding: 4px 10px;
+  text-decoration: none;
+  color: black;
+  background: white;
+  border: none;
+  border-radius: 2px;
+  margin-left: 15px;
+}
+
+#warning {
+	color:red;
+}
+
+li{
+  display: none;
+}
+
+#clear{
+  background: white;
+  margin-top: 50px;
+}
+
+#slideshow{
+  margin-top: 50px;
+}
