@@ -4,10 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>Hello Front-End</title>
+  <title>Hopefully safe reddit slide show</title>
 </head>
 <body>
   <h1>Hello Front-End</h1>
-<script src="js/"></script>
+  <div id="search-input">
+	  <form id="search-form">
+	  	<input id = "query" type="text" placerholders ="babies">
+	  	<button type="submit">Start</button>
+	  </form>
+  </div>
+  <div id="results">
+  	<div id="loading-screen"></div>
+  	<div id="slides"></div>
+  </div>
+  <div><button id="stop">Stop!</button></div>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script src="js/slideshow.js"></script>
 </body>
 </html>
