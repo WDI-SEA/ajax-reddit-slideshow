@@ -1,0 +1,21 @@
+body {
+	margin: 0 auto;
+}
+.slideshow {
+  text-align:center;
+  display:none;
+}
+.titlePage {
+  display:inline-block;
+  text-align:center;
+  height:1000px;
+  width:1000px;
+  margin-top:300px;
+  margin-left:300px;
+}
+
+.images {
+	height:100px;
+	width: 100px;
+}
+

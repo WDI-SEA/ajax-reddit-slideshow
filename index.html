@@ -3,9 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Hello Front-End</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div class='titlePage'>
+    <h1>Reddit Search Slideshow</h1>
+    <h4>Enter search term and hit "search" to begin slideshow.</h4>
+    <form id="search-form">
+      <input id="query" placeholder="Enter search term">
+      <button type="submit" id="button">Search Reddit</button>
+    </form>
+  </div>  
+  <div class="slideshow">
+    <h2>Search results for "...."</h2>
+    <div class="images">
+    	<ol id="results"></ol>
+    </div>
+    <button id="end">End Slideshow</button>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
