@@ -1,0 +1,51 @@
+body {
+	background-color: grey;
+	text-align: center;
+}
+
+h1 { 
+	font-color: blue;
+	font-family: fantasy;
+	font-size: 60px;
+}
+
+p { 
+	font-family: fantasy;
+	width: 40%;
+	margin: auto;
+	font-size: 22px;
+}
+
+#query {
+	width: 30%;
+	height: 40px;
+	border: 2px solid red;
+	font-size: 25px;
+	font-family: fantasy;
+	margin: auto;
+
+}
+
+button {
+	width: 20%;
+	height: 8%;
+
+	font-size: 30px;
+	font-family: fantasy;
+	background-color: red;
+}
+
+#slides {
+	display: none;
+}
+
+ul {
+	color: black;
+}
+
+#clearDiv {
+	height: 50px;
+	margin: auto;
+	width: 20%;
+	text-align: center;
+}
