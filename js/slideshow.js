@@ -1,15 +1,30 @@
-$("#query") = query;
+//images stored in an array
+var imgs =[]; 
 
-//so the form doesn't reload the page
+$(function() {
+	//attach form submit to a search function
+	$("#search-form").on("submit", search);
+});
+
 function search(event) {
-    event.preventDefault();
-    var searchQuery = $("#query").val() || "babies";
+	//stop the default reload behavior of the form
+	event.preventDefault();
+	clearSearchResults();
 
-    $.get("https://www.reddit.com/search.json", {
-    	q: searchQuery + "nsfw:no",
-    	limit: 100
-    }).done(function(data){
-    	console.log(data);
-    })
+	//grab userInput, save it as userInput
+	//use babies as a search value
+	var userInput = $("#query").val() || "babies";
+	console.log("User Input was", userInput);
 
+	$get("http://www.reddit.com/search.json", {
+	q: userInput,
+	limit: 10
+	}).done(function(response){
+		console.log(response.data.children);
+		addSearchResult(response.data.children);
+	});
+}
+
+function clearSearchResults(){
+	$("#results").html("");
 }
