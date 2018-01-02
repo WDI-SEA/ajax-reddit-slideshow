@@ -7,9 +7,10 @@ $(function() {
 	$("#search-form").on("submit", search);
 });
 
-$("#stop").click("click", function(){
+$("#stop").click("click", function() {
 	clearSearchResults();
-	$("#search=
+	$("#search-bar").removeClass("searching");
+
 	searchResults = {};
 	imgs =[];
 
@@ -18,7 +19,7 @@ $("#stop").click("click", function(){
 function search(event) {
 	//stop the default reload behavior of the form
 	event.preventDefault();
-	$("#loading").text("Loading");
+	//set the following elements to display none
 	$("#search-bar").addClass("searching");
 	$("#stop").addClass("searching");
 	$("#slideshow").addClass("searching");
@@ -36,7 +37,12 @@ function search(event) {
 	});
 }
 
-//clear the results when I hit search again
-function clearSearchResults(){
-	$("#results").html("");
+function startDaShow{
+	interval = setInterval()
 }
+
+
+//clear the results when I hit search again
+// function clearSearchResults(){
+// 	$("#results").html("");
+// }
