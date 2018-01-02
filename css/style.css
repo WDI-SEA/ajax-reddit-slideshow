@@ -1,12 +1,54 @@
 body {
 	text-align: center;
-	background-color: gray;
+	background: gray;
+	background-size: cover;
 }
 
 #search-bar {
+	transition: opacity 4s height 10s;
+	background: rgb(86, 102, 105);
+	background: rgba(86, 102, 105, .25);
+	color: white;
+	display: inline-block;
 	padding: 100px;
+	position: relative;
 	margin: 80px auto 0 auto;
 	z-index: 99;
-	color: white;
-	position: relative;
 }
+
+#search-bar.searching {
+	display: none;
+}
+
+#stop.searching {
+	display: inline-block;
+
+}
+
+#results {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+
+#slideshow {
+	height: 0;
+	display: block;
+	transition: background 1.5s;
+	background-color: red;
+}
+
+#slideshow {
+	height: 600px;
+	background-color: black;
+}
+
+#stop {
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	border: 0;
+	padding: 20px;
+}
+
