@@ -10,7 +10,7 @@ function search(event) {
 	//stop the default reload behavior of the form
 	event.preventDefault();
 	clearSearchResults();
-
+	$("search-form").css("display","none")
 	//grab userInput, save it as userInput
 	//use babies as a search value
 	var userInput = $("#query").val() || "babies";
