@@ -8,9 +8,9 @@ $(function() {
 });
 
 $("#stop").click("click", function() {
-	clearSearchResults();
 	$("#search-bar").removeClass("searching");
-
+	$("#stop").removeClass("searching");
+	$("#slideshow").removeClass("searching");
 	searchResults = {};
 	imgs =[];
 
@@ -37,9 +37,12 @@ function search(event) {
 	});
 }
 
-function startDaShow{
+//Logic to filter through the array and pick out the img links
+
+//logic to add the links to the slide show div
+function startDaShow (){
 	interval = setInterval()
-}
+};
 
 
 //clear the results when I hit search again

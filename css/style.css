@@ -21,7 +21,7 @@ body {
 }
 
 #stop.searching {
-	display: inline-block;
+	display: block;
 
 }
 
@@ -32,13 +32,13 @@ body {
 }
 
 #slideshow {
+	display: none
 	height: 0;
-	display: block;
-	transition: background 1.5s;
-	background-color: red;
+	
 }
 
-#slideshow {
+#slideshow.searching{
+	display: block;
 	height: 600px;
 	background-color: black;
 }
