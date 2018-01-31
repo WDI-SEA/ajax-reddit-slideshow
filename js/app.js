@@ -3,6 +3,9 @@ $(document).ready(function() {
   $("button").on("click", function() {
     // e.preventDefault();
     // console.log("in the click");
+    //hide div that holds title, p and form
+    $("#splash").hide();
+
     var searchString = document.forms["imageform"].elements["imagebox"].value;
 
     $.get('https://www.reddit.com/search.json', {
