@@ -49,7 +49,7 @@ img {
 }
 
 #searchButton {
-	margin: 20px 12px;
+	margin: 20px 12px 30px 12px;
 	padding: 11px 13px;
 	border-radius: 15px;
 	background-color: orange;
@@ -81,5 +81,15 @@ img {
 	overflow: hidden;
 	display: block;
 	box-shadow: 20px 20px 2px 1px rgba(0, 0, 0, .4);
+}
+
+@media (max-width: 600px) {
+	.mainForm {
+		width: 300px;
+	}
+
+	#results {
+		width: 400px;
+	}
 }
 
