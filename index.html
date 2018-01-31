@@ -3,9 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <title>Hello Front-End</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div class="container">
+    <h1>Ajax reddit api practice</h1>
+    <p>Enter an input in the search field to find images related to your search found on reddit!</p>
+    <form>
+      <input type="text" maxlength="25" name="searchterm" id="searchterm" placeholder="Enter a search term!" value="">
+      <button type="button" id="searchbutton">Search</button>
+    </form>
+  </div>
+  <div>
+    <button type="button" id="stop">Stop</button>
+    <button type="button" id="resume">Resume</button>
+    <button type="button" id="reset">Reset</button>
+  </div>
+  <div id="results">
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+    src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
