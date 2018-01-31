@@ -44,7 +44,7 @@ img {
 }
 
 .imgFade {
-  animation: fade 2s infinite;
+  animation: fade 3s infinite;
 }
 
 .resetDiv {
@@ -157,10 +157,10 @@ img {
 }
 
 @keyframes fade {
-  0% {opacity: .1;}
+  0% {opacity: 0;}
   40% {opacity: 1;}
   80% {opacity: 1}
-  100% {opacity: .1;}
+  100% {opacity: 0;}
 }
 
 @keyframes shake {

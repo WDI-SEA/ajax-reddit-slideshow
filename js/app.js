@@ -51,9 +51,9 @@ $(document).ready(function() {
         setTimeout(function() {
           setTimeout(function() {
             $('img').addClass('imgFade');
-          }, 2000);
-          myInterval = setInterval(updateImage, 2000);
-        }, 2500);
+          }, 3000);
+          myInterval = setInterval(updateImage, 3000);
+        }, 1000);
       });
       setTimeout(function() {
         loadText.remove();
