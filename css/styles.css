@@ -8,20 +8,26 @@ body {
   background-color: blue;
   text-align: center;
   padding-bottom: 3vh;
+  border-radius: 10px;
+}
+#searchterm {
+  border-radius: 5px;
 }
 .buttons {
   width: 25vw;
   margin: 2vh auto;
   background-color: gray;
   text-align: center;
+  border-radius: 5px;
 }
 #results {
-  width: 25vw;
+  width: 50vw;
   height: auto;
   margin: 0 auto;
   background-color: gray;
 }
 img {
-  width: 25vw;
+  width: 50vw;
   height: auto;
+  margin: 0 auto;
 }

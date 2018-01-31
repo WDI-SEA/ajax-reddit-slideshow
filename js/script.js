@@ -18,7 +18,7 @@ function reset() {
   clearInterval(myInterval);
   imageArray = [];
   count = 0;
-  $('.container').toggleClass('hide');
+  hide();
   $('#searchterm').focus();
   $('#searchterm').val('');
   $('#results').children().remove();
@@ -35,7 +35,6 @@ var slideShow = function() {
       $('#results').append('<img src="'+imageArray[count]+'">');
     }
 }
-
 
 $(document).ready(function(){
 
