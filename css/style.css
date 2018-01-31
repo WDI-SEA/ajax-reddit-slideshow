@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: gray;
+    text-align: center;
+    font-family: Roboto;
+}
+
+header {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+form {
+    vertical-align: top;
+}
+
+input {
+    font-family: Roboto;
+    font-size: 1em;
+    height: 25px;
+    width: 200px;
+    margin-right: 5px;
+}
+
+button {
+    height: 31px;
+    width: 75px;
+    margin: 0;
+    border: none;
+    font-family: Roboto;
+    font-size: 1em;
+}
+
+img {
+    display: none;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+}
+
+input[type="submit"] {
+    font-family: Roboto;
+
+}
+
+.italic {
+    font-style: italic;
+}
+
+#stop {
+    display: none;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 3px 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 1px dashed black;
+}
+
+#stop:hover {
+    cursor: pointer;
+}
