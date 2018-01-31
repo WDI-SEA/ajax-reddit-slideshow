@@ -12,19 +12,22 @@ function slideShowStart(){
     var page = $('.img2');
   }
   if(count === countMax){
-    audioplayer.pause();
-    audioplayer.currentTime = 0;
-    $('.waiting').hide();
-    $('.formcont').show();
-    $('.replay').show();
-    $('.request1').show();
-    $('.rebutton').on("click",function(){
-      count = 0;
-      $('.formcont').hide();
-      $('.replay').hide();
-      $('.request1').hide();
-      slideShowStart();
-    });
+    setTimeout(function(){
+      audioplayer.pause();
+      audioplayer.currentTime = 0;
+      $('.waiting').hide();
+      $('.formcont').fadeToggle();
+      $('.replay').show();
+      $('.request1').show();
+      $('.rebutton').on("click",function(){
+        count = 0;
+        $('.formcont').hide();
+        $('.replay').hide();
+        $('.request1').hide();
+        slideShowStart();
+      });
+    },4000);
+
   }
   page.css('background-image', 'url(' + approvedImages[count].thumbnail + ')').fadeToggle(2000);
   page.css('background-image', 'url(' + approvedImages[count].thumbnail + ')').fadeToggle(2000);
@@ -41,14 +44,14 @@ $(document).ready(function(){
     e.preventDefault();
     $('.request1').hide();
     $('.formcont').append("<img class= 'waiting' src='https://www.pedul.com/images/loading.gif'>")
-    $('.formcont').fadeToggle(5000);
+    $('.formcont').fadeToggle(4000);
     var searchString = document.forms["request"].elements["userinput"].value;
     $('userinput').val();
     $.get('https://reddit.com/search.json',{
       q: searchString
     }).done(function(data){
+      audioplayer.play();
       results = data.data.children;
-
       results.forEach(function(item){
         newItem = item.data;
         if(newItem.over_18 === false && newItem.thumbnail.charAt(0) === "h"){

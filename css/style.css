@@ -1,3 +1,9 @@
+@media(max-width:600px){
+  .player{
+    display: none;
+  }
+}
+
 body{
   margin: 0;
 }
@@ -16,13 +22,13 @@ form{
 .topcontain{
   vertical-align: middle;
   width: 100%;
-  position: ;
   height: 45px;
   padding: 0;
   margin: 0;
   background: grey;
 }
 .maincontain{
+  overflow: hidden;
   text-align: center;
   justify-content: center;
   align-items: center;
