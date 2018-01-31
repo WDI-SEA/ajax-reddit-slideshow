@@ -10,15 +10,6 @@ var slideshow = function () {
   }
 };
 
-var stopSlideshow = function () {
-   clearInterval(imageTimer);
-   $('.container').toggleClass('hide');
-   $('#stopbutton').toggleClass('hide');
-   $('#picture').attr('src', '');
-   imageUrls = [];
-   $('#searchbox').val('');
-  };
-
 var crawl = function () {
   var searchString = $('#searchbox').val();
   $.get('https://www.reddit.com/search.json', {
@@ -30,10 +21,20 @@ var crawl = function () {
              imageUrls.push(item.data.thumbnail);
          };
      }); 
-     $('.container').toggleClass('hide');
-     $('#stopbutton').toggleClass('hide');
+     $('.container').addClass('hide');
+     $('#stopbutton').removeClass('hide');
      slideshow();
      imageTimer = setInterval(slideshow, 1000);
+
+     var stopSlideshow = function () {
+        clearInterval(imageTimer);
+        $('.container').removeClass('hide');
+        $('#stopbutton').addClass('hide');
+        $('#picture').attr('src', '');
+        imageUrls = [];
+        $('#searchbox').val('');
+       };
+
      $('#stopbutton').on('click', stopSlideshow);
     });
 };
