@@ -3,9 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+
+  <title>Reddit Image Search</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+	<div id="splash">
+		<h1>Reddit Image Search</h1>
+		<p>Enter search term below</p>
+
+		   <form name="imageform">
+	      <input type="text" id="searchterm" name="imagebox" value="" placeholder="Enter a searchTerm...">
+	      <button type="button" id="searchbutton">Search</button>
+	      </form>
+	</div>
+
+	<div id="content">
+		
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
