@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-135deg, rgba(150, 0, 122, 0.5), rgba(0,118,206, 0.4) ), url('../img/spencer-watson-367233.jpg');
+  -webkit-transition: all 1s; /* Safari */
+  transition: all 1s;
+  background-size: cover;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 3px;
+}
+
+p {
+  color: #fff;
+  max-width: 100%;
+  width: 600px;
+  margin: 0px auto 20px;
+  font-size: 1.3rem;
+}
+
+#search-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 5;
+}
+
+#search-field {
+  font-size: 1.6rem;
+  padding: 4px 8px;
+
+}
+
+#search-btn {
+  background: #1ce0c5;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 2px;
+  margin: 0px 17px;
+  padding: 7px 20px;
+}
+
+
+#slide-show {
+  max-width: 100%;
+  width: 100%;
+  opacity: 0;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* pointer-events: none; */
+}
+
+#slide-show.black {
+  /* background: #000; */
+  opacity: 1;
+  -webkit-transition: all 1s; /* Safari */
+  transition: all 1s;
+}
+
+#slide-show img {
+  max-width: 100%;
+  height: auto;
+}
+
+#stop-slideshow {
+  position: absolute;
+  width: 300px;
+  bottom: 0;
+  z-index: 50;
+  margin: 0px 0px 20px -150px;
+  background: #d13737;
+  border: none;
+  padding: 5px 40px;
+  font-size: 1.5rem;
+  color: #fff;
+  border-radius: 4px;
+  left: 50%;
+}
+
+img {
+  max-height: 80vh;
+}
+
+.zindex0 {
+    z-index: 0;
+}
+
+.zindex20 {
+    z-index: 20;
+}
