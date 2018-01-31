@@ -4,8 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hello Front-End</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div id="inputContainer">
+	  <h1>Slideshow</h1>
+	  <p>Type what image you are looking for in box bleow, then hit start.</p>
+	  <form name="imageform">
+	  	<input type="text" name="imagebox" value=" ">
+	  	<button type="button" id="startbutton">Start</button>
+	  </form>
+  </div>
+
+  <div id="postedimage">
+  	<img src=" ">
+  </div>
+  <div>
+    <button type="button" id="stopbutton">stop</button>
+  </div>  
+    
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

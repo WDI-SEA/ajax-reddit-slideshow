@@ -1,0 +1,19 @@
+h1 {
+	color: purple;
+}
+
+body {
+	text-align: center;
+}
+
+#postedImage {
+	width: 400px;
+	margin: auto;
+}
+
+image {
+	width: 300px;
+	margin: auto;
+	
+	display: block;
+}
