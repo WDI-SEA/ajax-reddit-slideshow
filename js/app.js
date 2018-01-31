@@ -1,3 +1,8 @@
+// work queue
+//need to get default to work
+//reset function var clearMyInterval doesn't clear paused image from board
+//resizing image function needs help
+
 var imageArray= [];
 //how many images we've replaced
 var imgCounter = 1;
@@ -13,19 +18,19 @@ var updateImage = function() {
   }
     //how we move through the array by iteration using the imgCounter
     $("img").attr('src', imageArray[imgCounter].data.url);
-    //resize all the image heights in a loop, set their height property to a new value
+    //resize all the image heights in a loop, set  height property to a new value
     // $("img)").height('url', imageArray[imgCounter].data.height, 600);
     }
 // }
 
 var clearMyInterval = function() {
-      $(imageArray).html("");
-      clearInterval(myInterval);
-      $("#splash").show();
+      imageArray = [];
+      $("img").attr('src', "");
+      clearInterval(myInterval); //this stops the interval from running
+      $("#splash").show(); //shows search form again
       console.log('clicked clearmyInterval');
     }
 
-//on the click function, we start doing this
 $(document).ready(function() {
 
   $("#resetbutton").on("click", function() {
@@ -47,11 +52,14 @@ $(document).ready(function() {
     }).done(function(data) {
       var result = data.data.children;
 
+      //https://pressupinc.com/blog/2014/02/setting-dynamic-equal-heights-multiple-elements-jquery/
+      // var result = each.function (){
+      // $(this)(t).
+      // }
+
       var result = result.filter(function(item) {
-        // if (item.data.url !== 'default');
-        // ($.text(this).indexOf('My String') != -1)
-        if ($.text(item).indexOf('Reddit') != -1);
-        imageArray.push(item);
+        if (item.data.thumbnail.indexOf('reddit') != -1){ //filtering for certain condition = thumbnail
+            imageArray.push(item); //matched condition, add this item to my array
         console.log(imageArray);
       });
       myInterval = setInterval(updateImage, 2000);
