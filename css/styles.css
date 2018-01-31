@@ -14,20 +14,43 @@ body {
   border-radius: 5px;
 }
 .buttons {
-  width: 25vw;
+  width: 30vw;
   margin: 2vh auto;
   background-color: gray;
   text-align: center;
   border-radius: 5px;
 }
 #results {
-  width: 50vw;
+  width: 30vw;
   height: auto;
   margin: 0 auto;
   background-color: gray;
 }
 img {
-  width: 50vw;
+  width: 30vw;
   height: auto;
   margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .buttons {
+    width: 40vw;
+  }
+  #results {
+    width: 40vw;
+  }
+  img {
+    width: 40vw;
+  }
+}
+@media (max-width: 500px) {
+  .buttons {
+    width: 50vw;
+  }
+  #results {
+    width: 50vw;
+  }
+  img {
+    width: 50vw;
+  }
 }
