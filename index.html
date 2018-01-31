@@ -3,9 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link type="text/css" rel="stylesheet" href="./css/main.css">
+  <title>Reddit Slideshow (AJAX)</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <h1>Your Slideshow</h1>
+  <p>Use the search form below to find images for your slideshow.</p>
+  <div class="content">
+  </div>
+  <div id="slideControls">
+    <h3>Create Slideshow</h3>
+      <div>
+        <form class="searchForm" name="imageForm" id="imageForm">
+          <input type="text" name="searchTerm" value="">
+          <button type="button" name="searchButton" id="searchButton">Search</button>
+        </form>
+      </div>
+      <h3>Control Slideshow</h3>
+      <div>
+        <button class="showControls" type="button" name="stopShow" id="stopShow">Stop</button>
+        <button class="showControls" type="button" name="startShow" id="startShow">Start</button>
+      </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
