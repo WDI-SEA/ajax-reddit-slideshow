@@ -18,7 +18,6 @@ function searchReddit(e) {
 function extractImages(results) {
     var posts = results.data.children;
     var urls = [];
-    // console.log(posts);
     posts.forEach(function(post){
         if(post.data.url.endsWith(".jpg") ||
         post.data.url.endsWith(".png") ||
@@ -30,7 +29,9 @@ function extractImages(results) {
             urls.push(post.data.media.oembed.thumbnail_url);
         } else if (post.data.preview) {
             urls.push(post.data.preview.images[0].source.url);
-        } else if (post.data.thumbnail) {
+        } else if (post.data.thumbnail.endsWith(".jpg") ||
+        post.data.thumbnail.endsWith(".png") ||
+        post.data.thumbnail.endsWith(".gif")) {
             urls.push(post.data.thumbnail);
         }
     });
