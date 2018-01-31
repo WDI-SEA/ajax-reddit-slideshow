@@ -15,16 +15,15 @@ var resetButton = $('#stopbutton');
 var prepareSlideShow = function() {
   pics.attr('src', startPic);
   collection = [];
-  resetForm.toggle();
+  resetForm.show();
   searchForm.hide();
-  pics.attr('src', startPic);
 }
 
 var sliderReset = function() {
   pics.attr('src', endPic);
   searchForm.show().focus();
   clearInterval(myInterval);
-  resetForm.toggle();
+  resetForm.hide();
   searchTerm.val('');
 }
 

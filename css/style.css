@@ -17,6 +17,7 @@ h1 {
 img {
   height: 200px;
   width: 200px;
+  border-radius: 100%;
 }
 
 #splash {
@@ -91,4 +92,53 @@ img {
   font-family: 'Alice', serif;
   font-size: 15px;
   font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  #splash {
+    width: 200px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+
+  #searchform {
+    position: absolute;
+    left: 40px;
+    top: 125px;
+  }
+  #searchterm {
+    width: 100px;
+    height: 20px;
+    background: none;
+    border: none;
+    border-bottom: white solid 2px;
+    text-align: center;
+    margin-bottom: 3px;
+    font-size: 10px;
+    color: white;
+  }
+
+  #searchbutton {
+    font-size: 10px;
+  }
+
+  #resetform {
+    display: none;
+    position: absolute;
+    left: 75px;
+    top: 150px;
+  }
+
+  #stopbutton {
+    font-size: 10px;
+  }
+
 }
