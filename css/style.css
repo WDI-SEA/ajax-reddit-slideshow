@@ -1,0 +1,23 @@
+body {
+  background-image: url("../img/backdrop.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#splash {
+  width: 300px;
+  margin: 200px auto;
+  color: white;
+}
+
+.resultImg {
+  display: block;
+  margin: 200px auto;
+}
+
+#reset {
+  font-size: 24px;
+  width: 100px;
+  margin: 50px auto;
+  display: block;
+}
