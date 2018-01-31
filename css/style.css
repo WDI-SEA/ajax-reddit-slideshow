@@ -1,0 +1,25 @@
+#splash {
+	width: 30%;
+	height: 300px;
+	margin: 0 auto;
+}
+
+body {
+	text-align: center;
+	background: linear-gradient(to right, #3071db, #11d7db);
+}
+
+#content {
+	width: 100px;
+	height: 100px;
+}
+
+#stopButton {
+	position: relative;
+/*	left: 50%;
+	top: 400px;*/
+}
+
+#stopButton {
+	width: 100px;
+}
