@@ -1,0 +1,95 @@
+body {
+	background-image: url(https://wallpaperlayer.com/img/2015/7/cool-textured-backgrounds-6925-7205-hd-wallpapers.jpg);
+	color: white;
+	font-family: 'Karla', sans-serif;
+}
+
+h1 {
+	font-family: 'Arvo', serif;
+	color: #bc5418;
+	margin-top: 0px;
+}
+
+h3 {
+	color: orange;
+}
+
+img {
+	width: 100%;
+	margin: auto;
+	display: none;
+}
+
+#resetButton {
+	top: 500px;
+	right: 44%;
+	position: fixed;
+	background-color: #f47730;
+	color: black;
+	padding: 15px;
+	border-radius: 15px;
+	font-family: 'Karla', sans-serif;
+	font-size: 16px;
+	opacity: 0.8;
+	box-shadow: 2px 4px black;
+	display: none;
+	border: none;
+}
+
+#resetButton:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+#searchBox {
+	padding: 10px 30px;
+	border-radius: 15px;
+	font-family: 'Arvo', serif;
+}
+
+#searchButton {
+	margin: 20px 12px 30px 12px;
+	padding: 11px 13px;
+	border-radius: 15px;
+	background-color: orange;
+	color: white;
+	font-family: 'Arvo', serif;
+	border:none;
+}
+
+#searchButton:hover {
+	padding: 9px 11px;
+	border: white 2px solid;
+	background-color: darkorange;
+}
+
+.mainForm {
+	width: 400px;
+	margin: 180px auto 0 auto;
+	text-align: center;
+	display: block;
+	background: rgba(0,0,0,0.3);
+	padding-top: 30px;
+	border-radius: 30px;
+}
+
+#results {
+	margin: 180px auto;
+	width: 500px;
+	height: 250px;
+	overflow: hidden;
+	display: block;
+	box-shadow: 20px 20px 2px 1px rgba(0, 0, 0, .4);
+}
+
+@media (max-width: 600px) {
+	.mainForm {
+		width: 300px;
+	}
+
+	#results {
+		width: 400px;
+	}
+}
+
