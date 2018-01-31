@@ -15,6 +15,7 @@ var updateImage = function() {
 
 var stopShow = function() {
 	clearInterval(myInterval);
+  $("img").attr('src', " ");
 }
 
 // var clearShow = function() {

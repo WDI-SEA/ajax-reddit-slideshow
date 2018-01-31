@@ -9,11 +9,11 @@ body {
 #postedImage {
 	width: 400px;
 	margin: auto;
+	border: none;
 }
 
 image {
 	width: 300px;
 	margin: auto;
-	
 	display: block;
 }
