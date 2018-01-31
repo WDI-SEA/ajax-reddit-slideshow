@@ -3,11 +3,6 @@ var approvedImages =[];
 var countMax;
 var count = 0;
 
-function dc(str){
-  console.log(str);
-}
-//num_comments
-//Ups
 function slideShowStart(){
   if(count%2 === 0){
     var page = $('.img1');
@@ -19,7 +14,13 @@ function slideShowStart(){
     $('.formcont').show();
     $('.replay').show();
     $('.request1').show();
-    $('.rebutton').on("click", slideShowStart);
+    $('.rebutton').on("click",function(){
+      count = 0;
+      $('.formcont').hide();
+      $('.replay').hide();
+      $('.request1').hide();
+      slideShowStart();
+    });
   }
   page.css('background-image', 'url(' + approvedImages[count].thumbnail + ')').fadeToggle(2000);
   page.css('background-image', 'url(' + approvedImages[count].thumbnail + ')').fadeToggle(2000);
@@ -28,7 +29,6 @@ function slideShowStart(){
     setTimeout(slideShowStart, 4000)
   }
 };
-
 $(document).ready(function(){
   function dc (str){
     console.log(str);
