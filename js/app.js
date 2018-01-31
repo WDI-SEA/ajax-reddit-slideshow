@@ -1,5 +1,5 @@
-var results= [];
-//how many images we've replaces
+var imageArray= [];
+//how many images we've replaced
 var imgCounter = 1;
 //this is for the seconds interval
 var myInterval = null;
@@ -7,18 +7,13 @@ var myInterval = null;
 //set itnerval function tht replaces images
 //two if else statments - one for img counter, one to replace image
 var updateImage = function() {
-  if (imgCounter < results.length) {
+  if (imgCounter < imageArray.length) {
     imgCounter++;
   } else {
     imgCounter = 0;
+  }
     //how we move through the array by iteration using the imgCounter
-    $("img").attr('src', results[imgCounter]);
-  }
-  if (results[0].data.thumbnail !=== 'default') {
-    $('img').attr('src', results[0].data.thumbnail);
-  } else {
-    $('img').attr('src', results[1].data.thumbnail);
-  }
+    $("img").attr('src', imageArray[imgCounter].data.thumbnail);
 }
 
 //on the click function, we start doing this
@@ -28,34 +23,24 @@ $(document).ready(function() {
     // e.preventDefault();
     // console.log("in the click");
     //hide div that holds title, p and form
+
     $("#splash").hide();
 
     var searchString = document.forms["imageform"].elements["imagebox"].value;
 
-
     $.get('https://www.reddit.com/search.json', {
       q: searchString
     }).done(function(data) {
-      var results = data.data.children;
+      var result = data.data.children;
 
-      var filteredResults = results.filter(function(item)) {
-        return.item.data !== 'default';
+      var result = result.filter(function(item) {
+        // if (item.data.thumbnail !== 'default');
+        // ($.text(this).indexOf('My String') != -1)
+        if ($.text(item).indexOf('Reddit') != -1) ;
+        imageArray.push(item);
+        console.log(imageArray);
       });
-
-      // if (results[0].data.thumbnail !=== 'default') {
-      //   $('img').attr('src', results[0].data.thumbnail);
-      // } else {
-      //   $('img').attr('src', results[1].data.thumbnail);
-      // }
-      myInterval = setInterval(updateImage, 3000);
-
-      });
-
-
-    }
-  });
-});
-
-
+    });
+    myInterval = setInterval(updateImage, 500);
   });
 });
