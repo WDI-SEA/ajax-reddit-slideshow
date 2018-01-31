@@ -4,6 +4,7 @@ $(document).ready( function(){
   var myInterval = null;
   var imageArray = [];
   var imgCounter = 0;
+  var intervalTimer = 1000;
 
   var updateImage = function(){
     // hide the search field
@@ -47,7 +48,7 @@ $(document).ready( function(){
       }
       $( ".slideControls" ).accordion( "option", "active", 1 );
       $( ".progressbar" ).progressbar({ value: 75 }).delay( 2000 ).fadeOut( 400 );
-      myInterval = setInterval(updateImage, 1000);
+      myInterval = setInterval(updateImage, intervalTimer);
 
     });
   });
@@ -60,7 +61,7 @@ $(document).ready( function(){
   // start and stop functions
   $("#stopShow").on("click", stopSlideInterval);
   $("#startShow").on("click", function(){
-    myInterval = setInterval(updateImage, 3000);
+    myInterval = setInterval(updateImage, intervalTimer);
   });
   $("#searchTerm").focus();
 

@@ -25,7 +25,7 @@ body {
 }
 /* slideshow search and controls */
 .slideControls {
-  width: 60%;
+  width: 40%;
   position: fixed;
   bottom: 20px;
   right: 20px;
