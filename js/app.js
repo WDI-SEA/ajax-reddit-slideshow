@@ -38,7 +38,7 @@ function extractImages(results) {
 }
 
 function showSlides(urls) {
-    var i = 23;
+    var i = 0;
     $("#picViewer").attr("src", urls[i]);
     i++;
     myInterval = setInterval(function() {
