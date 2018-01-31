@@ -27,30 +27,37 @@ $(document).ready( function(){
     }
 
   $("#searchButton").on("click", function(){
-    $( ".progressbar" ).progressbar({ value: false });
-    $(".instructions").hide();
     // if you use a submit button
     // get the value of the term to search for
     var searchString = document.forms["imageForm"].elements["searchTerm"].value;
-    // use the requested value to find
-    // thumbnail images from reddit search .get()
-    $.get("https://www.reddit.com/search.json", {
-      q: searchString
-    }).done(function(data){
-      // store results from query
-      var results = data.data.children;
-      // for each results look at the item filer the item where thumbnail === default
-      // imageArray = results.filter(data.data.children[result].data.thumbnail !== "default");
-      for (result in results){
-          if (results[result].data.thumbnail !== "default"){
-            imageArray.push(results[result]);
-          }
-      }
-      $( ".slideControls" ).accordion( "option", "active", 1 );
-      $( ".progressbar" ).progressbar({ value: 75 }).delay( 2000 ).fadeOut( 400 );
-      myInterval = setInterval(updateImage, intervalTimer);
+    // check to see if searchString === empty
+    if (searchString !== ""){
+      $( ".progressbar" ).progressbar({ value: false });
+      $(".instructions").hide();
+      // use the requested value to find
+      // thumbnail images from reddit search .get()
+      $.get("https://www.reddit.com/search.json", {
+        q: searchString
+      }).done(function(data){
+        // store results from query
+        var results = data.data.children;
+        // for each results look at the item filer the item where thumbnail === default
+        // imageArray = results.filter(data.data.children[result].data.thumbnail !== "default");
+        for (result in results){
+            if (results[result].data.thumbnail !== "default"){
+              imageArray.push(results[result]);
+            }
+        }
+        $( ".slideControls" ).accordion( "option", "active", 1 );
+        $( ".progressbar" ).progressbar({ value: 75 }).delay( 2000 ).fadeOut( 400 );
+        myInterval = setInterval(updateImage, intervalTimer);
 
-    });
+      });
+    } else {
+      $("#searchTerm").focus();
+      $("#searchTerm").attr("placeholder", "Enter a search term");
+    }
+
   });
 
   // accordion

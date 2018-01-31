@@ -25,7 +25,7 @@ body {
 }
 /* slideshow search and controls */
 .slideControls {
-  width: 40%;
+  /* width: 40%; */
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -33,4 +33,31 @@ body {
 /* progressbar style */
 .progressbar {
   /* background-color: green; */
+}
+
+@media (max-width: 800px) {
+  .slideControls {
+    width: 40%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 800px) and (min-height: 330px) {
+  .slideControls {
+    width: 60%;
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+  }
+}
+
+.controls:hover {
+  background-color: pink;
+  color: rebeccaPurple;
+}
+
+.searchTextBox:focus {
+  background: skyblue;
 }
