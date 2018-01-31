@@ -1,0 +1,35 @@
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.outercontainer {
+	width: 300px;
+	height: 200px;
+	margin: 50px auto 0px;
+	padding: 20px;
+	position:relative;
+}
+
+
+.hide {
+	display: none;
+}
+
+#imageContainer {
+	margin: 0px auto;
+}
+
+#searchbutton {
+	padding: 5px;
+	margin: 9px auto 0px;
+}
+ 
+#stopbutton {
+	margin: -22px auto;
+	padding: 5px;
+	position: relative;
+}
+
+

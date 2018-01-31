@@ -3,9 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <title>Ajax reddit slideshow</title>
 </head>
+
+
 <body>
-  <h1>Hello Front-End</h1>
+  
+
+  <div class="outercontainer">
+    <div class="container">
+  	<h1>Reddit Image Crawler</h1>
+  	<p>Type a search term in the box and create a slideshow of related Reddit images</p>
+
+  	<form>
+  	 <input type="text" name="searchbox" id="searchbox" value=""> 
+  	</form>
+    <button type="button" id="searchbutton" name="searchbutton">Search</button>
+    </div>
+    <div id="imageContainer"><img id="picture" src=""></div>
+  </div>
+  
+  <button type="button" id="stopbutton" name="stopbutton" class="hide">Stop</button>
+
+  
+
+
+
+
+
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
