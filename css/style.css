@@ -30,7 +30,9 @@ form{
   height: 350px;
   width: 350px;
   margin: 10% auto;
-  background-image: url('../img/background.png')
+  background-image: url('../img/background.png');
+  background-repeat: no-repeat;
+
 }
 .formcont{
   position: absolute;

@@ -1,15 +1,19 @@
+var audioplayer = document.getElementsByClassName("player")[0];
 var results;
 var approvedImages =[];
 var countMax;
 var count = 0;
 
 function slideShowStart(){
+  audioplayer.play();
   if(count%2 === 0){
     var page = $('.img1');
   }else{
     var page = $('.img2');
   }
   if(count === countMax){
+    audioplayer.pause();
+    audioplayer.currentTime = 0;
     $('.waiting').hide();
     $('.formcont').show();
     $('.replay').show();
