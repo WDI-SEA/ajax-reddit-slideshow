@@ -28,7 +28,7 @@ function extractImages(results) {
             urls.push(post.data.url.slice(0, -1));
         } else if (post.data.media !== null && post.data.media.oembed) {
             urls.push(post.data.media.oembed.thumbnail_url);
-        } else if (post.data.preview.images[0].source.url) {
+        } else if (post.data.preview) {
             urls.push(post.data.preview.images[0].source.url);
         } else if (post.data.thumbnail) {
             urls.push(post.data.thumbnail);
