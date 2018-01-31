@@ -1,0 +1,63 @@
+body {
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.container {
+  position: fixed;
+  top: 0;
+  width: 85%;
+  margin: 5px;
+  padding: 0 5px;
+  height: 100%;
+  border: 3px inset;
+  border-radius: 5px;
+}
+/* holds the main slideshow */
+.content {
+  background-color: black;
+  height: 80%;
+  padding: 20px;
+}
+/* form class */
+.searchForm {
+
+}
+/* slideshow search and controls */
+.slideControls {
+  /* width: 40%; */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+/* progressbar style */
+.progressbar {
+  /* background-color: green; */
+}
+
+@media (max-width: 800px) {
+  .slideControls {
+    width: 40%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 800px) and (min-height: 330px) {
+  .slideControls {
+    width: 60%;
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+  }
+}
+
+.controls:hover {
+  background-color: pink;
+  color: rebeccaPurple;
+}
+
+.searchTextBox:focus {
+  background: skyblue;
+}
