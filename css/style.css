@@ -1,0 +1,179 @@
+body {
+background-color: #2A327A;
+text-align: center;
+padding: 0;
+}
+
+.content {
+  background-color: #333;
+  height: 500px;
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 30px;
+  box-shadow: 0 50px 60px 11px #090909;
+}
+
+.parallax-window {
+  min-height: 400px;
+  /* background: transparent; */
+}
+
+h1 {
+  color: #82F5AF;
+}
+
+p {
+  color: #FC6E4C;
+}
+
+img {
+  border-radius: 5%;
+}
+
+#searchterm {
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  transition: transform .3s;
+  animation: shake 10s infinite ease-out;
+}
+
+#searchterm:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 4px #FFFF9F;
+}
+
+.imgFade {
+  animation: fade 2s infinite;
+}
+
+.resetDiv {
+  display: inline-block;
+  height: 15%;
+  width: 15%;
+  position: relative;
+  left: -5px;
+  top: 5px;
+}
+
+.resetDiv p {
+  margin: 5% auto 0;
+  left: 50%;
+  height: 70%;
+  width: 70%;
+}
+
+#searchbutton {
+  display: none;
+}
+
+.resetButton {
+  position: relative;
+  background: radial-gradient(#ccc, #777);
+  color: #EB4840;
+  top: 0px;
+  font-size: 25px;
+  height: 35px;
+  width: 35px;
+  margin: 10px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 0 1px 1px #222;
+  transition: .2s;
+}
+
+.resetButton:hover {
+  box-shadow: 0 0 2px 2px #1f1f1f;
+  transform: scale(1.15);
+}
+
+  .testDiv {
+  padding: 20px;
+  /*background: #4C4BC5;*/
+}
+
+.slideshowImage {
+  transition:
+}
+
+.spinDiv {
+  height: 10px;
+  width: 100px;
+  position: absolute;
+  top: 350px;
+  left: 47.5%;
+  margin: 0 auto;
+  border-radius: 50%;
+  opacity: .7;
+  display: none;
+}
+
+.div1 {
+  background: #7DA3BF;
+  animation: spin 2.5s 1 alternate ease-out;
+}
+
+.div2 {
+  background: orchid;
+  animation: spin 2.5s .2s 1 alternate ease-out;
+}
+
+.div3 {
+  background: purple;
+  animation: spin 2.5s .4s 1 alternate ease-out;
+}
+
+.div4 {
+  background: orchid;
+  animation: spin 2.5s .6s 1 alternate ease-out;
+}
+
+.div5 {
+  background: purple;
+  animation: spin 2.5s .8s 1 alternate ease-out;
+}
+
+.div6 {
+  background: purple;
+  animation: spin 2.5s 1s 1 alternate ease-out;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg);
+       background-color: #333;}
+  10% { transform: rotate(36deg) scale(1.2, 1.1); }
+  20% { transform: rotate(72deg) scale(1.4, 1.2); }
+  30% { transform: rotate(108deg) scale(1.6, 1.3); }
+  40% { transform: rotate(144deg) scale(1.8, 1.4); }
+  50% { transform: rotate(180deg) scale(2, 1.5);
+        background-color: }
+  60% { transform: rotate(216deg) scale(1.8, 1.4); }
+  70% { transform: rotate(252deg) scale(1.6, 1.3); }
+  80% { transform: rotate(288deg) scale(1.4, 1.2); }
+  90% { transform: rotate(324deg) scale(1.2, 1.1); }
+  100% { transform: rotate(360deg) scale(1, 1); }
+}
+
+@keyframes fade {
+  0% {opacity: .1;}
+  40% {opacity: 1;}
+  80% {opacity: 1}
+  100% {opacity: .1;}
+}
+
+@keyframes shake {
+  80% { transform: translate(0px, 0px) rotate(0deg); }
+  85% { transform: translate(1px, 1px) rotate(0deg); }
+  88% { transform: translate(1px, -3px) rotate(-3deg); }
+  91% { transform: translate(-1px, 1px) rotate(1deg); }
+  94% { transform: translate(-2px, 0px) rotate(3deg); }
+  96% { transform: translate(1px, 1px) rotate(1deg); }
+  97.5% { transform: translate(0px, -3px) rotate(-3deg); }
+  98% { transform: translate(-1px, 0px) rotate(0deg); }
+  98.5% { transform: translate(-4px, -1px) rotate(4deg); }
+  99% { transform: translate(1px, 1px) rotate(0deg); }
+  99.5% { transform: translate(1px, -2px) rotate(-4deg); }
+  100% { transform: translate(-1px, 0px) rotate(0deg); }
+}

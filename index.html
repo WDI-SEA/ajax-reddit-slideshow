@@ -3,9 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>AJAX Reddit slideshow</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css"></style>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+
+  <div class="content parallax-window" data-parallax="scroll" data-image-src="img/lame.png">
+
+    <div id="splash">
+      <h1>Reddit Image Search</h1>
+      <p>Please enter a search term in the box below:</p>
+      <form class="form" name="imageform">
+        <input type="text" id="searchterm" name="imagebox" placeholder="Enter a search term...">
+        <button type="submit" id="searchbutton">Search</button>
+      </form>
+    </div>
+
+    <div class="resetDiv">
+      <p>click to reset the search</p>
+      <button type="button" class="resetButton">&times;</button>
+    </div>
+
+    <div class="testDiv">
+      <img class="slideshowImage">
+      <div class="spinDiv div1"></div>
+      <div class="spinDiv div2"></div>
+      <div class="spinDiv div3"></div>
+      <div class="spinDiv div4"></div>
+      <div class="spinDiv div5"></div>
+      <div class="spinDiv div6"></div>
+    </div>
+
+  </div>
+
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="/path/to/parallax.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
