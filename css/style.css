@@ -1,0 +1,63 @@
+body,h1 {
+  font-family: "Raleway", sans-serif;
+}
+
+html,body {
+  margin:0;
+  padding:0;
+}
+
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("./background-star.jpeg");
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #splash p {
+        display: none;
+    }
+}
+
+.imgNew {
+  height = 600px;
+  width = 600px;
+}
+
+.innerContainer {
+  padding: 200px 0;
+  text-align: center;
+  color: white;
+  }
+
+.button {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    background-color: #0E1C29;
+    border-radius: 10px;
+    border: 0.5px solid white;
+    font-size: 12px;
+    padding: 5px 20px 5px 20px;
+}
+
+#searchterm {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    font-size: 12px;
+    border-radius: 10px;
+    border: 0.5px solid white;
+    background-color: #0E1C29;
+    margin: 5px;
+    padding: 5px 20px 5px 20px;
+}
+
+#searchterm:focus {
+  background: #565C16;
+  color: white;
+}
+
+#resetbutton {
+    background-color: #285075;
+}
