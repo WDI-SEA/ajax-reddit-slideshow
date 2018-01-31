@@ -15,8 +15,15 @@ body {
     text-align: center;
 }
 
-img {
-  max-width: 1000px
+@media (max-width: 600px) {
+    #splash p {
+        display: none;
+    }
+}
+
+.imgNew {
+  height = 600px;
+  width = 600px;
 }
 
 .innerContainer {
@@ -44,6 +51,11 @@ img {
     background-color: #0E1C29;
     margin: 5px;
     padding: 5px 20px 5px 20px;
+}
+
+#searchterm:focus {
+  background: #565C16;
+  color: white;
 }
 
 #resetbutton {

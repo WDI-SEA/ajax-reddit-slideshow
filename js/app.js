@@ -18,6 +18,8 @@ var updateImage = function() {
   }
     //how we move through the array by iteration using the imgCounter
     $("img").attr('src', imageArray[imgCounter].data.url);
+    $("img").addClass('imgNew', imageArray[imgCounter]);
+
     //resize all the image heights in a loop, set  height property to a new value
     // $("img)").height('url', imageArray[imgCounter].data.height, 600);
     }
@@ -59,7 +61,8 @@ $(document).ready(function() {
 
       var result = result.filter(function(item) {
         if (item.data.thumbnail.indexOf('reddit') != -1){ //filtering for certain condition = thumbnail
-            imageArray.push(item); //matched condition, add this item to my array
+            imageArray.push(item);
+          } //matched condition, add this item to my array
         console.log(imageArray);
       });
       myInterval = setInterval(updateImage, 2000);
