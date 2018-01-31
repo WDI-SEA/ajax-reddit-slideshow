@@ -1,21 +1,23 @@
 body {
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
-h1 {
-
-}
-p {
-
+.container {
+  position: fixed;
+  top: 0;
+  width: 85%;
+  margin: 5px;
+  padding: 0 5px;
+  height: 100%;
+  border: 3px inset;
+  border-radius: 5px;
 }
 /* holds the main slideshow */
 .content {
   background-color: black;
-  border: 2px solid;
-  /* position: relative; */
-  /* top: 100px; */
-
+  height: 80%;
+  padding: 20px;
 }
 /* form class */
 .searchForm {
@@ -23,13 +25,12 @@ p {
 }
 /* slideshow search and controls */
 .slideControls {
-  border: 2px solid;
   width: 60%;
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
 }
-
+/* progressbar style */
 .progressbar {
   /* background-color: green; */
 }

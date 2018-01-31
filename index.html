@@ -8,25 +8,27 @@
   <title>Reddit Slideshow (AJAX)</title>
 </head>
 <body>
-  <h1>Your Slideshow</h1>
-  <p class="instructions">Use the search form below to find images for your slideshow.</p>
-  <div class="content">
-    <div class="progressbar"></div>
-  </div>
-  <div class="slideControls">
-    <h3>Create Slideshow</h3>
-      <div>
-        <form class="searchForm" name="imageForm" id="imageForm">
-          <input type="text" name="searchTerm" id="searchTerm" value="">
-          <button type="button" name="searchButton" id="searchButton">Search</button>
-        </form>
+  <div class="container">
+      <h1>Your Slideshow</h1>
+      <p class="instructions">Use the search form below to find images for your slideshow.</p>
+      <div class="content">
+        <div class="progressbar"></div>
       </div>
-      <h3>Control Slideshow</h3>
-      <div>
-        <button class="showControls" type="button" name="stopShow" id="stopShow">Stop</button>
-        <button class="showControls" type="button" name="startShow" id="startShow">Start</button>
-      </div>
-  </div>
+      <div class="slideControls">
+        <h3>Create Slideshow</h3>
+          <div>
+            <form class="searchForm" name="imageForm" id="imageForm">
+              <input type="text" name="searchTerm" id="searchTerm" value="">
+              <button type="button" name="searchButton" id="searchButton">Search</button>
+            </form>
+          </div>
+          <h3>Control Slideshow</h3>
+          <div>
+            <button class="showControls" type="button" name="stopShow" id="stopShow">Stop</button>
+            <button class="showControls" type="button" name="startShow" id="startShow">Start</button>
+          </div>
+        </div>
+    </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
