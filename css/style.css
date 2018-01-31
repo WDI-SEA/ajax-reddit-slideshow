@@ -11,5 +11,36 @@ html,body {
 body {
     background-size: cover;
     background-attachment: fixed;
-    background-image: url("./img/background-ghibli.jpg");
+    background-image: url("./background-ghibli.jpg");
+    text-align: center;
+}
+
+.innerContainer {
+  padding: 200px 0;
+  text-align: center;
+  color: white;
+  }
+
+.button {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    background-color: #24313E;
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 5px 20px 5px 20px;
+}
+
+#searchterm {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    font-size: 12px;
+    border-radius: 10px;
+    border: 0.5px solid white;
+    background-color: #24313E;
+    margin: 5px;
+    padding: 5px 20px 5px 20px;
+}
+
+#resetbutton {
+    background-color: #265274;
 }
