@@ -17,3 +17,7 @@ image {
 	margin: auto;
 	display: block;
 }
+
+#stopbutton:hover {
+	background: blue;
+}

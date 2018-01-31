@@ -15,6 +15,7 @@ var updateImage = function() {
 
 var stopShow = function() {
 	clearInterval(myInterval);
+  
   $("img").attr('src', " ");
 }
 
@@ -46,6 +47,8 @@ $(document).ready(function() {
       
       $("#stopbutton").on("click", function() {
   		    stopShow();
+          results = [];
+          imgCounter = 0;
 
 		  })
           // $("#dataviewing").append("<img src='" + item.data.thumbnail + "'>");  
