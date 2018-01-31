@@ -1,69 +1,50 @@
-var i = 1;
+var i = 0;
+var imageTimer = null;
+var imageUrls = [];
 
-var slideshow = function (pictureArray) {
-  $('#picture').attr('src', pictureArray[i]);
-  i = i + 1;
+var slideshow = function () {
+  $('#picture').attr('src', imageUrls[i]);
+  i++;
+  if (i > imageUrls.length) {
+    i = 0;
+  }
 };
 
-var hideOnClick = function() {
-
-};
-
+var stopSlideshow = function () {
+   clearInterval(imageTimer);
+   $('.container').toggleClass('hide');
+   $('#stopbutton').toggleClass('hide');
+   $('#picture').attr('src', '');
+   imageUrls = [];
+   $('#searchbox').val('');
+  };
 
 var crawl = function () {
-
   var searchString = $('#searchbox').val();
-    console.log($('#searchbox').val());
-    $.get('https://www.reddit.com/search.json', {
-        q: searchString   // search string for results, when DONE, next function starts
-      }).done( function(data) {           //store results in an array from children
-          var results = data.data.children;
-          console.log(data);
-
-        var imageUrls = results.map(function(item) {
-            if (item.data.thumbnail.indexOf("reddit") != -1) {
-                var urlArray = [];
-                urlArray.push(item.data.thumbnail);
-              return urlArray;
-             }
-          }); 
-        console.log(imageUrls);
-
-        $('.container').addClass('hide');
-        $('#stopButton').removeClass('hide');
-
-         var imageTimer = function () {
-          setInterval(slideshow(imageUrls), 1000);
-        };
-         imageTimer();
-
-         var stopSlideshow = function () {
-          clearInterval(imageTimer);
-          $('.container').removeClass('hide');
-          $('#stopButton').addClass('hide');
-          $('#picture').attr('src', '');
-        };
-
-        $('#stopButton').on('click', stopSlideshow);
-
-
-     });
-
+  $.get('https://www.reddit.com/search.json', {
+      q: searchString   // search string for results, when DONE, next function starts
+  }).done( function(data) {           //store results in an array from children
+     var results = data.data.children;
+     results.forEach(function(item) {
+         if (item.data.thumbnail.indexOf("reddit") != -1) {
+             imageUrls.push(item.data.thumbnail);
+         };
+     }); 
+     $('.container').toggleClass('hide');
+     $('#stopbutton').toggleClass('hide');
+     slideshow();
+     imageTimer = setInterval(slideshow, 1000);
+     $('#stopbutton').on('click', stopSlideshow);
+    });
 };
 
-
 $(document).ready(function() {
-  
-  $("#searchButton").on("click", function () {
-    // e.preventDefault();
-    // console.log("in the click");
+  $("#searchbutton").on("click", function () {
     crawl();
-
-     //outside functions end below
+  });
+  $('form').submit(function(event){
+    crawl();
+    event.preventDefault();
   });
 });
 
-
-// $("#pictures").append("<img src='" + item.data.thumbnail + "'>");
-
-// var slideshowTimer = setInterval(slideshow, 1000);

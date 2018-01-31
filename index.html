@@ -12,20 +12,22 @@
 <body>
   
 
-  <div class="container">
-
+  <div class="outercontainer">
+    <div class="container">
   	<h1>Reddit Image Crawler</h1>
   	<p>Type a search term in the box and create a slideshow of related Reddit images</p>
 
   	<form>
   	 <input type="text" name="searchbox" id="searchbox" value=""> 
   	</form>
-    <button type="button" id="searchButton" name="searchButton">Search</button>
-
-
+    <button type="button" id="searchbutton" name="searchbutton">Search</button>
+    </div>
+    <div id="imageContainer"><img id="picture" src=""></div>
   </div>
-  <div id="imageContainer"><img id="picture" src=""></div>
-  <button type="button" id="stopButton" name="stopButton" class="hide">Stop</button>
+  
+  <button type="button" id="stopbutton" name="stopbutton" class="hide">Stop</button>
+
+  
 
 
 
