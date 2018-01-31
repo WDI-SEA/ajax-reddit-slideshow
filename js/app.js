@@ -9,9 +9,20 @@ function dc(str){
 //num_comments
 //Ups
 function slideShowStart(){
-  $('.slidedisplay').attr('src', approvedImages[count].thumbnail).fadeToggle(2000);
-  $('.details').val("Test");
-  $('.slidedisplay').attr('src', approvedImages[count].thumbnail).fadeToggle(2000);
+  if(count%2 === 0){
+    var page = $('.img1');
+  }else{
+    var page = $('.img2');
+  }
+  if(count === countMax){
+    $('.waiting').hide();
+    $('.formcont').show();
+    $('.replay').show();
+    $('.request1').show();
+    $('.rebutton').on("click", slideShowStart);
+  }
+  page.css('background-image', 'url(' + approvedImages[count].thumbnail + ')').fadeToggle(2000);
+  page.css('background-image', 'url(' + approvedImages[count].thumbnail + ')').fadeToggle(2000);
   if(count < countMax){
     count +=1;
     setTimeout(slideShowStart, 4000)
@@ -25,7 +36,7 @@ $(document).ready(function(){
   $('.usersub').on('click', function(e){
     e.preventDefault();
     $('.request1').hide();
-    $('.formcont').append("<img src='https://www.pedul.com/images/loading.gif'>")
+    $('.formcont').append("<img class= 'waiting' src='https://www.pedul.com/images/loading.gif'>")
     $('.formcont').fadeToggle(5000);
     var searchString = document.forms["request"].elements["userinput"].value;
     $('userinput').val();
@@ -40,7 +51,7 @@ $(document).ready(function(){
           approvedImages.push(newItem);
         }
       });
-      countMax = approvedImages.length
+      countMax = approvedImages.length -1;
       setTimeout(slideShowStart, 4000);
       });
   });
