@@ -38,7 +38,10 @@ var crawl = function () {
          imageTimer();
 
          var stopSlideshow = function () {
-          clearInterval(imageTimer)
+          clearInterval(imageTimer);
+          $('.container').removeClass('hide');
+          $('#stopButton').addClass('hide');
+          $('#picture').attr('src', '');
         };
 
         $('#stopButton').on('click', stopSlideshow);
