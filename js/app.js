@@ -13,7 +13,10 @@ var updateImage = function() {
   }
     //how we move through the array by iteration using the imgCounter
     $("img").attr('src', imageArray[imgCounter].data.url);
-}
+    //resize all the image heights in a loop, set their height property to a new value
+    // $("img)").height('url', imageArray[imgCounter].data.height, 600);
+    }
+// }
 
 var clearMyInterval = function() {
       $(imageArray).html("");
