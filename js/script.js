@@ -19,6 +19,8 @@ function reset() {
   imageArray = [];
   count = 0;
   $('.container').toggleClass('hide');
+  $('#searchterm').focus();
+  $('#searchterm').val('');
   $('#results').children().remove();
 }
 

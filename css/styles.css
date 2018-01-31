@@ -1,6 +1,27 @@
 .hide {
   display: none;
 }
-.show {
-  display: show;
+body {
+  background: black;
+}
+.container {
+  background-color: blue;
+  text-align: center;
+  padding-bottom: 3vh;
+}
+.buttons {
+  width: 25vw;
+  margin: 2vh auto;
+  background-color: gray;
+  text-align: center;
+}
+#results {
+  width: 25vw;
+  height: auto;
+  margin: 0 auto;
+  background-color: gray;
+}
+img {
+  width: 25vw;
+  height: auto;
 }
