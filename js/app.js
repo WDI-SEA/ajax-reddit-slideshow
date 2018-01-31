@@ -16,10 +16,6 @@ var updateImage = function() {
   console.log('yo ' + imageIndex);
   if (imageIndex < allImagesArr.length) {
     slideshowImage.attr('src', allImagesArr[imageIndex]);
-      // $('img').addClass('imgFade');
-      // setTimeout(function() {
-      //   $('img').removeClass('imgFade');
-      // }, 1990);
     imageIndex++;
     if (imageIndex >= allImagesArr.length) {
       imageIndex = 0;
@@ -53,20 +49,17 @@ $(document).ready(function() {
         });
         //load screen here instead of below
         setTimeout(function() {
-          slideshowImage.attr('src', allImagesArr[imageIndex]); //change this to load screen
           setTimeout(function() {
             $('img').addClass('imgFade');
           }, 2000);
           myInterval = setInterval(updateImage, 2000);
-        }, 4000);
+        }, 2500);
       });
       setTimeout(function() {
         loadText.remove();
-        $('.spinDiv').css({display: 'none'});  
+        $('.spinDiv').css({display: 'none'});
       }, 4000);
-
     });
-
     $('.resetButton').on('click', function() {
       resetSearch();
     });
