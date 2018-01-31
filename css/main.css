@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  width: 88%;
+  width: 80%;
   margin: 0 auto;
 }
 h1 {
@@ -9,28 +9,27 @@ h1 {
 p {
 
 }
-.content{
+/* holds the main slideshow */
+.content {
   background-color: black;
   border: 2px solid;
-}
-.searchForm{
+  /* position: relative; */
+  /* top: 100px; */
 
 }
-.form{
+/* form class */
+.searchForm {
 
 }
-.searchTerm{
-
+/* slideshow search and controls */
+.slideControls {
+  border: 2px solid;
+  width: 60%;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
-.searchButton{
 
-}
-.showControls{
-
-}
-#stopShow{
-
-}
-#startShow{
-
+.progressbar {
+  /* background-color: green; */
 }
