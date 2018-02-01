@@ -13,45 +13,42 @@ var updateImage = function() {
 	$("img").attr('src', results[imgCounter].data.thumbnail);
 }
 
-var stopShow = function() {
+var clearShow = function() {
 	clearInterval(myInterval);
-  
   $("img").attr('src', " ");
 }
-
-// var clearShow = function() {
-//   results.forEach()
-// }
 
 
 
 $(document).ready(function() {
 
   $("#startbutton").on("click", function() {
-    // e.preventDefault();
     // console.log("in the click");
     var searchString = document.forms["imageform"].elements["imagebox"].value;
     
     $.get('https://www.reddit.com/search.json', {
-      q: searchString
+        q: searchString
     }).done(function(data) {
       results = data.data.children; //item stored as a variable
       //console.log(data); //important to d in arder to find data in response log
       //results.forEach(function(item) {
         //if (item.data.thumbnail !== 'default') {//checks for broken images
-      results = results.filter(function(item) {
+        results = results.filter(function(item) {
           return item.data.thumbnail !== 'default'
       });
       
-      myInterval = setInterval(updateImage, 4000);
+      myInterval = setInterval(updateImage, 2000);
       
       $("#stopbutton").on("click", function() {
-  		    stopShow();
+  		    clearShow();
           results = [];
           imgCounter = 0;
+          $("#imagebox").val('');
+          $("#imagebox").focus();
+      })
 
-		  })
-          // $("#dataviewing").append("<img src='" + item.data.thumbnail + "'>");  
+      
+        // $("#dataviewing").append("<img src='" + item.data.thumbnail + "'>");  
 	   });
   });
 });

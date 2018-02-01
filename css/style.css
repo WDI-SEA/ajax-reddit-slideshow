@@ -6,18 +6,51 @@ body {
 	text-align: center;
 }
 
-#postedImage {
-	width: 400px;
+#postedimage {
+	width: 350px;
+	height: 300px;
 	margin: auto;
+	border: 5px solid black;
+	/*display: fixed;*/
+	
+
+}
+
+img {
+	width: 100%;
+	margin: auto;
+	height: 100%;
+	display: block;
 	border: none;
 }
 
-image {
-	width: 300px;
-	margin: auto;
-	display: block;
+#stopbutton {
+	background: white;
+	color: black;
+	width: 100px;
+	height: 50px;
+	font-size: 22px;
+	margin-top: 10px;
+}
+
+#startbutton {
+	background: white;
+	color: black;
+	width: 100px;
+	height: 50px;
+	font-size: 22px;
+}
+
+#imagebox {
+	height: 45px;
+	font-size: 22px;
+	margin-bottom: 10px;
 }
 
 #stopbutton:hover {
-	background: blue;
+	background: grey;
+}
+
+#startbutton:hover {
+	background: grey;
 }
