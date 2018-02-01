@@ -6,22 +6,25 @@ body {
 	text-align: center;
 }
 
+#inputcontainer {
+	width: 600px;
+	height: 400px;
+	margin: auto;
+}
+
 #postedimage {
 	width: 350px;
 	height: 300px;
 	margin: auto;
-	border: 5px solid black;
-	/*display: fixed;*/
-	
-
+	border: none;
 }
 
-img {
+#thumbnail {
 	width: 100%;
 	margin: auto;
 	height: 100%;
 	display: block;
-	border: none;
+	border: 0;
 }
 
 #stopbutton {
@@ -31,6 +34,7 @@ img {
 	height: 50px;
 	font-size: 22px;
 	margin-top: 10px;
+	display: none;
 }
 
 #startbutton {

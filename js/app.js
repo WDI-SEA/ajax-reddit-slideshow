@@ -18,12 +18,9 @@ var clearShow = function() {
   $("img").attr('src', " ");
 }
 
-
-
 $(document).ready(function() {
 
   $("#startbutton").on("click", function() {
-    // console.log("in the click");
     var searchString = document.forms["imageform"].elements["imagebox"].value;
     
     $.get('https://www.reddit.com/search.json', {
@@ -38,17 +35,18 @@ $(document).ready(function() {
       });
       
       myInterval = setInterval(updateImage, 2000);
+      $("#inputContainer").hide();
+      $("#stopbutton").show();
       
       $("#stopbutton").on("click", function() {
   		    clearShow();
           results = [];
           imgCounter = 0;
+          $("#stopbutton").hide();
+          $("#inputContainer").show();
           $("#imagebox").val('');
           $("#imagebox").focus();
       })
-
-      
-        // $("#dataviewing").append("<img src='" + item.data.thumbnail + "'>");  
 	   });
   });
 });
