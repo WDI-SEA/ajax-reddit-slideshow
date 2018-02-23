@@ -1,0 +1,56 @@
+h1 {
+	color: purple;
+}
+
+body {
+	text-align: center;
+}
+
+
+
+#postedimage {
+	width: 350px;
+	height: 300px;
+	margin: auto;
+	border: none;
+}
+
+#thumbnail {
+	width: 100%;
+	margin: auto;
+	height: 100%;
+	display: block;
+	border: 0;
+}
+
+#stopbutton {
+	background: white;
+	color: black;
+	width: 100px;
+	height: 50px;
+	font-size: 22px;
+	margin-top: 10px;
+	display: none;
+}
+
+#startbutton {
+	background: white;
+	color: black;
+	width: 100px;
+	height: 50px;
+	font-size: 22px;
+}
+
+#imagebox {
+	height: 45px;
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+#stopbutton:hover {
+	background: grey;
+}
+
+#startbutton:hover {
+	background: grey;
+}
