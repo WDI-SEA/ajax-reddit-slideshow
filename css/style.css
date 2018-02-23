@@ -1,0 +1,31 @@
+body {
+	margin: 0 auto;
+	border: 0;
+	text-align: center;
+	width: 350px;
+}
+
+p {
+	display: block;
+}
+
+img{
+	max-width: 300px;
+
+	/*height: 300px;*/
+}
+
+.pics{
+	width: 300px;
+	height: 300px;
+}
+
+#searchbox{
+	display: inline-block;
+	background-color: lightgray;
+	line-height: 30px;
+	vertical-align: middle;
+	text-align: center;
+	margin: 5px;
+	width: 300px;
+}
