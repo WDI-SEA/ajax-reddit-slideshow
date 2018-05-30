@@ -1,0 +1,10 @@
+body{
+    background: #1d0921;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
