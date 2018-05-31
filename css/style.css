@@ -1,0 +1,36 @@
+/* .tasklist {
+  width: 15em;
+  height: 15em;
+  border: 5px solid black;
+  text-align: center;
+  margin: auto;
+} */
+
+body {
+  background-color: rebeccapurple;
+}
+
+form {
+  margin: auto;
+  text-align: center;
+  color: white;
+  margin-top: 5em;
+  font-size: 30px;
+}
+
+.input,
+.button {
+  font-size: 30px;
+}
+
+.image {
+  margin: auto;
+  text-align: center;
+  margin-top: 10em;
+  /* border: 2px solid black; */
+}
+
+img {
+  height: 300px;
+  width: 300px;
+}
