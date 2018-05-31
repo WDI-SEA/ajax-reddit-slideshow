@@ -1,10 +1,74 @@
 body{
     background: #1d0921;
     color: antiquewhite;
-    text-align: center;
+    font-family: 'Noto Serif', serif;
 }
 
 .container {
-    width: 80%;
+    text-align: center;
+    width: 800px;
     margin: 0 auto;
+    padding-top: 20px;
+}
+
+.container h1 {
+    text-align: left;
+    font-family: 'Noto Sans', sans-serif;
+    line-height: .5em;
+}
+
+.container p {
+    text-align: left;
+}
+
+#form-tab {
+    background-color: rgba(255,255,255,0.5);
+    height: 60px;
+    width: 100%;
+    margin: 10px 0 30px 0;
+    padding: 40px;
+    display: hidden;
+    
+}
+
+#form-tab form {
+    bottom: 50%;
+    text-align:center;
+}
+
+#form-tab form input,button {
+    padding: 10px;
+}
+
+#form-tab p {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+#control {
+    position: absolute;
+    bottom: 10px;
+    right: 400px;
+}
+
+#stage {
+    width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slide {
+    width: 800px;
+    margin: 0 50px;
+}
+
+input[type=text] {
+    width: 50%;
+}
+
+.img {
+    border-radius: 50%;
+    width:800px;
+    height:800px;
 }

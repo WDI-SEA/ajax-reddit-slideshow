@@ -4,20 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Reddit Slide Show</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif" rel="stylesheet">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/app.js"></script>
 </head>
 <body>
   <div class="container">
-    <div class="form-tab">
+    <h1>Reddit Slide Show</h1>
+    <p>the slide page of the internet</p>
+    <div id="form-tab">
       <form>
-        <input type="text" id="query" />
+        <input type="text" id="query" placeholder="do you like dogs?" />
         <button type="button" id="search">FINDDIT</button>
       </form>
+      <p>what do you want to see?</p>
     </div>
-    <div class="stage"></div>
+    <div id="stage">
+      <div id="slide">
+        <!-- append img here -->
+      </div>
+    </div>
+    <div id="control"><button type="button" id="stop">STOPPIT</button></div>
   </div>
 </body>
 </html>
+
