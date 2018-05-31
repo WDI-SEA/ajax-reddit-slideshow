@@ -5,20 +5,6 @@ authorArr = [];
 titleArr = [];
 var slideshowInterval;
 
-// var startSlideshow = function(imgSrc) {
-// 	img = $('<img src="' + imgArr[counter] + '" />');
-// 	$('.image-container').html(img);
-// 	$('.title p').text(titleArr[counter]);
-// 	$('.author p').text(authorArr[counter]);
-// 	$('.slideshow-container').fadeIn(1000);
-// 	slideshowInterval = setInterval(function() {
-// 		counter === imgArr.length - 1 ? counter = 0 : counter += 1;
-// 		$('.image-container img').attr('src', imgArr[counter]).hide().fadeIn(700);
-// 		$('.title p').text(titleArr[counter]).hide().fadeIn(700);
-// 		$('.author p').text(authorArr[counter]).hide().fadeIn(700);
-// 	}, 5000);
-// };
-
 var startSlideshow = function(imgSrc) {
 	$('#explode-container').html('<div id="ui-explode"><div class="title-container"><p>' + titleArr[counter] + '</p></div><div class="author-container"><p>' + authorArr[counter] + '</p></div><div class="image-container"><img src="' + imgArr[counter] + '" /></div></div>');
 	$('.slideshow-container').fadeIn(1000);
@@ -48,13 +34,13 @@ $(document).ready(function() {
 				titleArr.push(item.data.title);
 			});
 			imgArr = imgArr.filter(function(img) {
-				return img !== 'null' && img !== 'self' && img !== 'default';
+				return img !== 'null' && img !== 'self' && img !== 'default' && img !== 'undefined';
 			});
 			authorArr = authorArr.filter(function(author) {
-				return author !== 'null' && author !== 'self' && author !== 'default';
+				return author !== 'null' && author !== 'self' && author !== 'default' && author !== 'undefined';
 			});
 			titleArr = titleArr.filter(function(title) {
-				return title !== 'null' && title !== 'self' && title !== 'default';
+				return title !== 'null' && title !== 'self' && title !== 'default' && title !== 'undefined';
 			});
 			startSlideshow()
 		});
