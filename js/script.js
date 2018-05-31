@@ -1,3 +1,5 @@
+var timeOut;
+
 $(document).ready(function() {
 	$(".user-input").on("submit", function(e) {
 		e.preventDefault();
@@ -19,17 +21,17 @@ $(document).ready(function() {
     			} else {
     				i = 0;
     			}
-    				var timeOut = setTimeout(slideShow, 1800);
+    			timeOut = setTimeout(slideShow, 1800);
 			};
 			slideShow();
 			$("button").show();
-		})
+		});
 		$("input[type=text]").blur();
 		$(".page-info").slideUp(500);
 	});
 	$("button").on("click", function() {
 		$(".reset").hide();
 		$(".page-info").slideDown(500);
-		clearTimeout(slideShow);
+		clearTimeout(timeOut);
 	});
 });
