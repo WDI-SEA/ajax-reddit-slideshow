@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Reddit Slideshow</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="js/script.js"></script>
 </head>
+
 <body>
-  <h1>Hello Front-End</h1>
+  <div class="search-box">
+    <!-- Apply hidden attribute after submit is clicked -->
+    <h1>A Slideshow Search</h1>
+    <p class="par1">In the box below, type an image you would like to search for.</p>
+    <p class="par2">Click the search button to see a slideshow of the top results!</p>
+    <form>
+      <input placeholder="Kittens" type="text" id="search" />
+      <button type="submit" id="submit">Search</button>
+    </form>
+  </div>
+  <div class="slideshow">
+    <div class="img-box"></div>
+    <button type="reset" id="reset-button">New Image Search</button>
+    <button type="button" id="stop">Stop/Start Slideshow</button>
+  </div>
 </body>
+
 </html>
