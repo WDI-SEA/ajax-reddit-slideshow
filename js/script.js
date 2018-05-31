@@ -1,11 +1,11 @@
 var picArray = [];
 var picIndex = 0;
 
-// function displayImage() {									//this is Scott Ammon's function; not sure how to do this
-//     $('.image').attr("src",picArray[picIndex]);
-//     $('.image').fadeIn(1000);
-//     setTimeout(function() { $('.image').fadeOut(1000);}, 2000);
-// };
+function displayImage() {									//this is Scott Ammon's function; not sure how to do this
+    $('.image').attr("src",picArray[picIndex]);
+    $('.image').fadeIn(1000);
+    setTimeout(function() { $('.image').fadeOut(1000);}, 2000);
+};
 
 
 $(document).ready(function() {
@@ -23,31 +23,27 @@ $(document).ready(function() {
 		
 		//do a for each loop through array
 		returnData.data.children.forEach(function(item) {
-		
-		// if(item.data.thumbnail !== 'default' && item.data.thumbnail !== 'self') {		//this is Scott Ammon's loop
-  		//            picArray.push(item.data.thumbnail);
+			
+		if(item.data.thumbnail !== 'default' && item.data.thumbnail !== 'self') {		//this is Scott Ammon's loop
+  		            picArray.push(item.data.thumbnail);
 
 		$("#itembox").focus();
 		$("#itembox").val('');
-		})	
+		}
+	  })	
 	})
 
 
-//  var picInterval = setInterval(function() {     //this is Scott Ammon's function; not sure how to do this
-//        displayImage();
-//        picIndex++;
-//        if(picIndex >= picArray.length) {
-//           picIndex = 0;
-       
-//       }, 4000);
-//   } else {
-//     $('.bounce').effect('bounce', 1000);
-//   }
-// })
-
-
+    var picInterval = setInterval(function() {     //this is Scott Ammon's function; not sure how to do this
+       displayImage();
+       picIndex++;
+       if(picIndex >= picArray.length) {
+          picIndex = 0;
+      }
+      }, 4000);
+  })
 })
-})
+
 
 
 
