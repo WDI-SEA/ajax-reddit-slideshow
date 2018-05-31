@@ -3,9 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Reddit Search</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="js/app.js"></script>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+
+  <h1>Reddit Search</h1>
+
+  <div class="search-form-container">
+  	<form id="search-form">
+  		<input type="text" name="input" autocomplete="off">
+  		<button class="submit-btn" type="submit">search</button>
+  	</form>
+  </div>
+
+  <div class="slideshow-container">
+  	<div id="explode-container"></div>
+
+  	<button class="stop-btn" type="submit">pause</button>
+  	<button class="newsearch-btn" type="submit">new search</button>
+
+  	<p class="arrow right-arrow">&rarr;</p>
+  	<p class="arrow left-arrow">&larr;</p>
+  </div>
+
 </body>
 </html>
