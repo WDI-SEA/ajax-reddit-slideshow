@@ -1,0 +1,72 @@
+body {
+  background-color: rgb(58, 58, 58);
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+h1 {
+  color: white;
+  font-size: 24px;
+}
+
+label {
+  color: rgb(215, 215, 210);
+  font-size: 16px;
+}
+
+.search,
+.stop {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  top: 30%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -250px;
+}
+
+.slidebox {
+  width: 500px;
+  height: 400px;
+  top: 60%;
+  left: 50%;
+  position: absolute;
+  margin-top: -200px;
+  margin-left: -250px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.stop {
+  opacity: 0;
+  z-index: -1;
+}
+
+button {
+  border: 0;
+  background-color: rgb(116, 119, 113);
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  padding-right: 4px;
+  font-family: Helvetica, sans-serif;
+}
+
+button:hover {
+  background-color: rgb(217, 216, 209);
+  color: black;
+}
+
+.search-button {
+  visibility: hidden;
+}
+
+h3:hover {
+  background-color: rgb(221, 210, 217);
+}
+
+h3 {
+  padding-left: 10px;
+}
