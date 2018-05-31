@@ -40,6 +40,7 @@ $(document).ready(function() {
     $('#search').click( function(e) {
         e.preventDefault();
         searchInput = $('#query').val();
+        $('#subtitle').text(searchInput);
         $('#form-tab').slideUp('slow');
         $('#slide').html('<h2>loading...</h2>');
         getRedditResults(searchInput);
@@ -51,6 +52,7 @@ $(document).ready(function() {
         $('#form-tab').slideDown('slow');
         clearInterval(intervalHandle);
         $('#slide').empty();
+        $('#subtitle').text('slide');
         $('#query').focus();
 
     })
