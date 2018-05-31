@@ -1,0 +1,139 @@
+* {
+	font-family: Armata;
+}
+
+body {
+	text-align: center;
+	background: linear-gradient(to bottom right, rebeccapurple, lightgray);
+	background-attachment: fixed;
+	padding: 30px 0;
+}
+
+h1 {
+	color: #fff;
+	font-size: 3em;
+}
+
+.search-form-container {
+	border: 5px solid #fff;
+	width: 70%;
+	margin: 0 auto;
+	padding: 5% 0;
+}
+
+input[type="text"] {
+	width: 70%;
+	font-size: 2em;
+	padding: 0.6em;
+	display: block;
+	margin: 0 auto 5% auto;
+	border-radius: 10px 10px 0 0;
+	border: 3px solid rgba(55, 55, 55, 0.3);
+	outline: none;
+	background-color: rgba(55,55,55, 0.1);
+	transition: all 0.3s ease;
+	color: #fff;
+}
+
+input[type="text"]:focus {
+	background-color: rgba(223, 54, 81, 0.1);
+	border-color: #fff;
+}
+
+.submit-btn {
+	width: 200px;
+	height: 200px;
+	background-color: #fff;
+	border: 3px solid #555;
+	outline: none;
+	font-size: 2em;
+	padding: 0.3em;
+	cursor: pointer;
+	border-radius: 100%;
+	transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+	border: 8px solid #6e1223;
+	background-color: #df3651;
+	color: #fff;
+}
+
+.slideshow-container {
+	display: none;
+	position: relative;
+}
+
+.image-container {
+	width: 70%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.image-container img {
+	width: 30%;
+	min-width: 250px;
+
+}
+
+.title-container p, .author-container p {
+	width: 70%;
+	margin: 20px auto;
+}
+
+.title-container p {
+	color: #fff;
+	font-size: 1.3em;
+	line-height: 1.5em;
+}
+
+.author-container p {
+	color: lightgray;
+	font-style: italic;
+	font-size: 1.2em;
+}
+
+.stop-btn, .newsearch-btn {
+	width: 200px;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 1.3em;
+	margin-top: 3em;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	outline: none;
+}
+
+.stop-btn:hover, .newsearch-btn:hover {
+	border: 3px solid #fff;
+	background-color: #555;
+	color: #fff;
+}
+
+.left-arrow {
+	left: 12%;
+}
+
+.right-arrow {
+	right: 12%;
+}
+
+.left-arrow, .right-arrow {
+	position: absolute;
+	color: #fff;
+	font-size: 6em;
+	top: 15%;
+	opacity: 0.7;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+	opacity: 1;
+	text-shadow: 2px 2px 4px #888;
+}
+
+
+
+
+
