@@ -3,9 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
-</head>
+  <title>Reddit Image Search</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	  <link rel="stylesheet" href="css/style.css">
+	  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	  <script src='js/script.js'></script>
+	</head>
+
 <body>
-  <h1>Hello Front-End</h1>
+
+  <div class="wrapper">
+
+	  <h1><span>r/</span> search</h1>
+
+	  <form>
+	    <input type="text" placeholder="look for...">
+	    <button type="submit" class="go">go</button>
+    </form>
+  </div>
+
+  <!-- div to contain current slideshow image -->
+	<div class="insert">
+ 	  <img class='image' src="">
+  </div>
+	  
+	<button class='reset'>stop slideshow</button>
 </body>
 </html>
