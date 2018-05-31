@@ -1,0 +1,66 @@
+body {
+	/*font-family: 'Sunflower', sans-serif;*/
+	font-family: Verdana;
+	text-align: center;
+	color: #ff4503;
+	background-color: #ff4503;;
+}
+
+.page-info {
+	height: 150px;
+	border-bottom: 1px solid black;
+	width: 50%;
+	margin: auto;
+	background-color: white;
+	border-radius: 20px;
+}
+
+.page-info p {
+	font-style: italic;
+	font-size: 10px;
+	width: 50%;
+	margin: auto;
+	margin-top: 1em;
+	padding-right: 6%;
+}
+
+input[type=text] {
+	font-family: sans-serif;
+	border: 0;
+	border-bottom: 1px solid black;
+	height: 30px;
+	font-size: 30px;
+	text-align: center;
+	font-family: Verdana;
+}
+
+input[type=submit] {
+	height: 30px;
+}
+
+img {
+	display: none;
+	margin: auto;
+	text-align: center;
+	margin-top: 20%;
+	height: 180px;
+}
+
+.submit {
+	height: 28px;
+    width: 48px;
+    font-size: 10px;
+	font-family: Verdana;
+	padding-right: 2px;
+}
+
+.reset {
+	display: none;
+	margin: auto;
+	margin-top: 10px;
+	height: 55px;
+	width: 140px;
+	font-size: 20px;
+	background-color: #FFFFFF;
+	font-family: Verdana;
+}
