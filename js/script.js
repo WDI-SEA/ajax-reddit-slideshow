@@ -59,7 +59,7 @@ function searchThing(e) {
     q: theQuery[0].value + ' site:imgur.com +nsfw:no'
   }).done(function(returnData) {
     returnData.data.children.forEach(function(item, i) {
-      if (item.data.url.includes("jpg")) {
+      if (item.data.url.includes("jpg") || item.data.url.includes("png")) {
         fakeArray.push(item.data.url);
       }
     });
