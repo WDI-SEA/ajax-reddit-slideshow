@@ -41,8 +41,8 @@ $(document).ready(function() {
         e.preventDefault();
         searchInput = $('#query').val();
         $('#form-tab').slideUp('slow');
-        getRedditResults(searchInput);
         $('#slide').html('<h2>loading...</h2>');
+        getRedditResults(searchInput);
     });
 
     // bind stop button to stop slide show and clear the slide div
