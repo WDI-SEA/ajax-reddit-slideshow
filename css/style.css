@@ -1,0 +1,11 @@
+body {
+  background: #2b8875;
+  font-family: sans-serif;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    display: inline-block;
+}
