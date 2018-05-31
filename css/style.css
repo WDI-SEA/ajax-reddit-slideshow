@@ -44,7 +44,7 @@ input:focus, textarea:focus {
   display: none;
   position: absolute;
   left: 41%;
-  top: 150px;
+  top: 200px;
   width: 300px;
   height: 300px;
 }
