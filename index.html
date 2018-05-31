@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+	<title>Reddit Slideshow</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+ 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+ 	<script src="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+	<div class="hidethis">
+		<img src="https://cdn.worldvectorlogo.com/logos/reddit.svg">
+		<h1>Reddit Slideshow</h1>
+		<p>Enter a search term in the field below and click the "Search" button to create a slideshow of photos from Reddit.com. Click the "Stop" button to pause the slideshow.</p>
+	</div>
+  		<form>
+    		<label for="itembox">Find images of:</label>
+    		<input type="text" name="text" id="itembox" />
+    		<input type="submit" id="searchbutton" value="Search" />
+    		<input type="submit" id="stopbutton" value="Stop" />
+  		</form>
+
+  	<div class="insert">
+  		<img class='image' src="">
+	</div>
 </body>
 </html>
