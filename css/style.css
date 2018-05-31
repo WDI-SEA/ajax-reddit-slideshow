@@ -1,16 +1,16 @@
 body {
-	background-color: #222;
-	text-align: center;
+  background-color: #222;
+  text-align: center;
 }
 
 span {
-	color: red;
+  color: red;
 }
 
 h1 {
-	font-family: 'Open Sans';
-	font-size: 48px;
-	color: white;
+  font-family: 'Open Sans';
+  font-size: 48px;
+  color: white;
 }
 
 .wrapper {
@@ -20,13 +20,13 @@ h1 {
 }
 
 input {
-	width: 500px;
-	height: 54px;
-	font-size: 36px;
-	text-transform: underline;
-	border: none;
-	color: white;
-	background-color: transparent;
+  width: 500px;
+  height: 54px;
+  font-size: 36px;
+  text-transform: underline;
+  border: none;
+  color: white;
+  background-color: transparent;
 }
 
 input:focus, textarea:focus {
@@ -34,32 +34,32 @@ input:focus, textarea:focus {
 }
 
 .insert {
-	width: 500px;
-	height: 200px;
-	margin: 300px auto 0 auto;
-	text-align: center;
+  width: 500px;
+  height: 200px;
+  margin: 300px auto 0 auto;
+  text-align: center;
 }
 
 .image {
-	display: none;
+  display: none;
 }
 
 .reset {
-	display: none;
+  display: none;
 }
 
 form button,
 .reset {
-	border-radius: 6px;
-	background-color: transparent;
-	color: white;
-	font-size: 30px;
-	margin: 6px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  margin: 6px;
 }
 
 .reset:hover,
 .go:hover {
-	background-color: #fff;
-	color: #222;
+  background-color: #fff;
+  color: #222;
 }
 
