@@ -23,10 +23,8 @@ var getRedditResults = function(input) {
         })
         // cycle through slides arrayw
         intervalHandle = setInterval( function(){
-            $('#slide').fadeIn(500);
             $('#slide').replaceWith(slides[0]);
-            let slideShown = slides.shift();
-            slides.push(slideShown);
+            slides.push(slides.shift());
             $('#slide').fadeOut(2900);
         },3000)
     }).fail( function() {
@@ -54,7 +52,5 @@ $(document).ready(function() {
         $('#slide').empty();
         $('#subtitle').text('slide');
         $('#query').focus();
-
     })
-
 })
