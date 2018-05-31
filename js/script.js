@@ -27,12 +27,12 @@ $(document).ready(function() {
           // for each object grab the thumbnail
           returnData.data.children.forEach(function(item) {
             // use map here instead?
-            if(item.data.thumbnail !== 'default' && item.data.thumbnail !== 'self') {
-              imageCollection.push(item.data.thumbnail);
+            if(item.data.url.includes('jpg') || item.data.url.includes('png')) {
+              imageCollection.push(item.data.url);
             }
           });
+          console.log(imageCollection);
       });
-
      
       $('.reset').show();
 
@@ -40,6 +40,7 @@ $(document).ready(function() {
       $('.reset').on('click', function() {
         $('.wrapper').show();
         $('.reset').hide();
+        $('.insert').hide();
         clearInterval(imgInterval);
         imageCollection.length = 0;
         $('input').val('').focus();
