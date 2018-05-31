@@ -4,6 +4,10 @@ body{
     font-family: 'Noto Serif', serif;
 }
 
+input[type=text] {
+    width: 50%;
+}
+
 .container {
     text-align: center;
     width: 800px;
@@ -56,19 +60,18 @@ body{
     width: 900px;
     margin: 0 auto;
     text-align: center;
+    padding: 20px auto;
 }
 
-.slide {
+#slide {
     width: 800px;
     margin: 0 50px;
 }
 
-input[type=text] {
-    width: 50%;
-}
+.error {
+    color: lightskyblue;
+    text-align: center;
+    position: absolute;
+    top: 25%;
 
-.img {
-    border-radius: 50%;
-    width:800px;
-    height:800px;
 }
