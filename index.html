@@ -3,9 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Reddit Slideshow</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="https://fonts.googleapis.com/css?family=Mrs+Saint+Delafield" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div class="headers">
+  <h1>Reddit<h2>Image Search and Slideshow</h2></h1>
+  </div>
+
+  <div class="container">
+        <div class="insert"></div>
+
+
+      <div class="formbox">
+        <form class="form">
+          <input class='inputbox' type='text' placeholder="What shall you search?">
+          <input type='submit' value="See the things!" />
+        </form>
+      </div>
+  </div>
+
+
+<button onclick="stopPicShow();">Stop</button>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
