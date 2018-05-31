@@ -1,0 +1,38 @@
+body {
+  text-align: center;
+  background: rgb(46, 5, 46);
+  color: rgb(218, 191, 218);
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.search-box {
+
+}
+
+.par1 {
+  font-size: 1.2em;
+}
+
+.slideshow {
+  display: none;
+  border: 2px solid rgb(218, 191, 218);
+  padding: 10px;
+  width: 70%;
+}
+
+button {
+  box-shadow: 2px 1px rgb(218, 191, 218);
+  margin: 0 5px;
+}
+
+input:hover {
+  /* highlight field? */
+}
+
+.img-box {
+  margin: 10px;
+}
