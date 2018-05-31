@@ -1,34 +1,31 @@
-// Create your form (HTML/CSS) √
-// Prevent default form submission and verify that you can type something into the form √
-// Use AJAX to make a request. Show data in console √
-// Create an array of image URLs (tip: use filter and map).
-// Make the form / title / description hide
-// Cycle through images
-// tip: use setInterval
-// Either add images, or change the src of a single image tag
-// Add some interesting style / animation
-// Create button to stop animation (tip: use clearInterval).
-
+// global vars
 var slideInterval;
 var imageArray = null;
 var count = 0;
 
+// assigning the click handlers
 $(document).ready(function() {
   $('form').submit(searchThing);
   $('#stop').click(slidesStop);
 });
 
+// starting the slideshow
+
 function slidesGo() {
+  // hide the search field, show the stop button
+  $('.search').fadeOut(700);
+  $('.stop').fadeTo(700, 1);
   slideInterval = setInterval(slideAdvance, 3000);
   slideAdvance()
 }
-
+// showing a new slide
 function slideAdvance() {
   if (count < imageArray.length) {
     $('.slidebox').fadeIn(500);
     $('.slidebox').css("background-image", "url('" + imageArray[count] + "')");
     $('.slidebox').fadeOut(2500);
     count++
+    // if we run out of images, start over
   } else {
     count = 0;
     $('.slidebox').fadeIn(500);
@@ -36,7 +33,7 @@ function slideAdvance() {
     $('.slidebox').fadeOut(2500);
   }
 }
-
+// stop the slides, hide the slideshow, bring the search field back
 function slidesStop() {
   clearInterval(slideInterval);
   count = 0;
@@ -45,28 +42,30 @@ function slidesStop() {
   $('.stop').fadeOut(700);
   $('form')[0].reset();
   $('input').focus();
-
 }
 
+// search button
 
 function searchThing(e) {
   e.preventDefault();
   var fakeArray = [];
-  $('.search').fadeOut(700);
-  $('.stop').fadeTo(700, 1);
+  // pass the user input to reddit as search q
   var theQuery = $('form').serializeArray();
   $.get("https://www.reddit.com/search.json", {
-    q: theQuery[0].value + ' site:imgur.com +nsfw:no'
+    q: theQuery[0].value + ' site:imgur.com +nsfw:no' // use imgur only so we don't get text posts
   }).done(function(returnData) {
     returnData.data.children.forEach(function(item, i) {
-      if (item.data.url.includes("jpg") || item.data.url.includes("png")) {
-        fakeArray.push(item.data.url);
+      if (item.data.url.includes("jpg") || item.data.url.includes("png")) { // make sure there's a direct image link
+        fakeArray.push(item.data.url); // put the image into an array-like thing?
       }
     });
 
-    imageArray = $.makeArray(fakeArray)
-    if (imageArray.length > 0) {
-    slidesGo();
+    imageArray = $.makeArray(fakeArray) // make sure it's an array please
+    if (imageArray.length > 0) { // only start slides if we actually found an image
+    slidesGo(); // start slides
+  } else {
+    $('.no-results').fadeTo(600, 1);
+    $('.no-results').fadeOut(800);
   }
 
 
