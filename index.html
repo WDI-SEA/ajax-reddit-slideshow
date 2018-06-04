@@ -3,9 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Ajax Slide Show</title>
+  
+  <link rel="stylesheet"  href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet"  href="css/style.css">
+  	
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  	<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+	
+	<script src="js/app.js"></script>
+
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+	<div class = "container">
+		<div class = "disapearStuff">
+			<div class ="titlePage">some text</div>
+			<div class ="description">a lot more text to read</div>
+			<form class ="inputField">
+				<input type="text" name="stuffToSearch" class = inputStuff>
+				<button type="submit" class= "go">start</button>
+				<!-- <button class = "go">Go!</button> -->
+			</form>
+		</div>
+		<div class = "slideShow">
+			<div class = "picBox">
+				<img id="slide"/>
+			</div>
+			<button class = "skip">skip</button>
+		</div>
+		
+  	</div>
 </body>
 </html>
