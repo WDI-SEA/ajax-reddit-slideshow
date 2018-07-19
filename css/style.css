@@ -1,0 +1,54 @@
+body {
+	text-align: center;
+	background: gray;
+	background-size: cover;
+}
+
+#search-bar {
+	transition: opacity 4s height 10s;
+	background: rgb(86, 102, 105);
+	background: rgba(86, 102, 105, .25);
+	color: white;
+	display: inline-block;
+	padding: 100px;
+	position: relative;
+	margin: 80px auto 0 auto;
+	z-index: 99;
+}
+
+#search-bar.searching {
+	display: none;
+}
+
+#stop.searching {
+	display: block;
+
+}
+
+#results {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+
+#slideshow {
+	display: none
+	height: 0;
+	
+}
+
+#slideshow.searching{
+	display: block;
+	height: 600px;
+	background-color: black;
+}
+
+#stop {
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	border: 0;
+	padding: 20px;
+}
+
