@@ -3,9 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+  <title>Reddit Slideshow</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+<div id="head">
+  <h1>Create your slideshow</h1>
+
+  <form id="search-form">
+    Please enter the theme for your slideshow:<br>
+    <input id="query" type="text" name="required-img"><br>
+    <!-- <input id="search-button" type="button" value="Search"> -->
+    <button type="submit">search reddit</button>
+  </form>
+</div>
+    <!-- The div where results will be displayed. -->
+  <div id="results">
+   <img id="theImage" src="">
+  </div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
