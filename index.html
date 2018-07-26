@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Reddit Slide Show</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <h1>Slide Show</h1>
+  <p>Input text in the text box and press submit to start a slideshow related to your search.</p>
+  <input autofocus="autofocus" type="text" name="searchBar" placeholder="Search here..." id="searchBar">
+  <button type="button" id="startBtn">Start</button>
+  <div id="slide-container"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
