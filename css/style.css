@@ -1,0 +1,48 @@
+body{
+  margin: 0 auto;
+  text-align: center;
+  background: #666666;
+}
+
+input{
+  padding: 10px;
+  border: none;
+  margin: 0 20px;
+  border-radius: 2px;
+}
+button{
+  border: none;
+  background: white;
+  padding: 10px;
+  width: 70px;
+  border-radius: 2px;
+}
+#slides{
+  height: 800px;
+}
+.slidesjs-container{
+    margin: 10px auto;
+}
+
+.slidesjs-navigation{
+  padding: 4px 10px;
+  text-decoration: none;
+  color: black;
+  background: white;
+  border: none;
+  border-radius: 2px;
+  margin-left: 15px;
+}
+
+li{
+  display: none;
+}
+
+#clear{
+  background: white;
+  margin-top: 50px;
+}
+
+#slidesContainer{
+  margin-top: 50px;
+}
