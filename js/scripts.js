@@ -14,6 +14,7 @@ $( document ).ready( function () {
     });
     $('#user-submit').on('click',function(){
         var url =  'https://www.reddit.com/search.json?q=' + $('#search-text').val();
+        console.log(url);
         $.ajax({'url':url}).done(function (resp) {
             var children = resp.data.children;
             for(var i = 0; i < children.length; i++){

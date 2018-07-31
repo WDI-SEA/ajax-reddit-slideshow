@@ -25,5 +25,8 @@ body {
 }
 #img-page button {
     margin-bottom: 30px;
+    border-radius: 3px;
+    border: 1px solid grey;
+    padding: 10px;
 }
 
