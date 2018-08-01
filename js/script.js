@@ -2,13 +2,7 @@ console.log("script is working!")
 
 document.addEventListener("DOMContentLoaded", function(){
 	console.log("dom content loaded");
-	// $("#submit").on("click", function(e){
-	// 	e.preventDefault();
-	// 	addItem();
-	// 	deleteButton();
-	// 	removeItem();
-	// 	clearInput();
-	// 	strikeOut();
+	
 	$("button").click(function(){
 		$.ajax({
 			url: "https://www.reddit.com/search.json?=", 
@@ -16,8 +10,12 @@ document.addEventListener("DOMContentLoaded", function(){
 			data: {q: $("#searchImage").val()}
 		})
 			.done(function(response){
-				console.log("success", response);
-				$("#imageBox").attr("src", response.url);
+				//console.log("success", response.data);
+				response.data.children.forEach(function(post){
+					console.log(post.data.url);
+					$("img").attr("src", post.data.url);
+				})
+				//$("#imageBox").attr("src", response.url);
 			})
 			.fail(function(err){
 				console.log("error", err);
@@ -32,3 +30,5 @@ document.addEventListener("DOMContentLoaded", function(){
 //build function to insert input value into API filter at click of button
 //build function to display images found on reddit
 //build function to switch images at some interval.
+
+
