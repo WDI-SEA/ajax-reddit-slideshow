@@ -9,12 +9,14 @@ $(document).ready(function() {
 		country = $("#text-input").val();
 		console.log(country);
 		if (country!==''){
+			addLoader();
 			$("#text-input").val(" ");
 			$("#ctry").text(country);
-			//console.log(searchText);	
-			//start(country);	
+			start(country);	
 			showResetStopHideSearch();
-		}		
+		} else {
+			$("#title").text("please enter a country name");
+		}	
 	});
 
 	$("#reset").click(function(e){
@@ -38,8 +40,6 @@ function start(country){
 	// create a loading delay before requesting
 	// query results and remove when data is returned
 	console.log("start called!!")
-	
-
 	// Get images
 	redditAjaxCall(country);
 }
@@ -78,13 +78,21 @@ function removeLoader(){
 	//Remove loading overlay
 	loader = $(".loadingoverlay").length;
 	if (loader!==0) {
-		console.log('loaded');
 		// Stop loading
 		$('#result').LoadingOverlay('hide');
 	}
 }
 
 
+function hideImage(){
+	$("img").hide();
+	addLoader();
+}
+
+function showImage(){
+	removeLoader();
+	$("img").hide();
+}
 
 function redditAjaxCall(country) {
 	// call reddir CLI to get images for the query 
@@ -99,12 +107,12 @@ function redditAjaxCall(country) {
 	   console.log("response.data", response.data);
 	   response.data.children.forEach(function(post){
 	   		//console.log(post.data.title);
+	   		hideImage();
 	   		$("#title").text(post.data.title);
-	   		removeLoader();
-	   		//console.log(post.data.src);
-	    	// var img = $('<img id="images">');
-      //   	img.attr('src', data);
-      //   	img.appendTo('#result');
+	    	var img = $('<img id="images">');
+        	img.attr('src', post.data);
+         	img.appendTo('#result');
+         	showImage();
 	  	});
 	}).fail(function(err){
 	  console.log("error", err);
