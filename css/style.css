@@ -6,6 +6,8 @@ h1{
 }
 div{
 	background-color: black;
+	background-repeat: no-repeat;
+	background-position: center;
 	width: 100%;
 }
 button{
