@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Hello WDI 20</title>
+  <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <h1>Picture Wonderland!</h1>
+  <h2>Kittens, puppies, and other pictures from the internet</h2>
+
+  <form id="submit-form">
+    <input type="text" id="search-box" placeholder="What are you looking for?">
+    <input type="submit" value="Click for a Pic!">
+  </form>
+
+  <div id="results"></div>
+  <button id="stop">Make it stop!</button>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="./js/app.js"></script>
 </body>
 </html>
