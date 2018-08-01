@@ -1,0 +1,32 @@
+body {
+    text-align:center;
+    font-family: 'Do Hyeon',arial;
+    background-color: rgba(0,0,0,.7);;
+}
+#user-input {
+    margin: 0 auto;
+    padding: 10px;
+}
+#user-input *{
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid grey;
+}
+#user-input button:hover{
+    background-color:white;
+}
+#img-page {
+    margin: 0 auto;
+    padding: 10px;
+}
+#img-page img {
+    width: 300px;
+    height: auto;
+}
+#img-page button {
+    margin-bottom: 30px;
+    border-radius: 3px;
+    border: 1px solid grey;
+    padding: 10px;
+}
+
