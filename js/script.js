@@ -1,54 +1,70 @@
-
+var picArray, currentIndex, interval;
 
 $(document).ready(function() {
 	
 	console.log("Hello World");
 
-	var slideshowPix = [];
-
+	$("#submit-form").submit(function(e){
+		e.preventDefault();
+		console.log("form submitted");
+		var searchText = $("#search-box").val();
+		if(searchText){
+			console.log("You typed in", searchText)
+			$("#search-box").val("");
+			getData(searchText);
+		} else {
+			console.log("Please enter a search term")
+		};
 	
-	//function redditQuery() {
-		//var userQuery = document.getElementById("user-search").value;
-		$.ajax({
-			url: "https://www.reddit.com/search.json",
-			method: "GET",
-			data: {
-				q: "dinosaur costume"
-			}
-
-		}).done(function(response){
-			console.log("response.data", response.data);
-			response.data.children.forEach(function(post){
-				if (post.data.url.includes(".jpg")) {
-
-				console.log(post.data.title);
-				//console.log(post.data.url);
-				slideshowPix.push(post.data.url);
-
-				};
-				console.log(slideshowPix);
-			})	
-
-		}).fail(function(err){
-			console.log("error", err);
-		});
-	//};
-
-    function slideShow() {
-    	var current = 0;
-    	var imgDuration = 3000;
-        document.getElementById("img1").src = slideshowPix[current];
-        current++;
-        if (current == slideshowPix.length) { current = 0; }
-        setTimeout("slideShow()", imgDuration);
-    };
-
-	$("button").click(function(){
-			console.log("click happened");
-			//redditQuery();
-			slideShow();
 	});
 
-
+	$("#stop").click(function(){
+		console.log("stop button clicked");
+		clearInterval(interval);
+	});
 
 });
+
+function getData(searchText) {
+	$.ajax({
+		url: "https://www.reddit.com/search.json",
+		method: "GET",
+		data: {
+			q: searchText,
+			limit: 100
+
+		}
+	}).done(function(response){
+		picArray = [];
+		currentIndex = 0;
+		console.log("success", response.data);
+		response.data.children.forEach(function(post){
+			if(post.data.post_hint === "image"){
+			
+			console.log(post.data.title);
+			console.log(post.data.url);
+			picArray.push(post.data.url);
+		}
+
+		}) 
+		console.log(picArray);
+		interval = setInterval(switchPic, 2000);
+	}).fail(function(err){
+		console.log("error", err);
+	})
+}
+
+
+function switchPic(){
+	console.log("switching picture");
+	if(currentIndex >= picArray.length){
+		currentIndex = 0;  //loops through the array from the beginning again
+	}
+	console.log("current image is", picArray[currentIndex]);
+	var newImg = $("<img src ='" + picArray[currentIndex] + "''>");
+	$("#results").empty().append(newImg);
+	currentIndex ++;
+}
+
+
+

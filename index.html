@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./js/script.js"></script>
   <title>Hello Front-End</title>
 </head>
 <body>
   <h1>Slideshow</h1>
-  <div>
-  	<input id="search-term" type="text"><br>
-  	<button id="user-search">search images</button><br>
-  	<img id = "img1" src = "" width = "500">
-  </div>
+  
+  	<form id="submit-form">
+  	   <input id="search-box" type="text" placeholder="what do you want to see?"><br>
+  	   <button id="user-search" type ="submit">click for a pic!</button>
+    </form><br>
+  	<div id="results">
+  	   <img id = "img1" src = "">
+    </div>
+    <div class="footer">
+    	<button id="stop">Make it stop!</button>
+  	</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>

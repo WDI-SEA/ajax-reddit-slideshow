@@ -32,3 +32,20 @@ button:hover {
 input {
 	font-size: 20px;
 }
+
+img{
+	max-height: 400px;
+}
+
+#results {
+	text-align: center;
+}
+
+
+.footer {
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
