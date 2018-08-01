@@ -13,7 +13,12 @@ $( document ).ready( function () {
         });
     });
     $('#user-submit').on('click',function(){
-        var url =  'https://www.reddit.com/search.json?q=' + $('#search-text').val();
+        var value = $('#search-text').val();
+        while(value.indexOf(' ') != -1) {
+            value = value.replace(' ','+');
+        }
+        var url =  'https://www.reddit.com/search.json?q=' + value;
+        
         console.log(url);
         $.ajax({'url':url}).done(function (resp) {
             var children = resp.data.children;
