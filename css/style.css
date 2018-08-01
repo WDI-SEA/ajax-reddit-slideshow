@@ -1,9 +1,34 @@
+
+body {
+	margin: 0 auto;
+	background: black;
+	text-align: center;
+}
+
 .div {
 	width: 700px;
 	margin: 0 auto;
 }
 
 h1 {
-	color: blue;
+	color: #cfd1d3;
+	font-family: helvetica, sans serif;
 
+}
+
+button {
+	padding: 15px 30px 15px 30px;
+	color: black;
+	background-color: #cfd1d3;
+	border: none;
+	margin: 25px;
+}
+
+button:hover {
+	color: #cfd1d3;
+	background-color: black;
+}
+
+input {
+	font-size: 20px;
 }
