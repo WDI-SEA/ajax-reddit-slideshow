@@ -1,0 +1,34 @@
+body {
+	background-color: gray;
+}
+
+h1 {
+	text-align: center;
+	background-color: #ffffff;
+	margin-left: 35%;
+	padding: 10px 10px;
+	border: 5px solid black;
+	border-radius: 10px;
+	width: 200px;
+}
+
+#directions {
+	background-color: #00e895;
+	text-align: center;
+	width: 300px;
+	margin-left: 30%;
+}
+
+#searchImage {
+	width: 200px;
+	margin-left: 30%;
+}
+
+#searchButton {
+	margin-left: 0%;
+	margin-right: 0px;
+}
+
+#picDiv {
+	background-color: blue;
+}

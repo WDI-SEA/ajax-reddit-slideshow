@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
 		})
 			.done(function(response){
 				console.log("success", response);
+				$("#imageBox").attr("src", response.url);
 			})
 			.fail(function(err){
 				console.log("error", err);
@@ -26,9 +27,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	
 });
 
-function clearField(){
-	$
-}
+
 //build API search function
 //build function to insert input value into API filter at click of button
 //build function to display images found on reddit
