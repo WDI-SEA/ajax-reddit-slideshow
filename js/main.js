@@ -2,6 +2,7 @@ $(function(){
 	console.log("DOM has loaded.");
 });
 var turn = 0;
+var interval, picArray, currentindex;
 
 $("#query").click(function(){
 	$("#query").val("");
@@ -17,13 +18,18 @@ $("#button").click(function(){
 		  }
 		}).done(function(response){
 		  console.log("response.data", response.data);
-		  response.data.children.forEach(function(post){
-		    post.data.preview.images.forEach(function(photo){
-		    	$("#images").css("backgropund", photo.source), 3000;
-		    	$("#images").css("background","");
-		    });
+		  picArray = response.data.children.filter(function(post){
+		  	return post.data.post_hint === "image";
+		  })
+		  picArray = picArray.map(function(post){
+		  	return post.data.url;
 		  });
-		}).fail(function(err){
+		  currentindex =0;
+		  console.log(picArray);
+
+		  interval = setInterval(switchPic, 3000);
+		  })
+		.fail(function(err){
 		  console.log("error", err);
 		});
 
@@ -42,10 +48,27 @@ $("#button").click(function(){
 		$("#query").show();
 
 		$("#button").html("Search");
+
+		clearInterval(interval);
+
 	}
 
 	turn++;
 
 });
+
+function switchPic(){
+	console.log("switching picture");
+	if(currentindex>= picArray.length){
+		currentindex = 0;
+	}
+
+	console.log(picArray[currentindex]);
+
+	var newImage = $("<img src='" + picArray[currentindex] + "'>");
+	$("#images").empty().append(newImage);
+
+	currentindex++;
+};
 
 	

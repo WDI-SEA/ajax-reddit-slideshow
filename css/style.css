@@ -6,8 +6,6 @@ h1{
 }
 div{
 	background-color: black;
-	background-repeat: no-repeat;
-	background-position: center;
 	width: 100%;
 }
 button{
@@ -16,4 +14,12 @@ button{
 }
 input{
 	padding: 7px;
+}
+
+img{
+	width:300px;
+	height:auto;
+}
+#images{
+	text-align:center;
 }
