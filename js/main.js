@@ -20,6 +20,7 @@ $("#button").click(function(){
 		  response.data.children.forEach(function(post){
 		    post.data.preview.images.forEach(function(photo){
 		    	$("#images").css("backgropund", photo.source), 3000;
+		    	$("#images").css("background","");
 		    });
 		  });
 		}).fail(function(err){
