@@ -1,0 +1,32 @@
+body {
+  background: #444;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+button {
+  margin-top: 80px;
+}
+
+form, input {
+  font-size: 28px;
+}
+
+button, input {
+  background: #eee;
+  border-radius: 5px;
+  padding: 10px 40px;
+}
+
+h1 {
+  margin: 80px;
+}
+
+img {
+  width: 20%;
+}
+
+.container {
+  position: relative;
+}
