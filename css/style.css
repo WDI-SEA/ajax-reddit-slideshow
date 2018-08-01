@@ -1,0 +1,19 @@
+body{
+	text-align:center;
+}
+h1{
+	color:#235684;
+}
+div{
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+}
+button{
+	margin: 30px;
+	padding: 7px;
+}
+input{
+	padding: 7px;
+}
