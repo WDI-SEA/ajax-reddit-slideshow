@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+  	<title>Justen's Reddimage</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+	<div id="header">
+		<h1>Reddimage</h1>
+  		<p>A slideshow maker for all your favorite reddit images. Just search what you are looking for in the box</p>
+	</div>
+	 <form id="search-form">
+      <input id="query" placeholder="search">
+      <button type="submit">search reddit</button>
+    </form>
+
+    <!-- The div where results will be displayed. -->
+    <ol id="results"></ol>
+
+	<script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
