@@ -1,0 +1,26 @@
+body {
+  background: black;
+  color: white;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#slides {
+  display:none;
+}
+
+.sections {
+  color: white;
+  margin-top: 50px;
+}
+
+ul {
+  color black;
+}
+
+#clearDiv {
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+

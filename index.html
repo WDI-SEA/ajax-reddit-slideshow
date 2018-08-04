@@ -3,9 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Search Slide Show</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div class="top">
+  <h1>Slide Show</h1>
+  <h2>To search for awesome images, enter something you like and click the button below!</h2>
+  </div>
+
+  <div class="sections" class="top">
+  <form id="searchInput" class="top">
+      <input id="query" placeholder="I'd like to see...">
+      <button type="submit">Find Me Pictures</button>
+  </form>
+  </div>
+
+  <div id="main" class="sections" >
+    <div id="slides">
+    </div>
+  </div>
+
+  <div id="clearDiv" class="sections">
+  <button id="clear">Clear</button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="js/jquery.slides.min.js"></script>
+  <script src="js/ajax.js"></script>
 </body>
 </html>
