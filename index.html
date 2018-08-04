@@ -3,9 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <title>Kyle Reddit Sideshow</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div class="topcontain">
+    <nav class="topnavcont">
+      <ul class="topnav">
+        <li><a href="#">Home</a></li>
+      </ul>
+      <audio class= "player" controls>
+        <source class="music" src="files/Mattia_Vlad_Morleo_-_Respiro.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+      <h4> Music By: Mattiav Ladmorleo </h4><a href="https://www.mattiavladmorleo.com">Click Here for more info</a>
+  </div>
+  <div class="formcont">
+    <div class="replay">
+      <h1 class='replay'>Replay?</h1>
+      <button type="button" class="replay rebutton">Replay</button>
+    </div>
+    <br />
+    <div>
+      <form name="request" class="request1">
+        <label>
+          <h1>Please Enter a Search Below</h1>
+          <input name="userinput" type="text"></input><br />
+          <button type="submit" class="usersub">Submit</button>
+        </label>
+      </form>
+    </div>
+  </div>
+
+  <div class="maincontain">
+    <div class="img1">
+
+    </div>
+    <div class="img2">
+
+    </div>
+    <p class="details"></p>
+  </div>
+
 </body>
+<script src="js/app.js"></script>
 </html>
