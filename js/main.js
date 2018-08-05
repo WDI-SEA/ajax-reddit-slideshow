@@ -23,14 +23,20 @@ function runSearch(e) {
 // ajax call
 //
 function scanReddit(query) {
-  console.log('search is: ', query + '+nsfw:no');
+  // filter inappropriate listings
+  query = query + '+nsfw:no';
+  console.log('search is: ', query);
   $.ajax({
-    url: 'https://www.reddit.com/search.json?q=cats+nsfw:no',
-    method: 'GET'
+    url: 'https://www.reddit.com/search.json',
+    method: 'GET',
+    data: {
+      q: query,
+      limit: 10
+    }
   }).done(function(data) {
     console.log('success with result:', data);
-  }).fail(function(data) {
-    console.log('fail with feedback:', data);
+  }).fail(function(response) {
+    console.log('fail with feedback:', response);
   });
 }
 
