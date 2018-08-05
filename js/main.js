@@ -1,5 +1,7 @@
 $(document).ready(function() {
   console.log('DOM and JQuery loaded');
+  // setup event listener on submit button
+  $('#search').submit(runSearch);
 });
 
 //
@@ -26,6 +28,7 @@ function scanReddit(query) {
   // filter inappropriate listings
   query = query + '+nsfw:no';
   console.log('search is: ', query);
+  // do the search
   $.ajax({
     url: 'https://www.reddit.com/search.json',
     method: 'GET',
@@ -34,23 +37,21 @@ function scanReddit(query) {
       limit: 10
     }
   }).done(function(result) {
+    // get all results (posts)
     console.log('success with result:', result);
     console.log('posts are in:', result.data);
     arrOfPosts = result.data.children;
-    // print each post and append full img to images
+    // print each post and picture info
     arrOfPosts.forEach(function(ele) {
       console.log('post obj is:', ele);
       console.log('picture is in:', ele.data.preview.images);
       console.log('picture is stored at:', ele.data.preview.images[0].source);
+      // append picture to array of pictures
     });
   }).fail(function(response) {
     console.log('fail with feedback:', response);
   });
 }
-
-// setup event listener on submit button
-$('#search').submit(runSearch);
-
 
 //
 // output
