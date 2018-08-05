@@ -7,14 +7,15 @@
     <title>Andres' Reddit Preview</title>
   </head>
   <body>
-    <h1>Reddit Speedreader</h1>
-    <p>Search for what you want your pictures to be about!</p>
-    <div class="img-box" id="img-display">
+    <div id="pre-search">
+      <h1>Reddit Speedreader</h1>
+      <p>Search for what you want your pictures to be about!</p>
+      <form class="search-form" id="search">
+        <input type="text" />
+        <input type="submit" value="Get 'em!" />
+      </form>
     </div>
-    <form class="search-form" id="search">
-      <input type="text" />
-      <input type="submit" value="Get 'em!" />
-    </form>
+    <div class="img-box" id="img-display"></div>
     <div class="hidden" id="stop-div">
       <button id="halt">Halt!</button>
     </div>

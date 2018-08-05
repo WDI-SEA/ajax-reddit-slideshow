@@ -89,7 +89,7 @@ function scanReddit(query) {
 function outputResults() {
   console.log('outputResults() reached');
   // hide search form
-  $('#search').hide();
+  $('#pre-search').hide();
   pictures.forEach(function(ele) {
     // setup img tag
     var tag = '<img src=' + ele + ' />';
@@ -111,7 +111,7 @@ function halt() {
   // hide halt button
   $('#stop-div').removeClass('shown').addClass('hidden');
   // show search form
-  $('#search').show();
+  $('#pre-search').show();
 }
 
 //
