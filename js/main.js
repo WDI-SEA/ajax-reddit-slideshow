@@ -3,6 +3,8 @@
 //
 // pictures is global in the interest of future features
 var pictures = [];
+var index = -1;
+var interval;
 
 $(document).ready(function() {
   console.log('DOM and JQuery loaded');
@@ -90,22 +92,25 @@ function outputResults() {
   console.log('outputResults() reached');
   // hide search form
   $('#pre-search').hide();
-  pictures.forEach(function(ele) {
-    // setup img tag
-    var tag = '<img src=' + ele + ' />';
-    // create a new img element
-    $('#img-display').append(tag);
-  });
+  // pictures.forEach(function(ele) {
+    // // setup img tag
+    // var tag = '<img src=' + ele + ' />';
+    // // create a new img element
+    // $('#img-display').append(tag);
+  // });
   // TODO finish slideshow
+  interval = setInterval(slideShow, 2000);
 
   // show stop button (not using hide/show because of css)
   $('#stop-div').removeClass('hidden').addClass('shown');
 }
 
 //
-// TODO stop slideshow
+// stop slideshow
 //
 function halt() {
+  // (first) stop slideshow
+  clearInterval(interval);
   // remove images
   clearResults();
   // hide halt button
@@ -123,4 +128,21 @@ function clearResults() {
   $('#img-display').empty();
   // clear stored pictures
   pictures = [];
+  index = -1;
+}
+
+function slideShow() {
+  console.log('begin slideshow');
+  console.log('picture arr is:', pictures);
+  console.log('pre-set index is:', index);
+  // remove previous img
+  $('#img-display').empty();
+  // setup new img tag with next picture
+  index = (index + 1) % pictures.length;
+  console.log('new index is:', index);
+  ele = pictures[index];
+  console.log('ele is:', ele);
+  var tag = '<img src=' + ele + ' />';
+  // create a new img element
+  $('#img-display').append(tag);
 }
