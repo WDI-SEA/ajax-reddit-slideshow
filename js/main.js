@@ -86,12 +86,17 @@ function scanReddit(query) {
 //
 function outputResults() {
   console.log('outputResults() reached');
+  // hide search form
+  $('#search').hide();
+  // TODO replace with carosuel
   pictures.forEach(function(ele) {
     // setup img tag
     var tag = '<img src=' + ele + ' />';
     // create a new img element
     $('#img-display').append(tag);
   });
+  // show stop button (not using hide/show because of css)
+  $('#stop-div').removeClass('hidden').addClass('shown');
 }
 
 //

@@ -2,3 +2,11 @@ img {
   width: 250px;
   height: auto;
 }
+
+.shown {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
