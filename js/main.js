@@ -50,12 +50,17 @@ function scanReddit(query) {
     // print each post and picture info
     var src;
     arrOfPosts.forEach(function(ele) {
-      console.log('post obj is:', ele);
-      console.log('picture is in:', ele.data.preview.images);
-      src = ele.data.preview.images[0].source.url;
-      console.log('picture is stored at:', src);
-      // add picture src to array of pictures
-      pictures.push(src);
+      if (ele.data.preview) {
+        console.log('post obj is:', ele);
+        console.log('picture is in:', ele.data.preview.images);
+        src = ele.data.preview.images[0].source.url;
+        console.log('picture is stored at:', src);
+        // add picture src to array of pictures
+        pictures.push(src);
+      }
+      else {
+        console.log('skipping post');
+      }
     });
     // now that search is complete, output results
     outputResults();
