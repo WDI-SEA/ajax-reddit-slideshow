@@ -1,0 +1,12 @@
+img {
+  height: 300px;
+  width: auto;
+}
+
+.shown {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
