@@ -23,11 +23,13 @@ function runSearch(e) {
   console.log('event target[0].value is: :', e.target[0].value);
   // set input field content
   var search = e.target[0].value;
-  // run ajax to get search results
+  // if search term is empty (at most just whitespace)
   if (search.trim() === '') {
     console.log('please enter a search term!');
   }
+  // else attempt to retrieve pictures
   else {
+    // run ajax to get search results
     scanReddit(search);
   }
 }
@@ -45,6 +47,7 @@ function scanReddit(query) {
   $.ajax({
     url: 'https://www.reddit.com/search.json',
     method: 'GET',
+    // data here is specified by reddit's API, not standard
     data: {
       q: query,
       limit: 10
