@@ -1,3 +1,9 @@
+//
+// global variables
+//
+// pictures is global in the interest of future features
+var pictures = [];
+
 $(document).ready(function() {
   console.log('DOM and JQuery loaded');
   // setup event listener on submit button
@@ -42,17 +48,28 @@ function scanReddit(query) {
     console.log('posts are in:', result.data);
     arrOfPosts = result.data.children;
     // print each post and picture info
+    var src;
     arrOfPosts.forEach(function(ele) {
       console.log('post obj is:', ele);
       console.log('picture is in:', ele.data.preview.images);
-      console.log('picture is stored at:', ele.data.preview.images[0].source);
-      // append picture to array of pictures
+      src = ele.data.preview.images[0].source.url;
+      console.log('picture is stored at:', src);
+      // add picture src to array of pictures
+      pictures.push(src);
     });
+    // now that search is complete, output results
+    outputResults();
   }).fail(function(response) {
     console.log('fail with feedback:', response);
   });
 }
 
 //
-// output
+// output search results
 //
+function outputResults() {
+  console.log('outputResults() reached');
+  pictures.forEach(function(ele) {
+    alert(ele);
+  });
+}
