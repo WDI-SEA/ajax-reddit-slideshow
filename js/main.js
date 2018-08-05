@@ -70,6 +70,9 @@ function scanReddit(query) {
 function outputResults() {
   console.log('outputResults() reached');
   pictures.forEach(function(ele) {
-    alert(ele);
+    // setup img tag
+    var tag = '<img src=' + ele + ' />';
+    // create a new img element
+    $('#img-display').append(tag);
   });
 }
