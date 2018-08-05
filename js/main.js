@@ -50,6 +50,7 @@ function scanReddit(query) {
     // print each post and picture info
     var src;
     arrOfPosts.forEach(function(ele) {
+      // if post has an img
       if (ele.data.preview) {
         console.log('post obj is:', ele);
         console.log('picture is in:', ele.data.preview.images);
@@ -58,6 +59,7 @@ function scanReddit(query) {
         // add picture src to array of pictures
         pictures.push(src);
       }
+      // else post did not contain an image
       else {
         console.log('skipping post');
       }
