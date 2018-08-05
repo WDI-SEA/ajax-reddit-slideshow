@@ -25,9 +25,8 @@ function runSearch(e) {
 function scanReddit(query) {
   console.log('search is: ', query + '+nsfw:no');
   $.ajax({
-    url: 'https://www.reddit.com/search.json?q=',
-    method: 'GET',
-    data: query + '+nsfw:no'
+    url: 'https://www.reddit.com/search.json?q=cats+nsfw:no',
+    method: 'GET'
   }).done(function(data) {
     console.log('success with result:', data);
   }).fail(function(data) {
