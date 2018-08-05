@@ -24,13 +24,20 @@ function runSearch(e) {
   // set input field content
   var search = e.target[0].value;
   // run ajax to get search results
-  scanReddit(search);
+  if (search.trim() === '') {
+    console.log('please enter a search term!');
+  }
+  else {
+    scanReddit(search);
+  }
 }
 
 //
 // ajax call
 //
 function scanReddit(query) {
+  // clear previous results
+  clearResults();
   // filter inappropriate listings
   query = query + '+nsfw:no';
   console.log('search is: ', query);
@@ -82,4 +89,15 @@ function outputResults() {
     // create a new img element
     $('#img-display').append(tag);
   });
+}
+
+//
+// removes previous results
+//
+function clearResults() {
+  console.log('clearing previous results');
+  // clear displayed pictures
+  $('#img-display').empty();
+  // clear stored pictures
+  pictures = [];
 }
