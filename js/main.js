@@ -8,6 +8,8 @@ $(document).ready(function() {
   console.log('DOM and JQuery loaded');
   // setup event listener on submit button
   $('#search').submit(runSearch);
+  // setup event listener on halt button
+  $('#halt').click(halt);
 });
 
 //
@@ -88,15 +90,28 @@ function outputResults() {
   console.log('outputResults() reached');
   // hide search form
   $('#search').hide();
-  // TODO replace with carosuel
   pictures.forEach(function(ele) {
     // setup img tag
     var tag = '<img src=' + ele + ' />';
     // create a new img element
     $('#img-display').append(tag);
   });
+  // TODO finish slideshow
+
   // show stop button (not using hide/show because of css)
   $('#stop-div').removeClass('hidden').addClass('shown');
+}
+
+//
+// TODO stop slideshow
+//
+function halt() {
+  // remove images
+  clearResults();
+  // hide halt button
+  $('#stop-div').removeClass('shown').addClass('hidden');
+  // show search form
+  $('#search').show();
 }
 
 //
