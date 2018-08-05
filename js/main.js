@@ -33,8 +33,16 @@ function scanReddit(query) {
       q: query,
       limit: 10
     }
-  }).done(function(data) {
-    console.log('success with result:', data);
+  }).done(function(result) {
+    console.log('success with result:', result);
+    console.log('posts are in:', result.data);
+    arrOfPosts = result.data.children;
+    // print each post and append full img to images
+    arrOfPosts.forEach(function(ele) {
+      console.log('post obj is:', ele);
+      console.log('picture is in:', ele.data.preview.images);
+      console.log('picture is stored at:', ele.data.preview.images[0].source);
+    });
   }).fail(function(response) {
     console.log('fail with feedback:', response);
   });
