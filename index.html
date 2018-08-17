@@ -7,29 +7,37 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div>
-  		<h1>Reddit Images</h1>
-  	</div>
+	<h1>Picture Wonderland!</h1>
+	<h2>Kittens, puppies and other pictures from the internet</h2>
+
+	<form id="submit-form">
+		<input type="text" id="search-box" placeholder="Search goes here">
+		<input type="submit" value="Click for a Pic!">
+	</form>
+
+	<div id="results"></div>
+	<button id="stop">Make it stop!</button>
 
 
-<!-- Below is what is tied to my script and will result in API call  -->
-  	<div id="formid" title="">
+
+<!-- My Code -->
+<!--   	<div id="formid" title="">
 	  	<form>
 	  		<input type="text" placeholder="Search" id="searchbox">
 	  		<button type="submit" id="searchbutton">Search Images</button>
 	  	</form>
-    </div>
+    </div> -->
 
 
 
-<!-- JQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Loading Overlay CDN -->
-<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.5/dist/loadingoverlay.min.js"></script>
-<!-- Load Script File -->
-<script type="text/javascript" src="js/script.js"></script>
 
 
+	<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Loading Overlay CDN
+	<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.5/dist/loadingoverlay.min.js"></script> -->
+	<!-- Load Script File -->
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
 
