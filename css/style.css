@@ -1,0 +1,13 @@
+img {
+	width: 300px;
+	height: auto;
+}
+
+#results {
+	text-align: center;
+	min-height: 600px;
+}
+
+#stop {
+	margin-top: 25px;
+}
