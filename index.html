@@ -5,29 +5,44 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>HelloSlideShow</title>
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
 
 </head>
 
 <body>
-	<h1>Hello AJAX REDDIT SLIDESHOW</h1>
+	<h1>Picture Wonderland!</h1>
+	<h2>Kittens, puppies, and other pictures from the internet</h2>
 	<!-- instruction -->
 	<p> This is page is designed to show the images on reddit</p>
+
+	<form id="submit-form"> 
+		<input type="text" id="search-box" placeholder="What are you looking for?" >
+		<input type="submit" value="Click for a Pic!">
+	</form>
+	<div id="results"></div>
+	<button id="stop">Make it Stop!</button>
+
+
 	<!-- A blank text field-->	
-	<div class="searchq">
+	<!-- <div class="searchq">
 		<label for="sq">Search:</label>
-		<input type="text" id="search1" name="sq">
+		<input type="text" id="search1" name="sq"> -->
 		<!-- required
 		minlength="4" maxlength="8"
 		placeholder="4 to 8 characters long"  
 		<span class="validity"></span>  -->
-		<button id="click" class="getImage" type="button">Click Go</button>
+		<!-- <button id="click" class="getImage" type="button">Click Go</button>
 	</div>
-	<div id="result">Images: </div>
+	<div id="result">Images: </div> -->
 
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
 

@@ -7,3 +7,22 @@ button {
 	margin: auto;
 	font-size: 12px;
 }
+
+
+img {
+	width: 400px;
+	height: auto;
+
+}
+
+div {
+	margin-top: 15px;
+}
+
+#results {
+	min-height: 600px;
+}
+
+#stop {
+	margin-top: 15px;
+}
