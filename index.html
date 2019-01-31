@@ -11,20 +11,25 @@
   </head>
   <body>
     <div class="container">
-      <h1>Reddit Slideshow</h1>
-
       <main>
         <div class="query-box">
-          <form name="query-form">
-            <input type="text" name="query" id="query" />
-            <input type="submit" value="Search" />
-          </form>
+          <h1>Reddit Slideshow</h1>
+          <input
+            type="text"
+            name="query"
+            id="query"
+            value="Cats"
+            placeholder="Type Something in the box and then click the button."
+          />
+          <button id="search">SEARCH</button>
         </div>
-        <div class="image-box">
-          <!-- will contain image box -->
-          <!-- <img id="theImage" src="" alt="image" /> -->
-          <!-- will contain a button -->
-          <button id="stop"></button>
+        <div class="image-box hidden">
+          <div class="image">
+            <!-- will contain image box -->
+            <!-- <img id="theImage" src="" alt="image" /> -->
+            <!-- will contain a button -->
+          </div>
+          <button id="stop">STOP</button>
         </div>
       </main>
     </div>
