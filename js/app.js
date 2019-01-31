@@ -38,6 +38,9 @@ function getResults(url) {
             while (!isImage && i < filetypes.length) {
                 if (url.includes(filetypes[i])) {
                     isImage = true;
+                    if (url.includes('.gifv')) {
+                        isImage = false;
+                    }
                 }
                 i++
             }
@@ -46,10 +49,11 @@ function getResults(url) {
     }
     // makes imgs and assigns source
     ).then(urls => {
-        
+        console.log(urls.length)
         counter = 0;
         interval = setInterval(function(){
-            if (counter < urls.length) {
+            if (counter < urls.length -1) {
+                console.log("link", urls[counter])
                 display.style.backgroundImage = 'url(' + urls[counter] + ')'
                 counter++
             } else {
