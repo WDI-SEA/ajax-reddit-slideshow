@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Reddit Search</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+    <section id='header'>
+        <h1>search reddit</h1>
+    </section>
+
+    <section>
+    <form action='#' name='searchForm'>
+        <input type='text' id='searchinput' name='searchInput' placeholder='enter search'>
+        <input id='start' type='button' value='start'>
+        <input type='reset' value='clear' id='clear'><br>
+        <main id='main'>
+            <img id="output" src="#">
+        </main>
+    </form>
+    </section>
+
+    <!-- <section>
+    <div id="imagecontainer">
+        <img id="output" src="http://placekitten.com/200/300">
+    </div>
+    </section> -->
+
+    <script src="js/app.js"></script>
 </body>
 </html>
