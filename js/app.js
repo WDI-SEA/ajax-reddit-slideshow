@@ -40,6 +40,8 @@ function getResults(url) {
                     isImage = true;
                     if (url.includes('.gifv')) {
                         isImage = false;
+                    } else if (url.includes('preview.redd.it')) {
+                        isImage = false;
                     }
                 }
                 i++
@@ -49,7 +51,7 @@ function getResults(url) {
     }
     // makes imgs and assigns source
     ).then(urls => {
-        console.log(urls.length)
+        console.log("number of pics", urls.length)
         counter = 0;
         interval = setInterval(function(){
             if (counter < urls.length -1) {
