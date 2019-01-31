@@ -10,6 +10,25 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <h1>Reddit Slideshow</h1>
+    <div class="container">
+      <h1>Reddit Slideshow</h1>
+
+      <main>
+        <div class="query-box">
+          <form name="query-form">
+            <input type="text" name="query" id="query" />
+            <input type="submit" value="Search" />
+          </form>
+        </div>
+        <div class="image-box">
+          <!-- will contain image box -->
+          <!-- <img id="theImage" src="" alt="image" /> -->
+          <!-- will contain a button -->
+          <button id="stop"></button>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/app.js"></script>
   </body>
 </html>

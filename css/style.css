@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #ccc;
+  max-width: 1140px;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.query-box {
+  margin-bottom: 100px;
+}
+
+img {
+  /* width: 100%; */
+  height: 600px;
+}
