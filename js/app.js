@@ -2,7 +2,7 @@ console.log("locked and loaded")
 
 var searchTerm = '';
 var filteredUrls = []; 
-var slideShow;
+var slideShow = 0; 
 
 
 
@@ -28,10 +28,10 @@ function search(){
              json.data.children.forEach(function(child){
              imageUrls.push(child.data.url)
              filteredUrls = imageUrls.filter(function(element){
-                 return element.includes(".jpg") || element.includes(".png")
+                 return element.includes(".jpg") || element.includes(".png") || element.includes(".jpeg")
              })
 
- console.log('filteredURLs: ', filteredUrls); 
+ console.log("here ya go you nerd", filteredUrls); 
             //  })
             document.getElementById("userImage").style.backgroundImage = 'url('+ filteredUrls[0] +')'; 
 
@@ -42,9 +42,9 @@ function search(){
                 } else {
                     counter= 0
                 }
-              }, 1000);
-            })  
+              }, 5000);
 
+            })  
 
 
 

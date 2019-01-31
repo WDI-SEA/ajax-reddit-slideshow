@@ -1,9 +1,15 @@
 
 body{
-    background-color: #585B56;
     text-align: center;
     }
     
+.background{
+    background-image: url("/nnLP9U6.png");
+    width: 200px;
+    height: 200px;
+    display: relative; 
+
+}
 h1 {
     text-align: center; 
     font-size: 50px;
@@ -12,12 +18,7 @@ h1 {
     line-height: 0px;
 }
 
-.redditlogo{
-    background:url("/reddit-alien-logo-png-transparent.png");
-    width: 300px;
-    height: 300px;
 
-}
 
 h2 {
     text-align: center;
@@ -37,27 +38,33 @@ p{
 button {
     background-color: #E76B74;
     border: none;
-    color: #D7AF70;
+    color: white;
     text-align: center;
     text-decoration: none;
     display: relative;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 5px 5px;
     cursor: pointer;
+    font-family: 'Covered By Your Grace', cursive; 
 
 }
 
+#searchBox{
+    height:20px;
+    width: 400px;
+    font-family: 'Covered By Your Grace', cursive; 
+    font-size: 20px;
+}
 
 #userImage{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     background-size: cover; 
     margin: 0 auto;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-duration: 10s;
     animation-direction: alternate;
-    animation-name: cf3FadeInOut;
 } 
 
 
