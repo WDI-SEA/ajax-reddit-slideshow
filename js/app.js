@@ -34,6 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 json.data.children.forEach(function(item) {
                     images.push(item.data.url);
                 })
+                image = images.filter(function(image) {
+                    if (image.includes("jpeg") || image.includes("jpg") || image.includes("png")) {
+                        return true;
+                }   else {
+                        return false;
+                }
+                })
                 handle = setInterval(function() {
                     document.querySelector("img").src = images[imageCounter];
                     imageCounter++;
