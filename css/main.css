@@ -13,7 +13,10 @@ h1 {
 }
 
 .redditlogo{
-    background-image:url("https://cdn.freebiesupply.com/logos/large/2x/reddit-alien-logo-png-transparent.png");
+    background:url("/reddit-alien-logo-png-transparent.png");
+    width: 300px;
+    height: 300px;
+
 }
 
 h2 {
