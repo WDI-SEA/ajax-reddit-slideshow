@@ -25,10 +25,21 @@ function changeImage() {
   }
 }
 
+// steve's sample code done as a code along in class
+// keep for further reference
+
+// var handle = null;
+// var textBox;
+// var imgElement;
+
+// document.addEventListener('DOMContentLoaded', function() {
+// textBox = document.getElementById.('searchterm')
+// })
+
 // var handle = null;
 // document.addEventListener('DOMContentLoaded', function() {
 //   document.getElementsByTagName('button'[0].addEventListener('click', function(e) {
-//     var searchTerm = document.getElementById.('searchterm').value;
+//     var searchTerm = textBox.value;
 //     var url =`http://www.reddit.com/search.json?q=${searchTerm}+nsfw:no`;
 //     fetch(url)
 //       .then(function(data) {
@@ -42,7 +53,15 @@ function changeImage() {
 //         })
 //         document.querySelector('img').src = json.data.children[0].data.url
 //         json.data.children.forEach(function(item) {
+//         console.log(item.data.url)
 //         images.push(item.data.url)
+//         })
+//         handle = setInterval(function() {
+//           document.querySelector('img').querySelector.src = images[imageCounter];
+//           imageCounter++
+//           if ( imageCounter === images.length) {
+//             imageCounter = 0;
+//           }
 //         })
 //       })
 //   }))
@@ -98,4 +117,5 @@ clear.addEventListener('click', function() {
   i = 0;
   data = {};
   json = {};
+  clearInterval(startTimer)
 });

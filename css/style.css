@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(transparent, #11141a), #424242;
+    background: radial-gradient(transparent, #888a8d), #d8c5c5;
     font-variant: small-caps;
     font-weight: 10;
   }
@@ -50,7 +50,6 @@
     width: 1400px;
     height: 200px;
     font: 6em;
-    color: gray;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -63,14 +62,14 @@
     font-size: 40px;
     background-color: transparent;
     font-variant: small-caps;
-    color: darkgray;
+    color: #80918e;
     border-top: none;
     border-left: none;
     border-right: none;
   }
 
   h1 {
-    color: #b0bdbb;
+    color: #80918e;
     margin: 0;
   }
 
