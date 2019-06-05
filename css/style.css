@@ -1,0 +1,13 @@
+html {
+    background-color: black;
+}
+
+div, h1, h2, h3, form {
+    color: white;
+    text-align: center;
+}
+
+img {
+	height: 400px;
+	width: auto;
+}

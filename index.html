@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Reddit Photo Slideshow</title>
+  <link href="css/style.css" rel="stylesheet"> 
+  <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-reddit-square2-512.png">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <h1>Reddit Photo Slideshow</h1>
+  <h3>To Begin Slideshow, Please Type Something....</h3>
+    <form id="search">
+      <input id="query" type="text" placeholder="Search on Reddit">
+      <input type="submit" value="Click Me to Begin!">
+    </form>
+  <div class="clear">
+      <h2 id="title">Slideshow Time!</h2>
+      <div id="slideshow"></div>
+      <button id="stop">End Slideshow</button>
+  </div>
+      
+  <script src="js/script.js"></script>
 </body>
 </html>
