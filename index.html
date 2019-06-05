@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cats Reddit Slideshow</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ISS-API</title>
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <div id="block">
-    <h1>Cats Reddit Slideshow</h1>
-    <p>Enter the textbox with the desired keyword, and then click the start button.</p>
-  </div>
+    <div id="splash">
+            <h1> Reddit Image Search</h1>
+            <p> please enter a search term</p>
+            <div>
+                <input type="text" id="searchterm" placeholder="Enter a search term..">
+                <input type="button" id="searchbutton" value="search">
+            </div>
+     </div>
 
-  <button id="start"></button>
+<div id="content">
+    <img id="show">
+    <button id="stop">STOP</button>
+</div>
+
 <script src="js/script.js"></script>
 </body>
 </html>
+
+<!-- script at bottom, bcs it runs after the whole web page has loaded -->
