@@ -1,0 +1,47 @@
+body {
+    background-color: #123456;
+    /* color: white; */
+    text-align: center;
+    margin: 0 auto;
+}
+
+#title {
+    color: white;
+}
+
+input {
+    font-size: 1em;
+}
+
+button {
+    background-color: #123456;
+    border: 3px border white;
+    color: white;
+    font-size: 1em;
+    width: 100px;
+}
+
+.slides {
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    display: inline-block;
+    border: 2px solid grey;
+}
+
+#picture {
+    height: 350px;
+    width: 350px;
+    margin: 0 auto;
+    /* background-color: grey; */
+}
+
+#stop {
+    display: inline-block;
+    border: 5px solid white;
+    margin: 25px 0 0 0;
+}

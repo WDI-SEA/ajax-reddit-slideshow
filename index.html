@@ -3,9 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link href="css/style.css" rel="stylesheet">
+  <title>Reddit Slideshow</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div id ="title">
+    <h2>Search for Images</h2>
+    <p>Put what you'd like to search for in the box!</p>
+  </div>
+  <div class="search">
+    <input type="text" name="search" placeholder="Search">
+    <button id="submit">Submit</button>
+  </div>
+  <div class="slides">
+    <img src="https://placekitten.com/350/350" id="picture"></img>
+    <button id="stop">Stop</button>
+  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
