@@ -1,49 +1,66 @@
 // variables
 var imageArr = [];
+var posts;
+var imgCountVal;
 
 // DOM
 var btnSearch = document.getElementById('btnsearch');
 var searchDiv = document.getElementById('searchdiv');
 var userSearchItem = document.getElementById('search');
 var btnStop = document.getElementById('stop');
-
+var slideShowDiv = document.getElementById('slideshowdiv');
+var slideShowImg = document.getElementById('slideshowimg');
 // functions
 var init = function(){
     userSearchItem.value = '';
     imageArr = [];
+    slideShowDiv.style.display = "none";
 };
 var initiateSearch = function(){
-    //console.log("Search: " + userSearchItem.value);
+    slideShowImg.src = '';
     let searchLink = "http://www.reddit.com/search.json?q=" + userSearchItem.value + "+nsfw:no"
-    //console.log("link = " + searchLink);
     userSearchItem.value = '';
     searchDiv.style.display = "none";
-
+    slideShowDiv.style.display = "block";
 
     fetch(searchLink) 
         .then(function(responseData) {
         return responseData.json();
         })
         .then(function(jsonData) {
-        //console.log(jsonData);
         
-
-        let posts = jsonData.data.children
+        posts = jsonData.data.children
+        
+        
         for (let i = 0; i < posts.length; i++){
-            imageArr = posts[i].data.thumbnail;
+            imgCountVal = i;
+            setInterval(cycleImages,100);
+            // if (i === posts.length){
+            //     i = 0;
+            // }
+             
         };
+        
+        
     });
-    
-    console.log(imageArr);
 };
 
+var cycleImages = function(){
+    slideShowImg.src = posts[imgCountVal].data.thumbnail;
+    console.log(slideShowImg.src);
+}
 
 var showSearchBar = function(){
-    let status = searchDiv.style.display;
-    //console.log(status);
-    if (status === "none") {
+
+    if (searchDiv.style.display === "none") {
         searchDiv.style.display = "block";
     } 
+    if (slideShowDiv.style.display === 'block'){
+        slideShowDiv.style.display = 'none';
+    }
+
+    clearInterval(cycleImages);
+
 };
 
 // event listeners
@@ -57,7 +74,7 @@ userSearchItem.addEventListener('keypress', function(e){
     }
 });
 
-
+init();
 
 // data
 // children
