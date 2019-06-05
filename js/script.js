@@ -54,10 +54,7 @@ document.addEventListener('DOMContentLoaded', function(){
                     imageIndex++;
                     pictureEl.src = newThumbs[imageIndex];
                 }, 1000);
-            });
-    stopBtn.addEventListener("click", function (e) {
-
-    })        
+            });      
     });
 });
 
