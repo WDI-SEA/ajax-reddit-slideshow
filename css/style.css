@@ -14,3 +14,7 @@ input {
     width: 100px;
     display: block;
 }
+
+#stop {
+    width: 100px;
+}
