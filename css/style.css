@@ -4,3 +4,52 @@
 .visible{
     display: block;
 }
+.container{
+    margin: 0, auto;
+    text-align: center;
+}
+.main{
+    width: 500px;
+    margin: 100px auto;
+
+}
+button{
+    width: 200px;
+    padding: 10px;
+    box-shadow: 10px 10px black;
+   margin: 10px;
+   border-radius: 20px;
+   outline: none;
+}
+.description{
+    text-align: center;
+    font-size: 2em;
+    
+}
+#search{
+    text-align: center;
+    width: 400px;
+    margin: 20px auto;
+    height: 50px;
+    border: 4px solid lightgreen;
+    display: block;
+    border-radius: 20px;
+    outline: none;
+    font-size: 1.5em;
+}
+.title{
+    text-align: center;
+}
+body{
+    background-color:rgba(74, 132, 207, 0.568);
+}
+.pics{
+    margin: 0 auto;
+    width: 500px;
+    text-align: center;
+    
+}
+.par{
+    text-align: center;
+    font-size: 2em;
+}

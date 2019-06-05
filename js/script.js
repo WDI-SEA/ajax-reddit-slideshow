@@ -4,20 +4,19 @@ var button;
 var typedInput;
 var disc;
 var title;
-var par;
 var url = 'https://www.reddit.com/search.json?q=20';
 var imageIndex = 0;
 var handle = null;
 var leftPic;
-
+var par;
 document.addEventListener('DOMContentLoaded', function () {
     button = document.getElementsByTagName('button')[0];
     typedInput = document.getElementsByTagName('input')[0];
     disc = document.getElementsByTagName('div')[0];
     title = document.getElementsByTagName('h1')[0];
     stopButton = document.getElementById('stop');
-    par= document.getElementsByClassName('par')[0];
-    leftPic= document.getElementById('show');
+    par = document.getElementsByClassName('par')[0];
+    leftPic = document.getElementById('show');
     //add Event listner to the butoon
 
 
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
 
             typedInput.style.backgroundColor = 'rgb(216, 5, 23)';
-            par.textContent = "Pleas type what you want to see";
+            par.textContent = "Please type what you want to see!";
             par.style.color = 'red';
         }
 
