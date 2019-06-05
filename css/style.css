@@ -18,3 +18,17 @@ input {
 #stop {
     width: 100px;
 }
+
+#slideshowimg {
+    max-height: 400px;
+    max-width: 400px;
+    size: cover;
+}
+
+.hidden {
+    display: none;  
+}
+
+.visible {
+    display: block;
+}

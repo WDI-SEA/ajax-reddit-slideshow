@@ -1,16 +1,31 @@
 // variables
 var imageArr = [];
 var posts;
-var imgCountVal;
+var searchLink = '';
+
+// DOM Elements
+var btnSearch;
+var searchDiv;
+var userSearchItem;
+var btnStop;
+var slideShowDiv;
+var slideShowImg;
+var imgCounter = 0;
+var handle = null;
+
 
 // DOM
-var btnSearch = document.getElementById('btnsearch');
-var searchDiv = document.getElementById('searchdiv');
-var userSearchItem = document.getElementById('search');
-var btnStop = document.getElementById('stop');
-var slideShowDiv = document.getElementById('slideshowdiv');
-var slideShowImg = document.getElementById('slideshowimg');
+//document.addEventListener("DOMContentLoaded", function(){ 
+    btnSearch = document.getElementById('btnsearch');
+    searchDiv = document.getElementById('searchdiv');
+    userSearchItem = document.getElementById('search');
+    btnStop = document.getElementById('stop');
+    slideShowDiv = document.getElementById('slideshowdiv');
+    slideShowImg = document.getElementById('slideshowimg');
+//});
+
 // functions
+
 var init = function(){
     userSearchItem.value = '';
     imageArr = [];
@@ -18,36 +33,33 @@ var init = function(){
 };
 var initiateSearch = function(){
     slideShowImg.src = '';
-    let searchLink = "http://www.reddit.com/search.json?q=" + userSearchItem.value + "+nsfw:no"
+    searchLink = "http://www.reddit.com/search.json?q=" + userSearchItem.value + "+nsfw:no"
     userSearchItem.value = '';
     searchDiv.style.display = "none";
     slideShowDiv.style.display = "block";
+    imgCounter = 0;
 
     fetch(searchLink) 
-        .then(function(responseData) {
-        return responseData.json();
+        .then(function(data) {
+        return data.json();
         })
-        .then(function(jsonData) {
+        .then(function(json) {
         
-        posts = jsonData.data.children
+        posts = json.data.children
         
-        
-        for (let i = 0; i < posts.length; i++){
-            imgCountVal = i;
-            setInterval(cycleImages,100);
-            // if (i === posts.length){
-            //     i = 0;
-            // }
-             
-        };
-        
-        
+        handle = setInterval(function() {
+            cycleImages()
+        },1000);
+  
     });
 };
 
 var cycleImages = function(){
-    slideShowImg.src = posts[imgCountVal].data.thumbnail;
-    console.log(slideShowImg.src);
+    slideShowImg.src = posts[imgCounter].data.url;
+    imgCounter++
+    if (imgCounter === posts.length){
+        imgCounter = 0;
+    }
 }
 
 var showSearchBar = function(){
@@ -58,9 +70,7 @@ var showSearchBar = function(){
     if (slideShowDiv.style.display === 'block'){
         slideShowDiv.style.display = 'none';
     }
-
-    clearInterval(cycleImages);
-
+    clearInterval(handle);
 };
 
 // event listeners
