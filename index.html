@@ -3,9 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Word Slide Show by Pinyi @ GA, Seattle</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <header>
+      <h1>Slide Show for What Talks to You</h1>
+  </header>
+  <main>
+    <div class="container" id="slideshow">
+      <div class="container" id="intro">
+          <h2>Introduction</h2>
+          <div>
+            <p>Type a word with whatever talks to you in your mind right now. Check out random amazing pictures for that from reddit.</p>
+          </div>
+          <input id='userinputword' type="text" placeholder="Type What Talks to Your Right Now">
+      </div>  
+      <div id="slideimgdiv">
+        <img src="" alt="" id='slideimg'>
+      </div>
+      
+      <div id="button">
+        <button class="controlbtn" id="start">START</button>
+        <button class="controlbtn" id='stop'>STOP</button>
+      </div>
+    </div>
+
+   
+  </main>
+  
+
+
+
+
+
+  <script src='js/script.js'></script>
 </body>
 </html>
