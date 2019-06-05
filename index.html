@@ -8,17 +8,20 @@
 </head>
 <body>
   <div id="welcome">
-    <h1>Slideshow Generator</h1>
-    <p>This site generates a slideshow of images from Reddit based on your search entry</p>
-    <input type="text" name="input" placeholder="Enter text">
-    <button id="search">Search</button>
+    <h1>Reddit Slideshow Generator</h1>
+    <p>This site generates a slideshow of images from Reddit based on your search entry below!</p>
+    <!-- <input type="text" name="input" placeholder="Enter text"> -->
+    <input type="text" id="searchterm" placeholder="Enter text">
+    <!-- <button id="search">Search</button> -->
+    <input type="button" id="searchbutton" value="Search">
   </div>
   <div id="images">
-  
+    <img id="show">
   </div> 
 
-  <div id="stop" class="hidden">
-      <button id="reset">Reset</button>
+  <div id="stop">
+    <input type="button" id="resetbutton" class="hidden" value="Reset">  
+    <!-- <button id="reset" class="hidden">Reset</button> -->
 
   </div>
 

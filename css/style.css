@@ -4,10 +4,26 @@ div {
 }
 
 #images {
-    height: 200px;
-    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#show {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#stop {
+    display: block;
+    margin: 0 auto;
+    text-align: center; 
 }
 
 .hidden{
     display: none;
+}
+
+.visible {
+    display: contents; 
 }
