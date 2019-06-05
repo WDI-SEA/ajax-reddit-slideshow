@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
-</head>
-<body>
-  <h1>Hello Front-End</h1>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href='css/style.css' rel='stylesheet'>
+    <title>Super Slide Show</title>
+  </head>
+  <body>
+    <div id='title'>
+      <h1>Sliddit</h1>
+      <p>Please enter a search</p>
+      <div id='searchBox'>
+          <input id='searchterm' type='text' placeholder='Image Search'>
+          <input id='searchbtn' type='button' value='search'>
+      </div>
+    </div>
+    <div id='content'>
+      <img id='show'>
+      <button id='stop'>Stop</button>
+    </div>
+    <script src='js/script.js'></script>
+  </body>
 </html>

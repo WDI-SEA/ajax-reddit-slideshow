@@ -1,0 +1,49 @@
+.hidden {
+  display: none;
+}
+.visible {
+  display: block;
+}
+#title {
+  object-fit: cover;
+  font-size: 36px;
+  font-family: Roboto, Sans-Serif;
+  color:white;
+  background-color: rgb(37, 39, 35);
+  text-align: center;
+}
+
+#search {
+  background-color: lightskyblue;
+  unicode-bidi: bidi-override;
+}
+
+#searchBar {
+  font-size: 30;
+  color: darkslategray;
+  text-align: center;
+  background-color:white;
+  width: 400px;
+  height: 50px;
+  text-align: left;
+}
+
+#show { 
+  color: darkslategray;
+  width: 400px;
+  height: 600px;
+}
+
+#content {
+  object-fit: cover;
+  font-size: 36px;
+  font-family: Roboto, Sans-Serif;
+  color:white;
+  background-color: rgb(37, 39, 35);
+  text-align: center;
+}
+
+
+
+
+
