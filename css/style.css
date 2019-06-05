@@ -1,0 +1,16 @@
+body {
+    background-color: pink;
+    text-align: center;
+}
+
+input {
+    width: 400px;
+    height: 30px;
+    
+}
+
+#btnsearch {
+    background-color: yellow;
+    width: 100px;
+    display: block;
+}
