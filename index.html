@@ -3,9 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+  <title>Ajax Reddit Slideshow</title>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div id="description">
+    <h1>Welcome to Ajax Reddit Slideshow!</h1>
+    <p>Please enter the word describing what you'd like to search in the box below and click Play.</p>
+    <p>If, at any time, you'd like to stop the slide show, just click the Stop button.</p>
+    <p>Enjoy the show!</p>
+  </div>
+  <div>
+    <input type="text" name="word" id="text" placeholder="What would you like to search for?">
+  </div>
+  <div>
+    <button id="play">Play</button>
+  </div>
+  <div>
+    <button id="stop">Stop Presentation</button>
+  </div>
+  <div id="show">
+    <img src="" alt="slides" id="slides">
+
+  </div>
+  <script src="js/script.js"></script> 
 </body>
 </html>

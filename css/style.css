@@ -1,0 +1,48 @@
+body {
+  background-color: darkgray;
+  margin: 5px;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+  font-size: 45px;
+  border: 1px solid gray;
+  /*display: none;*/
+}
+
+p {
+  font-size: 20px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  /*display: none;*/
+}
+
+button {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  border: 1px solid gray;
+  margin: 5px;
+}
+
+#play:active {
+  background-color: rgb(144, 238, 164);
+}
+
+#stop:active {
+  background-color: rgba(255, 0, 55, 0.849);
+}
+
+input {
+  font-family: 'Oswald', sans-serif;
+  width: 200px;
+  height: 21px;
+  border: 1px solid gray;
+  padding: 3px;
+  margin: 5px;
+  text-align: center;
+  font-size: 15px;
+}
+
+#show {
+  /*display: none;*/
+}
