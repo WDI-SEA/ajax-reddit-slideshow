@@ -44,5 +44,5 @@ input {
 }
 
 #show {
-  /*display: none;*/
+  position: relative;
 }
