@@ -4,8 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hello Front-End</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div id="toggletitle">
+    <h1>Reddit API Slideshow</h1>
+    <h2>Enter search term</h2>
+    <input id="searchbox" type="text" placeholder="Enter search term">
+  </div>  
+    <input id="mainbutton" type="button" value="Search" onclick="hideTitle('toggletitle');
+      changeBtnValue(); apiFetch()">
+<script src="js/script.js"></script>
 </body>
 </html>
