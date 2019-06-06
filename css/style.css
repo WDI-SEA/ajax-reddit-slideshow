@@ -1,0 +1,13 @@
+body {
+    background-color: bisque;
+    text-align: center;
+    margin:auto;
+}
+h1{
+    font-family: cursive;
+    font-weight: bolder;
+}
+#footnail
+ {
+    background: radial-gradient(white,lightblue);
+}
