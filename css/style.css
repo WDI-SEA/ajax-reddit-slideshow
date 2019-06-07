@@ -1,0 +1,49 @@
+h1 {
+    text-align: center;
+    margin: 80px;
+}
+
+header {
+    text-align: center;
+    border: 1px solid black;
+
+
+}
+
+input {
+    text-align: center;
+    margin: 40px 38%;
+    border: 1px solid black;
+    width: 300px;
+}
+
+button {
+    text-align: center;
+    margin-left: 40%;
+}
+
+body {
+    background-color: slategray;
+}
+
+#displayPicture {
+    width: 400px;
+    height: 400px;
+    background-size: contain;
+}
+
+below is steve's css 
+
+.hidden {
+    display: none;
+
+}
+
+visible {
+    display: block;
+
+}
+
+p {
+    text-align: center;
+}
