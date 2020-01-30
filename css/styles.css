@@ -1,0 +1,31 @@
+html,
+body {
+    margin: 0 auto;
+    background: black;
+    color: red;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    width: 500px;
+    height: 200px;
+    border: 4px solid white;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.description {
+    padding-bottom: 16px;
+}
+
+label,
+input {
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+h1 {
+    padding-top: 12px;
+}
