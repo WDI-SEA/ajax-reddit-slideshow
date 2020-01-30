@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIepzY_QUjo1-ZBqfnha4qAIZ1DDxWcCVpT3XJ4kcci95hurkd&s");
+}
+
+h1{
+    color: rgb(76, 193, 25);
+}
+P {
+    color: rgb(76, 193, 25);
+} 
+
+label{
+    color: rgb(74, 193, 74);
+}
+.picbox{
+padding-top: 40px;
+margin: auto;
+width: 50%;
+height: 400px;
+border: 3px solid green;
+padding: 10px;
+}
+form {
+    padding-bottom: 20px;
+}
+.searchbox {
+    padding: 3px;
+}
+button {
+    margin-top: 20px;
+    padding: 5px 20px;
+    color: black;
+    background-color: red;
+    border: 2px solid black;
+}
