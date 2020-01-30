@@ -6,6 +6,11 @@
 body {
     display: flex;
     flex-direction: column;
+    min-height: 500px;
+}
+
+form {
+    /* make form exist on bottom of page */
 }
 
 h1, h2, ul, form {
@@ -25,13 +30,14 @@ li {
 
 .imgField {
     max-height: 300px;
-    max-width: 100%;
-    margin: 5px;
+    width: 100%;
+    min-height: 200px;
+    padding: 0px;
+    margin: 0px;
 }
 
 img {
     text-align: center;
-    height: 100px;
-    width: 100px;
-
+    height: 300px;
+    width: 300px;
 }
