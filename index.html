@@ -3,9 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Slideshow</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js"></script>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <div class="content">
+    <div id="cancel-slideshow-form">
+        <form action="#" name="stop-slideshow-form" id="stop-slideshow-form">
+          <div class="stop-slideshow-button">
+            <input type="submit" id="stop-slideshow" name="stop-slideshow">Click to stop slideshow</button>
+          </div>
+        </form>
+    </div>
+    <div id="image-present">
+      <img src="" alt="">
+    </div>
+    <div id="search-form">
+        <p>Type a keyword into the textfield and search for pictures</p>
+        <form action="#" name="search-images-form" id="search-images-form">
+            <div class="search-bar">
+              <input type="text" id="keyword" name="keyword" placeholder="what are you looking for...">
+            </div>
+            <div class="send-search-button">
+              <input type="submit" id="send-search" name="send-search">Search</button>
+            </div>
+          </form>
+    </div>
+    
+  </div>
 </body>
 </html>

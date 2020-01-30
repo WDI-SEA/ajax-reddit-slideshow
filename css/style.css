@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(83, 83, 83);
+  }
+ .search-bar {
+    display: flex;
+    justify-content: stretch;
+    text-align: center;
+ }
+ .search-bar > input {
+    background-color: rgb(70, 70, 70);
+ }
+ .search-bar > input::placeholder {
+    font-size: large;
+    font-style: italic;
+ }
+
+ #image-present {
+      color: tomato;
+      display: none;
+      
+ }
+
+ #search-form {
+      color: white;
+      font-size: large;
+      text-align: center;
+ }
+
+ #keyword {
+    width: 30vw;
+    color: white;
+    text-align: center;
+    font-size: larger;
+    margin: 20vh auto;
+}
+
+#cancel-slideshow-form {
+    display: none;
+}
+
+img {
+    max-width: 50vw;
+    max-height: 50vh;
+}
