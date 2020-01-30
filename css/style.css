@@ -1,0 +1,21 @@
+body {
+    background: black;
+    text-align: center;
+    font-family: Geneva;
+    color: yellow;
+    margin: 0 auto;
+}
+
+#text-box {
+    width: 266px;
+}
+button {
+    display: none;
+    margin: 20px auto;
+}
+#container {
+    width: 30%;
+    left: 35%;
+    position: absolute;
+}
+

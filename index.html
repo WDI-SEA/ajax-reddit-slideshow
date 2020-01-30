@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Reddit Slideshow</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <h1>Pictures from Reddit</h1>
+  <form>
+    <input type="text" name="textBox" id="text-box" placeholder="enter your search here">
+    <input type="submit" value="Go">
+  </form>
+  <button>Reset</button>
+  <div id="container">
+    <div id="reddit-results">
+    </div>
+  </div>
 </body>
 </html>
