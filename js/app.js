@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
  
      let form = document.getElementById("click-start");
      form.addEventListener("click", function(e) {
+
         //grab what user entered 
         e.preventDefault();
          let query = document.getElementById("text-box").value;
@@ -41,23 +42,59 @@ document.addEventListener('DOMContentLoaded', function() {
                 s.style.display = "inline-block";
             }
         console.log("Lets hide!");
+
+        // fetch images
+        fetch(`https://www.reddit.com/search.json?q=${query}`)
+                    .then(function(responseData) {
+
+                        // where we do some stuff with the response data given by the request made to the url
+                        let jsonData = responseData.json();
+                        return jsonData;
+                    })
+                    .then(function(jsonRedditData){
+                        console.log("Here is me data: ", jsonRedditData);
+
+                        let results = jsonRedditData.data.children;
+                        console.log("Here are my results ", results);
+                        
+                       
+                        // if (results.data.post_hint === "image") {
+                        let deetsINeed = results.map(function(redditResult){
+
+                            //get the image (url) 
+                            let oneResult = {
+                                image: redditResult.data.url,
+                            };
+                            // return { title: String, url: String }
+                            // return oneResult;
+                            });
+                            console.log(oneResult);
+                                  
+                        // };
+                        //add them to a list on a dom
+                        //get parent element
+                        let redditResultDOM = document.getElementById("reddit-results");
+                        //iterate over my list
+                        deetsINeed.forEach(function(e){
+                            //create image tag
+                            let image = document.createElement("img");
+                            // add href to img tag
+                            image.src = `${e}`;
+                            //add class to img tag
+                            image.classList.add("image");
+                            //append the image elem to parent
+                            redditResultDOM.appendChild(image);
+                        });
+                        });
+
+            });
     });
+
  
     
-     let stop = document.getElementById("teach-me");
-     stop.addEventListener("submit", function(e) {
-         e.preventDefault();
-         console.log("Stop!");
+    //  let stop = document.getElementById("teach-me");
+    //  stop.addEventListener("submit", function(e) {
+    //      e.preventDefault();
+    //      console.log("Stop!");
  
-     });
-
-
-    
-    //  document.getElementById("click-start").addEventListener("click", function(e) {
-
-
-
-
     //  });
-
-});

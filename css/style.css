@@ -16,3 +16,9 @@ input[type=text] {
     display: none;
     text-align: center;
 }
+
+.image { 
+    max-height: 200px;
+    max-width: 70%;
+    display: inline-block;
+}
