@@ -41,18 +41,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 });
                 console.log(images);
 
-                let ul = document.getElementById("redit-results");
+                let div = document.getElementById("redit-results");
+
+                //setInterval(function() {
                 // iterate over my list images and display them
                 images.forEach(function(image) { // for each image in Images[]
                     // create an li element
-                    let li = document.createElement("li");
-                    var img = document.createElement('img'); // create an img element
+                    //let li = document.createElement("li");
+                    var img = document.createElement("img"); // create an img element
                     img.src = image;
                     img.height = "200";
                     img.width = "200";
-                    li.appendChild(img);
-                    ul.appendChild(li);
+                    div.appendChild(img);
+                    //ul.appendChild(li);
                 });
+                // }, 2000)
+
 
             });
     });
