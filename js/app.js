@@ -56,30 +56,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         let results = jsonRedditData.data.children;
                         console.log("Here are my results ", results);
-                        
                        
-                        // if (results.data.post_hint === "image") {
-                        let deetsINeed = results.map(function(redditResult){
-
-                            //get the image (url) 
-                            let oneResult = {
-                                image: redditResult.data.url,
-                            };
-                            // return { title: String, url: String }
-                            // return oneResult;
+                            // if (results[i].data.post_hint === "image") {
+                            infoINeed = results.map(function(imageResult){
+                
+                                //get the image (url) 
+                                oneResult = {
+                                    image: imageResult.data.url
+                                };
+                                
+                                // return { title: String, url: String }
+                                return oneResult;
+                               
                             });
-                            console.log(oneResult);
-                                  
-                        // };
+                                
+                                console.log(oneResult);
+                                
+                            // };
+
                         //add them to a list on a dom
                         //get parent element
                         let redditResultDOM = document.getElementById("reddit-results");
                         //iterate over my list
-                        deetsINeed.forEach(function(e){
+                        infoINeed.forEach(function(oneResult){
                             //create image tag
                             let image = document.createElement("img");
                             // add href to img tag
-                            image.src = `${e}`;
+                            image.src = `${oneResult}`;
                             //add class to img tag
                             image.classList.add("image");
                             //append the image elem to parent
