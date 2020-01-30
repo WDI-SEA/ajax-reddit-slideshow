@@ -20,13 +20,14 @@ h1, h2, div, form {
 }
 
 .imgField {
-    height: 300px;
-    width: 100%;
+    max-height: 300px;
+    max-width: 100%;
     margin: 5px;
 }
 
 img {
     text-align: center;
-    height: 1300px;
-    width: 300px;
+    height: 100px;
+    width: 100px;
+
 }

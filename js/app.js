@@ -1,3 +1,5 @@
+let arr = [];
+
 let resetButtonEnable = function() {
     document.querySelector(".button").value = "Reset";
     document.querySelector(".inputBox").hidden = true;
@@ -12,6 +14,56 @@ let resetButtonDisable = function() {
     document.querySelector(".button").value = "Submit your wish";
     document.querySelector('.button').addEventListener('click', fetchFun);
 };
+
+let displayFunction = function() {
+
+setTimeout(function() {
+
+
+
+
+    console.log("displayFunction running")
+    // want to place img in the imgField
+    // document.querySelector('.imgField').appendChild(imgReddit);
+
+    for (i = 0; i < arr.length; i++) {
+        setTimeout(function() {
+            //empty div
+            //these two directly below work but for some reason the arr[i] and arr[i + 1] is not working; seems to be NODE related
+            document.querySelector('.imgField').removeChild(arr[0]);
+            document.querySelector('.imgField').appendChild(arr[1]);
+            // let tempImg= document.createElement('img');
+            // tempImg = arr[i]
+            document.querySelector('.imgField').removeChild(i);
+            //insert one pic into div
+            // tempImg2 = arr[i+1]
+            document.querySelector('.imgField').appendChild(i + 1);
+        }, 2000);
+    };
+}, 2000);
+}
+
+
+
+// deetsINeed.forEach(function(oneResult) {
+//     let listItem = document.createElement('li');
+//     // create an li elem
+//     let title = document.createElement('h3');
+//     // create h3
+//     title.textContent = oneResult.title;
+//     // add the h3 title to li
+//     listItem.appendChild(title);
+//     // create an a tag
+//     let link = document.createElement('a');
+//     // set a tag href
+//     link.href = "https://www.reddit.com/" + oneResult.url
+//     link.textContent = 'See it on Reddit!'
+//     // add the a tag with url to li
+//     listItem.appendChild(link);
+//     // append the li elem to parent
+//     redditResultsDOM.appendChild(listItem);
+    
+
 
 let fetchFun = function() {
     
@@ -43,38 +95,48 @@ let fetchFun = function() {
         let redditResultsDOM = document.querySelector('#reddit-results');
         // iterate over my list
         neededInfo.forEach(function(oneResult) {
-            setTimeout(function(){
+            // setTimeout(function(){
 
                     let imgReddit = document.createElement('img');
                     imgReddit.src = oneResult;
+                    arr.push(imgReddit);
                     // create an li elem
-                    let title = document.querySelector('.imgField');
+                    // let title = document.querySelector('.imgField');
                     // create h3
                     // title.textContent = oneResult.title;
                     // add the h3 title to li
-
-
+                    
                     
                     // want to place img in the imgField
-                    title.appendChild(imgReddit);
-                
-            }, 50000);
-            
-            
-            
-            // create an a tag
-            // let link = document.createElement('a');
-            // set a tag href
-            // link.href = "https://www.reddit.com/" + oneResult.url
-            // link.textContent = 'See it on Reddit!'
-            // add the a tag with url to li
-            // imgReddit.appendChild(link);
-            // append the li elem to parent
-            // redditResultsDOM.appendChild(imgReddit);
-        });
-                // $('.imgField').slick({
-                //     infinite: true,
-                //     slidesToShow: 3,
+                    // title.appendChild(imgReddit);
+                    
+                    // }, 2500);
+                    // setTimeout(function() {
+                        
+                        //     document.querySelector("img").remove();
+                        // }, 10);
+                        
+                        
+                        
+                        // create an a tag
+                        // let link = document.createElement('a');
+                        // set a tag href
+                        // link.href = "https://www.reddit.com/" + oneResult.url
+                        // link.textContent = 'See it on Reddit!'
+                        // add the a tag with url to li
+                        // imgReddit.appendChild(link);
+                        // append the li elem to parent
+                        // redditResultsDOM.appendChild(imgReddit);
+                    });
+                    displayFunction();
+                    console.log(arr);
+                    document.querySelector('.imgField').appendChild(arr[0]);
+
+
+                            // call display function
+                            // $('.imgField').slick({
+                                //     infinite: true,
+                                //     slidesToShow: 3,
                 //     slidesToScroll: 3
         });   
         resetButtonEnable();
@@ -102,3 +164,24 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.button').addEventListener('click', fetchFun);
     
 });
+
+
+
+
+
+
+
+// neededInfo.forEach(function(oneResult) {
+//     // setTimeout(function(){
+
+//             let imgReddit = document.createElement('img');
+//             imgReddit.src = oneResult;
+//             // create an li elem
+//             let title = document.querySelector('.imgField');
+//             // create h3
+//             // title.textContent = oneResult.title;
+//             // add the h3 title to li
+            
+//             arr.push(imgReddit);
+            
+//         });
