@@ -31,10 +31,24 @@ let displayFunction = function() {
         document.querySelector('img').src = arr[i];
             
         setInterval(function() {
-            // if more time, would troubleshoot which images don't appear and why and skip over them when displaying
             i++;
+            // if more time, would troubleshoot which images don't appear and why and skip over them when displaying
+            // tried to do that with a quick solution to help with some of them by saying if the url does not start with H, to skip over it
+                // by doing i++; Would ideally like to loop through the array rather than have a set of if statements in a row
             if (i > arr.length) {
                 i = 0;
+            }
+            if (i[0] != "h") {
+                i++
+            }
+            if (i[0] != "h") {
+                i++
+            }
+            if (i[0] != "h") {
+                i++
+            }
+            if (i[0] != "h") {
+                i++
             }
             document.querySelector('img').src = arr[i];
             console.log(arr[i]);
