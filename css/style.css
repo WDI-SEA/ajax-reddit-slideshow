@@ -1,0 +1,43 @@
+body {
+    margin: 0 auto;
+    background-color: rgb(141, 69, 99);
+    
+}
+
+#title {
+    text-align: center;
+}
+
+#reddit-result {
+    width: 400px;
+    height: 400px;
+    background-color: darkgrey;
+    border: 1px solid black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    left: 36%;
+    display: none;
+}
+
+input {
+    background-color: rgb(235, 219, 74);
+    height: 30px;
+    padding: 20px;
+}
+
+#get-input {
+    text-align: center;
+    position: relative;
+    margin-top: 300px;
+}
+
+button {
+    position: relative;
+    left: 43%;
+    text-align: center;
+    margin: 30px 0px;
+    height: 40px;
+    width: 200px;
+}
