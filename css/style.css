@@ -1,0 +1,13 @@
+body {
+    display: block;
+    justify-content: center;
+    text-align: center;
+}
+input[type=text] {
+    border-bottom: 3px solid black;
+    background-color: chartreuse;
+    height: 100px;
+    width: 600px;
+    display: inline-block;
+    text-align: center;
+}
