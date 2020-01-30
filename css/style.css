@@ -8,9 +8,13 @@ body {
     flex-direction: column;
 }
 
-h1, h2, div, form {
+h1, h2, ul, form {
     text-align: center;
     margin: 20px;
+}
+
+li {
+    list-style: none;
 }
 
 .inputBox {

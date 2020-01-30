@@ -15,34 +15,34 @@ let resetButtonDisable = function() {
     document.querySelector('.button').addEventListener('click', fetchFun);
 };
 
-let displayFunction = function() {
+// let displayFunction = function() {
 
-setTimeout(function() {
-
-
+// setTimeout(function() {
 
 
-    console.log("displayFunction running")
-    // want to place img in the imgField
-    // document.querySelector('.imgField').appendChild(imgReddit);
 
-    for (i = 0; i < arr.length; i++) {
-        setTimeout(function() {
-            //empty div
-            //these two directly below work but for some reason the arr[i] and arr[i + 1] is not working; seems to be NODE related
-            document.querySelector('.imgField').removeChild(arr[0]);
-            document.querySelector('.imgField').appendChild(arr[1]);
-            // let tempImg= document.createElement('img');
-            // tempImg = arr[i]
-            document.querySelector('.imgField').removeChild(i);
-            //insert one pic into div
-            // tempImg2 = arr[i+1]
-            document.querySelector('.imgField').appendChild(i + 1);
-        }, 2000);
-    };
-}, 2000);
-}
 
+//     console.log("displayFunction running")
+//     // want to place img in the imgField
+//     // document.querySelector('.imgField').appendChild(imgReddit);
+
+//     for (i = 0; i < arr.length; i++) {
+//         setTimeout(function() {
+//             //empty
+//             let imgField = document.querySelector('.imgField');
+//             //these two directly below work but for some reason the arr[i] and arr[i + 1] is not working; seems to be NODE related
+//             // imgField.removeChild(arr[0]);
+//             // imgField.appendChild(arr[1]);
+//             // let tempImg= document.createElement('img');
+//             // tempImg = arr[i]
+//             imgField.removeChild(imgField.childNodes[i]);
+//             //insert one pic into
+//             // tempImg2 = arr[i+1]
+//             imgField.appendChild(imgField.childNodes[i + 1]);
+//         }, 2000);
+//     };
+// }, 2000);
+// }
 
 
 // deetsINeed.forEach(function(oneResult) {
@@ -64,16 +64,15 @@ setTimeout(function() {
 //     redditResultsDOM.appendChild(listItem);
     
 
-
 let fetchFun = function() {
-    
+    arr = [];
     console.log("Testz");
 
     // document.querySelector('.button').addEventListener('click', function() {
         
     console.log("Testy");
 
-    fetch('https://www.reddit.com/search.json?q=doggos')
+    fetch(`https://www.reddit.com/search.json?q=${document.querySelector(".inputBox").value}`)
     .then(function(responseData) {
         //Where we do some stuff with the response data given to us by the request made to the url
         let jsonData = responseData.json();
@@ -105,7 +104,56 @@ let fetchFun = function() {
                     // create h3
                     // title.textContent = oneResult.title;
                     // add the h3 title to li
+
+
+
+
+
+                    let listItem = document.createElement('li');
+                    // create an li elem
+                        // let title = document.createElement('h3');
+                    // create h3
+                        // title.textContent = oneResult.title;
+                    // add the h3 title to li
+                    listItem.appendChild(imgReddit);
+                    // create an a tag
+                    // append the li elem to parent
                     
+                    let displayFunction = function() {
+
+                        setTimeout(function() {
+                        
+                        
+                        
+                        
+                            console.log("displayFunction running")
+                            // want to place img in the imgField
+                            // document.querySelector('.imgField').appendChild(imgReddit);
+                        
+                            // for (i = 0; i < arr.length; i++) {
+                                setTimeout(function() {
+                                    //empty
+                                    let imgField = document.querySelector('.imgField');
+                                    imgField.removeChild(imgField.childNodes[0]);
+                                    imgField.appendChild(listItem);
+                                // let imgField = document.querySelector('.imgField');
+                                    //these two directly below work but for some reason the arr[i] and arr[i + 1] is not working; seems to be NODE related
+                                    // imgField.removeChild(arr[0]);
+                                    // imgField.appendChild(arr[1]);
+                                    // let tempImg= document.createElement('img');
+                                    // tempImg = arr[i]
+                                // imgField.removeChild(imgField.childNodes[i]);
+                                    //insert one pic into
+                                    // tempImg2 = arr[i+1]
+                                // imgField.appendChild(imgField.childNodes[i + 1]);
+                                }, 2000);
+                            // };
+                        }, 4000);
+                    }
+                    
+                    
+                    
+                    displayFunction();
                     
                     // want to place img in the imgField
                     // title.appendChild(imgReddit);
@@ -128,9 +176,8 @@ let fetchFun = function() {
                         // append the li elem to parent
                         // redditResultsDOM.appendChild(imgReddit);
                     });
-                    displayFunction();
                     console.log(arr);
-                    document.querySelector('.imgField').appendChild(arr[0]);
+                    // document.querySelector('.imgField').appendChild(arr[0]);
 
 
                             // call display function
