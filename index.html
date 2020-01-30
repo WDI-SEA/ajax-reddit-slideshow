@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<title>Reddit Slide Show</title>
 </head>
-<body>
-  <h1>Hello Front-End</h1>
-</body>
+	<body>
+		<div class="form-div">
+			<h1>Reddit Slide Show</h1>
+			<button class="do-not-show" id="stop">Stop and Restart</button>
+			<form id="input-form">
+				<label>Please enter a search :</label>
+				<input type="text" name="query" placeholder="enter query" id="text-box">
+				<input type="submit" id="submit-button">
+			</form>
+		</div>
+		<div class="image-container">
+			
+		</div>
+	</body>
 </html>

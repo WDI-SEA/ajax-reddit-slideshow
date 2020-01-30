@@ -1,0 +1,21 @@
+body{
+	margin: 0 auto;
+	text-align: center;
+}
+.form-div{
+}
+.image-container{
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.do-not-show{
+	display: none;
+}
+img{
+	height: 300px;
+	width: 300px;
+}
+
