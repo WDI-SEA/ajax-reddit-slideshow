@@ -21,6 +21,11 @@ body {
     display: none;
 }
 
+img {
+    width: 400px;
+    height: 400px;
+}
+
 input {
     background-color: rgb(235, 219, 74);
     height: 30px;
