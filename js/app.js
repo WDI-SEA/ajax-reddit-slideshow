@@ -33,14 +33,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 let results = jsonRedditData.data.children;
                 let details = results.map(function(redditResult) {
                     let result = {
-                        pic: redditResult.data.thumbnail,
+                        pic: redditResult.data.url,
                         url: redditResult.data.permalink
                     }
                     console.log(result.pic);
                     return result;
                 });
                 details.forEach(function(result) {
-                    if (result.pic[0]=="h") {
+                    if (result.pic[result.pic.length-1]=="g") {
                         let pic = document.createElement("img");
                         pic.setAttribute("src", result.pic);
                         redditResultsDOM.appendChild(pic);
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 $('#reddit-results').slick({
                     fade: true,
                     autoplay: true,
-                    autoplaySpeed: 2000,
+                    autoplaySpeed: 3000,
                     centerMode: true,
                     centerPadding: '60px',
                     responsive: [
