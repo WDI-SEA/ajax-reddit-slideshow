@@ -12,9 +12,7 @@ Reddit sometimes contains some offensive images be careful with your search term
 
 * Fork and clone this repository
 * Run `npm install` to install dependencies
-  * `npm start` - start the BrowserSync server
-  * `npm run lint:css` - lint CSS
-  * `npm run lint:js` - lint JS
+* Run `npm start` to start the BrowserSync server
 
 ## Requirements/User Experience
 
