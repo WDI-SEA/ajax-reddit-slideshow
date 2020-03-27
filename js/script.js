@@ -82,10 +82,14 @@ const displayCurrent = () => {
 // Updates the next image
 
 const carousel = () =>{
+	//Attempting to get the image element appended above to remove it
+	let oldImg = document.getElementsByTagName('img')[0]
+	console.log(oldImg[0])
+	//oldImg.results.removeChild(oldImg) 
     for (let i = 0; i < currentImages.length; i++) {
-        currentIndex++
-        startSlideshow()
+        //currentIndex++
+        //startSlideshow()
     }
 }
 
-//setInterval(carousel, INTERVAL_DELAY)
+setInterval(carousel, INTERVAL_DELAY)
