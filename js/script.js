@@ -1,7 +1,6 @@
-console.log("JS is working")
 // Declare global variable and constants
 const API_URL_BASE = 'http://www.reddit.com/search.json?nsfw=no&q='
-const INTERVAL_DELAY = 2000
+const INTERVAL_DELAY = 10000
 let currentImages = []
 let currentIndex = 0
 let interval = null
@@ -81,3 +80,12 @@ const displayCurrent = () => {
     document.getElementById('results').append(h3)
 }
 // Updates the next image
+
+const carousel = () =>{
+    for (let i = 0; i < currentImages.length; i++) {
+        currentIndex++
+        startSlideshow()
+    }
+}
+
+//setInterval(carousel, INTERVAL_DELAY)
