@@ -3,9 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello Front-End</title>
+  <title>Cats, Cats, Cats</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <header>
+      <nav>
+          <h1>Reddit Search</h1>
+      </nav>
+  </header>
+  <div id="search-box">
+    <h2>What are you looking for?</h2>
+    <form id="search-form">
+      <div>
+        <label for="query">Search Query:</label>
+        <input type="text" id="query" placeholder="What you want?">
+      </div>
+      <button type="submit">GO GO GO</button>
+    </form>
+  </div>
+  <div id="slideshow">
+    <h2>Wow, look at that!</h2>
+    <div id="results"></div>
+    <button id="stop-button">STOP NOW!</button>
+  </div>
+  <script src="./js/script.js"></script>
 </body>
 </html>
