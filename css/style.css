@@ -46,6 +46,10 @@ h1 {
     position: absolute;
 }
 
+#results img.active {
+    visibility: visible;
+}
+
 #stopBtn {
     margin: 375px 50px;
     vertical-align: bottom;

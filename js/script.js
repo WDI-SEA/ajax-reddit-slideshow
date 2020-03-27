@@ -1,9 +1,10 @@
-console.log("loaded!")
+
 const REDDIT_API = 'https://www.reddit.com/search.json?nsfw=no&q='
 const INTERVAL_DELAY = 1000
 const intervalTime = 3000
 let currentImages = []
 let currentIndex = 0
+let interval = 0
 
 const helperLog = (e) => {
     e.preventDefault()
@@ -32,19 +33,13 @@ const submit = (userQuery) => {
                 gold: item.data.gilded > 0
             }
         })
-        // console.log(results)
         currentImages = results
-        // console.log("here are the results", currentImages[currentIndex].url)
         startSlideshow()
         currentImages.forEach( () => {
             displayCurrent()
              currentIndex++
          })
-         //slideshow loop lives here now
-         //loop where after 3 secs removes the class active from
-         console.log("here is the current image:", currentImages)
-        //  setInterval(imageloop, 1000)
-         imageloop()
+        interval = setInterval(imageloop, 3000)
     })
     .catch((err) => {
         console.log("uh oh ", err)
@@ -52,41 +47,31 @@ const submit = (userQuery) => {
 }
 
 const startSlideshow = () => {
-    // console.log("start")
-    //hide search bar
     document.getElementById("container").style.visibility = 'hidden'
-    //Show the slideshow div
     document.getElementById("slideshow").style.visibility = 'visible'
-    //display the first image
-    
-    //kick off the interval
 }
 
 const displayCurrent = () => {
-    //empty previous images
-    //create an image tag
-    // console.log("current image ", currentImages[currentIndex].url)
+    document.getElementById('results').innerHTML = ''
     let img = document.createElement('img')
     img.src = currentImages[currentIndex].url
     img.alt = currentImages[currentIndex].title
     if (currentIndex > 0) {
-        // img.style.display = "none"
         document.getElementById('results').append(img)
+        console.log("here is image")
     } else {
-        img.classList.add('active')
+         img.classList.add('active')
+         console.log("here is first image")
         document.getElementById('results').append(img)
     }
 
-// console.log("current index is ", currentIndex)
 }
 const imageloop = () => {
-$('#results img:gt(0)').hide();
-setInterval(function () {
-    let current = $('#results img:visible');
-    let next = current.next().length ? current.next() : $('#results img:eq(0)');
-    current.fadeOut(3000)
-    next.fadeIn(3000);
-}, 6000)
+    currentIndex += 1
+    if (currentIndex >= currentImages.length) {
+        currentIndex = 0
+    }
+    displayCurrent()
 }
 
 document.getElementById('stopBtn').addEventListener('click', function(){
@@ -95,6 +80,7 @@ document.getElementById('stopBtn').addEventListener('click', function(){
     currentImages = []
     currentIndex = 0
     $('img').remove()
+    clearInterval(interval)
 })
 
 document.getElementById('searchBtn').addEventListener('click', helperLog)
