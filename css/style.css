@@ -1,0 +1,63 @@
+body {
+    text-align: center;
+    background: #333333;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1 {
+    visibility: visible;
+    font-size: 30px;
+    color: white;
+}
+#container {
+    position: absolute;
+    top: 50%;
+    left: 27%;
+}
+#query {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    font-size: 80px;
+    background: #333333;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+}
+
+#searchBtn {
+    vertical-align: bottom;
+    color: white;
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 5px 5px 0 5px;
+    margin: 20px 0 -15px 0;
+    background: #333333;
+    border: 2px solid white;
+}
+
+#slideshow {
+    visibility: hidden;
+}
+
+#results img {
+    margin: -10px -175px;
+    height: 350px;
+    width: auto;
+    position: absolute;
+}
+
+#results img.active {
+    visibility: visible;
+}
+
+#stopBtn {
+    margin: 375px 50px;
+    vertical-align: bottom;
+    color: white;
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 5px 5px 0 5px;
+    background: #333333;
+    border: 2px solid white;
+}
+

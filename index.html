@@ -4,8 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hello Front-End</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-  <h1>Hello Front-End</h1>
+  <!-- <h1>Willow's Search Engine</h1> -->
+<nav>
+  <h1>Will's Search Engine</h1>
+</nav>
+<div id="container">
+
+  <form id="searchForm">
+    <label for="query"></label>
+    <input type="text" id="query" placeholder="Cats">
+    <div id="buttonDiv">
+      <button id="searchBtn">Search</button>
+    </div>
+  </form>
+
+</div>
+
+<div id="slideshow">
+  <div id="results"></div>
+  <button id="stopBtn">New Search</button>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="./js/script.js"></script>
 </body>
 </html>
